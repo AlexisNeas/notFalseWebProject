@@ -171,8 +171,8 @@ public class AdminInteractions {
    * @param type
    * @param status
    */
-  public void editUser(String firstName, String lastName, String username, String password, char type, char status){
-      Account account = new Account(firstName, lastName, username, password, type, status);
+  public void editUser(Account account){
+      //Account account = new Account(firstName, lastName, username, password, type, status);
 	  adminController.editUser(account);
   }
   
