@@ -6,8 +6,7 @@ http-equiv="content-type">
 </head>
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DBCOntroller"%>
-<% AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter"); %>
+    pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*"%>
 
 <big><big><big><big>View Users:<br>
 </big></big></big></big>
@@ -29,8 +28,8 @@ cellpadding="2" cellspacing="2">
 <td style="vertical-align: top;">Deactivate<br>
 </td>
 </tr>
-<% 	new DBController("juser","user");
-	ArrayList<Account> accounts = ai.getListOfUsers();
+<%	AdminInteractions interactions = new AdminInteractions();
+	ArrayList<Account> accounts = interactions.getListOfUsers();
 
 	for(int i = 0; i<accounts.size(); i++) 
 	{
