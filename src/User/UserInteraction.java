@@ -206,10 +206,10 @@ public class UserInteraction {
    * @param status the status of the account
    * 
    */
-  public void editProfile(String firstName, String lastName, String username, String password, char type, char status)
+  public int editProfile(String firstName, String lastName, String username, String password, char type, char status)
   {
-    userController.editProfile(firstName,  lastName,   username,  password,  type,  status);
-    //System.out.println("CHANGES SAVED");
+    return userController.editProfile(firstName,  lastName,   username,  password,  type,  status);
+    
   }
   /**
    * Allows the user to view their profile
