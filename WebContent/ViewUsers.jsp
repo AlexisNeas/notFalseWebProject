@@ -8,8 +8,12 @@ http-equiv="content-type">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*"%>
 
-<big><big><big><big>View Users:<br>
-</big></big></big></big>
+<font size = "18">View Users:</font>
+<br>
+
+<form method="post" action="AddAccount.jsp" name="Add Account">
+	<input name="Add" value="Add Account" type="submit"><br>
+</form>
 <table style="text-align: left; width: 809px; height: 60px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -38,9 +42,10 @@ cellpadding="2" cellspacing="2">
 
 <tr>
 <tr>
-<td style="vertical-align: top;"><input name="Username"
-value="<%=accounts.get(i).getUsername() %>" type="hidden"><input name="Edit" value="Edit"
-type="submit"><br>
+<td style="vertical-align: top;">
+<input name="Username" value="<%=accounts.get(i).getUsername() %>" type="hidden">
+<input name="Edit" value="Edit" type="submit">
+<br>
 </td>
 <td style="vertical-align: top;"><%= accounts.get(i).getFirstName() + " "+accounts.get(i).getLastName() %><br>
 </td>
@@ -53,14 +58,14 @@ type="submit"><br>
 <td style="vertical-align: top;"><%= accounts.get(i).getStatus() %><br>
 </td>
 <td style="vertical-align: top;">
-<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
-<input name="Deactivate" value="Deactivate" type="submit"><br>
+<form method="post" action="Deactivate.jsp" name="Deactivate">
+	<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
+	<input name="Deactivate" value="Deactivate" type="submit"><br>
+</form>
 </td>
 </tr>
 <% } %>
 </tbody>
 </table>
-<big><big><big><big><small><small><small></small></small></small><br>
-</big></big></big></big>
 </body>
 </html>
