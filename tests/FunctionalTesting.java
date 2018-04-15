@@ -84,10 +84,10 @@ public class FunctionalTesting {
 		String state = original.getState();
 		String location = original.getLocation();
 		int numStudents = original.getNumStudents();
-
-		adminInteractions.editSchool("Vetters School", "Minnesota", "Loserville",
+		University newSchool = new University("Vetters School", "Minnesota", "Loserville",
 				"STATE", 1, 1.0, 1, 1, 1.0, 1.0, 1, 1.0, 1.0, 1, 1, 1, "",
 				"", "", "", "");
+		adminInteractions.editSchool(newSchool);
 		University edited = adminController.getSchoolInformation("Vetters School");
 		
 		String stateE = edited.getState();
