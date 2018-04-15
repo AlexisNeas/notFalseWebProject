@@ -47,15 +47,12 @@ public class AdminInteractions {
    * @param studyArea4
    * @param studyArea5
    */
-  public void editSchool(String name, String state, String loc, String control, int numStudents, double perFem,
-                         double satVerbal, double satMath, double tuition, double perFinancialAid, int numApplicants,
-                         double perAccepted, double perEnroll, int academicScale, int social, int qualOfLife,
-                         String studyArea1, String studyArea2, String studyArea3, String studyArea4, String studyArea5) {
+  public void editSchool(University school) {
     
-    University school = new University(name, state, loc, control, numStudents, perFem,
+    /*University school = new University(name, state, loc, control, numStudents, perFem,
                                        satVerbal, satMath, tuition, perFinancialAid, numApplicants,
                                        perAccepted, perEnroll, academicScale, social, qualOfLife,
-                                       studyArea1, studyArea2, studyArea3, studyArea4, studyArea5);
+                                       studyArea1, studyArea2, studyArea3, studyArea4, studyArea5);*/
     adminController.setSchoolInfo(school);
   }
   
