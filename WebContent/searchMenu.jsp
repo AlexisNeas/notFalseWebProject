@@ -118,7 +118,7 @@ name="lowQualityOfLifeScale"> High:<input name="upQualityOfLifeScale"></td>
 <br>
 <br>
 <input name="submitButton" type="submit"><br>
-<input type="reset"><br>
+<input name="reset" type="reset"><br>
 </td>
 <td style="vertical-align: top;">1:<input name="studyArea1"><br>
 2:<input name="studyArea2"><br>
