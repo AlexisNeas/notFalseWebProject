@@ -5,7 +5,8 @@
 	AccountInteractions acctInter = new AccountInteractions();
 	int logIn = acctInter.logOn(username, password);
 	if(logIn == 1){
-		UserInteraction interactions = new UserInteraction(username);
+		UserInteraction interactions = new UserInteraction();
+		interactions.setCurrentUser(username);
 		session.setAttribute("userInter", interactions);
 		response.sendRedirect("UserMenu.jsp");
 	}

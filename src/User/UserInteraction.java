@@ -17,6 +17,11 @@ public class UserInteraction {
   private UserController userController;
   
   /**
+   * The logged in account
+   */
+  private User currentUser;
+  
+  /**
    * Constructor of User Interaction 
    */
   public UserInteraction()
@@ -217,4 +222,15 @@ public class UserInteraction {
     System.out.println("\tFirst name: "+info.getFirstName()+"\n\tLast name: "+info.getLastName()+"\n\tUsername: "
                          +info.getUsername()+"\n\tPassword: "+info.getPassword()+"\n\tAccount type: "+info.getAccountType());
   }
+
+  
+  public User getUser() {
+	  return this.user;
+  }
+  
+  public void setCurrentUser(String username) {
+	  Account acct = viewProfile(username);
+	  this.currentUser = new User(acct.getFirstName(), acct.getLastName(), acct.getUsername(), acct.getPassword(), acct.getAccountType(), acct.getStatus());
+  }
+
 }
