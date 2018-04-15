@@ -217,11 +217,10 @@ public class UserInteraction {
    * 
    * @param username the user's username
    */
-  public void viewProfile(String username)
+  public User viewProfile()
   {
-    Account info = userController.viewProfile(username);
-    System.out.println("\tFirst name: "+info.getFirstName()+"\n\tLast name: "+info.getLastName()+"\n\tUsername: "
-                         +info.getUsername()+"\n\tPassword: "+info.getPassword()+"\n\tAccount type: "+info.getAccountType());
+    return (User)userController.viewProfile(user.getUsername());
+
   }
   
   public User getUser() {
