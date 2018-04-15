@@ -17,11 +17,18 @@ public class UserInteraction {
   private UserController userController;
   
   /**
+   * The logged in account
+   */
+  private User user;
+  
+  /**
    * Constructor of User Interaction 
    */
-  public UserInteraction()
+  public UserInteraction(String username)
   {
     this.userController = new UserController();
+    this.user = (User) userController.viewProfile(username);
+    this.user.logOn();
   }
   
   /**
@@ -215,5 +222,9 @@ public class UserInteraction {
     Account info = userController.viewProfile(username);
     System.out.println("\tFirst name: "+info.getFirstName()+"\n\tLast name: "+info.getLastName()+"\n\tUsername: "
                          +info.getUsername()+"\n\tPassword: "+info.getPassword()+"\n\tAccount type: "+info.getAccountType());
+  }
+  
+  public User getUser() {
+	  return this.user;
   }
 }
