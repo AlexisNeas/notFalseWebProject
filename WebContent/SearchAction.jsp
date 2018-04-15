@@ -1,7 +1,8 @@
 <%@ page language="java" import="User.*" import="University.*" import="DBController.*" import="java.util.ArrayList"%>
 <%
 
-UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
+//UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
+UserInteraction ui = new UserInteraction("juser");
 String schoolName = request.getParameter("schoolName");
 String state = request.getParameter("state");
 String location = request.getParameter("location");
