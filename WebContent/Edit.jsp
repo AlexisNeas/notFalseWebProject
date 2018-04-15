@@ -8,7 +8,7 @@
 <br>
 Edit User form:<br>
 <%
-String error = request.getParameter("editError");
+String error = request.getParameter("Edit");
 if(error !=null && error.equals("-1"))
 {
 	out.println("User information not edited.");
