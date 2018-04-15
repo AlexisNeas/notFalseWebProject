@@ -216,9 +216,9 @@ public class UserInteraction {
    * 
    * @param username the user's username
    */
-  public User viewProfile(String username)
+  public Account viewProfile(String username)
   {
-    return (User)userController.viewProfile(username);
+    return userController.viewProfile(username);
 
   }
 
