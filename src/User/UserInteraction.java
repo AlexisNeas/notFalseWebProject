@@ -132,7 +132,7 @@ public class UserInteraction {
  * @throws Exception 
    * 
    */
-  public void searchSchool(String schoolName, String stateName, String location, String control,
+  public ArrayList<University> searchSchool(String schoolName, String stateName, String location, String control,
           int lowNumberOfStudents, int upNumberOfStudents,  
           double lowPercentFemale, double upPercentFemale, 
           double lowSATVerbal, double upSATVerbal,
@@ -168,6 +168,7 @@ public class UserInteraction {
     {
      System.out.println(universities.get(i).getSchoolName()); 
     }
+    return universities;
   }  
   
 
