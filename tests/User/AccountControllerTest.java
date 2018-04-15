@@ -36,7 +36,7 @@ public class AccountControllerTest {
 	}
 	
 	/**
-	 * Tests the log on method for an invalid username
+	 * Tests the log on method for invalid username
 	 */
 	@Test
 	public void testLogOnForInvalidUsername() {
