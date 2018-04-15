@@ -18,15 +18,13 @@ public class AdminInteractions {
   /**
    * The logged in account
    */
-  private Admin admin;
+  private Admin currentAdmin;
   
   /**
    * Constructor that initializes the admin controller
    */
-  public AdminInteractions(String username){
+  public AdminInteractions(){
     this.adminController = new AdminController();
-    this.admin = (Admin)adminController.getUserInfo(username);
-    this.admin.logOn();
   }
   
   /**
@@ -104,10 +102,9 @@ public class AdminInteractions {
    * 
    * @param username the username of the user to get info for
    */
-  public void getUserInfo(String username){
-    Account account = adminController.getUserInfo(username);
-    System.out.println("\tFirst: " + account.getFirstName()+ "\n\t" + "Last: " + account.getLastName() + "\n\t" + "Username: " + account.getUsername() + "\n\t" + "Password: " + account.getPassword()+ "\n\t" + "Type: " + account.getAccountType() + "\n\t" + "Status: " + account.getStatus());
-  }
+  public Account getUserInfo(String username){
+    	return adminController.getUserInfo(username);
+    }
   
   /**
    * Gets a schools info
@@ -195,6 +192,12 @@ public class AdminInteractions {
   }
   
   public Admin getAdmin() {
-	  return this.admin;
+	  return this.currentAdmin;
+  }
+  
+  public void setCurrentAdmin(String username) {
+	  Account acct = getUserInfo(username);
+	  this.currentAdmin = new Admin(acct.getFirstName(), acct.getLastName(), acct.getUsername(), acct.getPassword(), acct.getAccountType(), acct.getStatus());
+	  this.currentAdmin.logOn();
   }
 }

@@ -11,7 +11,8 @@
 		response.sendRedirect("UserMenu.jsp");
 	}
 	else if(logIn == 2){
-		AdminInteractions interactions = new AdminInteractions(username);
+		AdminInteractions interactions = new AdminInteractions();
+		interactions.setCurrentAdmin(username);
 		session.setAttribute("adminInter", interactions);
 		response.sendRedirect("AdminMenu.jsp");
 	}
