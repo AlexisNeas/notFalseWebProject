@@ -19,16 +19,14 @@ public class UserInteraction {
   /**
    * The logged in account
    */
-  private User user;
+  private User currentUser;
   
   /**
    * Constructor of User Interaction 
    */
-  public UserInteraction(String username)
+  public UserInteraction()
   {
     this.userController = new UserController();
-    this.user = (User) userController.viewProfile(username);
-    this.user.logOn();
   }
   
   /**
@@ -226,5 +224,10 @@ public class UserInteraction {
   
   public User getUser() {
 	  return this.user;
+  }
+  
+  public void setCurrentUser(String username) {
+	  Account acct = viewProfile(username);
+	  this.currentUser = new User(acct.getFirstName(), acct.getLastName(), acct.getUsername(), acct.getPassword(), acct.getAccountType(), acct.getStatus());
   }
 }
