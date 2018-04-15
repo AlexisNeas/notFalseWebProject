@@ -25,37 +25,8 @@ public class AccountInteractions {
    * @param password of the account logging on
    * @return Account of the account being logged on
    */
-  public Account logOn(String username, String password){
-    
-    Account user = aController.logOn(username,password);
-    if(user == null)
-    {
-      System.out.println("Invalid username or password");
-    }
-    else if(!user.isLoggedOn())
-    {
-      System.out.println("Invalid username or password");
-    }
-    else if(user.getStatus() == 'N')
-    {
-      System.out.println("Account has been deactivated: The account has not been logged on");
-    }
-    else
-    {
-      if(user instanceof User)
-      {
-        System.out.println("The user account is now logged on");
-        System.out.println("User Options: View Profile, View Saved Schools, Search Schools");
-        return (User)user;
-      }
-      else
-      {
-        System.out.println("The admin account is now logged on");
-        System.out.println("Admin Options: View Users, View Universities");
-        return (Admin)user;
-      }
-    }
-    return user;
+  public int logOn(String username, String password){
+    return aController.logOn(username,password);
   }
   
   /**
