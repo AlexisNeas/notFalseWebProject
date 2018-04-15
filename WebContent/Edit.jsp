@@ -7,11 +7,24 @@
 <body>
 <br>
 Edit User form:<br>
+<%
+String error = request.getParameter("Edit");
+if(error !=null && error.equals("-1"))
+{
+	out.println("User information not edited.");
+}
+else if(error != null && error.equals("0"))
+{
+	out.println("User information edited.");
+}
+%>
 <br>
 
 <%
-UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
-User user =uc.viewProfile();
+//UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
+//Account user = uc.viewProfile(uc.getUser().getUsername());
+UserInteraction uc = new UserInteraction();
+Account user = uc.viewProfile("juser");
 %>
 <form method="post" action="EditUserAction.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
@@ -41,6 +54,10 @@ border="1" >
 <td style="vertical-align: top;"><input name="Password" value=<%=user.getPassword()%>> </td>
 </tr>
 <tr>
+<td style="vertical-align: top;">Type<br>
+</td>
+<td style="vertical-align: top;"><input name="Type" value=<%=user.getAccountType()%> readonly> </td>
+</tr>
 <tr>
 <td style="vertical-align: top;"><input value="Edit"
 name="Edit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
