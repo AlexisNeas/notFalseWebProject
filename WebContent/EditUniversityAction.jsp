@@ -1,7 +1,7 @@
 <%@page language="java" import="User.*" import="University.*"%>
 <%
-AdminInteractions ai = new AdminInteractions();
-
+//AdminInteractions ai = new AdminInteractions();
+AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 
 
 

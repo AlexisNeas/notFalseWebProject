@@ -17,6 +17,11 @@ public class UserInteraction {
   private UserController userController;
   
   /**
+   * The logged in account
+   */
+  private User currentUser;
+  
+  /**
    * Constructor of User Interaction 
    */
   public UserInteraction()
@@ -132,7 +137,7 @@ public class UserInteraction {
  * @throws Exception 
    * 
    */
-  public void searchSchool(String schoolName, String stateName, String location, String control,
+  public ArrayList<University> searchSchool(String schoolName, String stateName, String location, String control,
           int lowNumberOfStudents, int upNumberOfStudents,  
           double lowPercentFemale, double upPercentFemale, 
           double lowSATVerbal, double upSATVerbal,
@@ -168,6 +173,7 @@ public class UserInteraction {
     {
      System.out.println(universities.get(i).getSchoolName()); 
     }
+    return universities;
   }  
   
 
@@ -210,10 +216,18 @@ public class UserInteraction {
    * 
    * @param username the user's username
    */
-  public void viewProfile(String username)
+  public User viewProfile()
   {
-    Account info = userController.viewProfile(username);
-    System.out.println("\tFirst name: "+info.getFirstName()+"\n\tLast name: "+info.getLastName()+"\n\tUsername: "
-                         +info.getUsername()+"\n\tPassword: "+info.getPassword()+"\n\tAccount type: "+info.getAccountType());
+    return (User)userController.viewProfile(user.getUsername());
+
+  }
+  
+  public User getUser() {
+	  return this.user;
+  }
+  
+  public void setCurrentUser(String username) {
+	  Account acct = viewProfile(username);
+	  this.currentUser = new User(acct.getFirstName(), acct.getLastName(), acct.getUsername(), acct.getPassword(), acct.getAccountType(), acct.getStatus());
   }
 }

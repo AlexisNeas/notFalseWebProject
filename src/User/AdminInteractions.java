@@ -16,10 +16,17 @@ public class AdminInteractions {
   private AdminController adminController;
   
   /**
+   * The logged in account
+   */
+  private Admin admin;
+  
+  /**
    * Constructor that initializes the admin controller
    */
-  public AdminInteractions(){
+  public AdminInteractions(String username){
     this.adminController = new AdminController();
+    this.admin = (Admin)adminController.getUserInfo(username);
+    this.admin.logOn();
   }
   
   /**
@@ -165,8 +172,8 @@ public class AdminInteractions {
    * @param type
    * @param status
    */
-  public void editUser(String firstName, String lastName, String username, String password, char type, char status){
-      Account account = new Account(firstName, lastName, username, password, type, status);
+  public void editUser(Account account){
+      //Account account = new Account(firstName, lastName, username, password, type, status);
 	  adminController.editUser(account);
   }
   
@@ -186,5 +193,9 @@ public class AdminInteractions {
    */
   public void deactivateUser(String username) {
     adminController.deactivateUser(username);
+  }
+  
+  public Admin getAdmin() {
+	  return this.admin;
   }
 }
