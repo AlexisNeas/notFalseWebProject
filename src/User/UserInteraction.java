@@ -221,6 +221,7 @@ public class UserInteraction {
     return userController.viewProfile(username);
 
   }
+
   
   public User getUser() {
 	  return this.currentUser;
@@ -229,5 +230,7 @@ public class UserInteraction {
   public void setCurrentUser(String username) {
 	  Account acct = viewProfile(username);
 	  this.currentUser = new User(acct.getFirstName(), acct.getLastName(), acct.getUsername(), acct.getPassword(), acct.getAccountType(), acct.getStatus());
+	  this.currentUser.logOn();
   }
+
 }
