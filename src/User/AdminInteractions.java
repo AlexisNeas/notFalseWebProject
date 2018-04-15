@@ -16,6 +16,11 @@ public class AdminInteractions {
   private AdminController adminController;
   
   /**
+   * The logged in account
+   */
+  private Admin currentAdmin;
+  
+  /**
    * Constructor that initializes the admin controller
    */
   public AdminInteractions(){
@@ -47,15 +52,12 @@ public class AdminInteractions {
    * @param studyArea4
    * @param studyArea5
    */
-  public void editSchool(String name, String state, String loc, String control, int numStudents, double perFem,
-                         double satVerbal, double satMath, double tuition, double perFinancialAid, int numApplicants,
-                         double perAccepted, double perEnroll, int academicScale, int social, int qualOfLife,
-                         String studyArea1, String studyArea2, String studyArea3, String studyArea4, String studyArea5) {
+  public void editSchool(University school) {
     
-    University school = new University(name, state, loc, control, numStudents, perFem,
+    /*University school = new University(name, state, loc, control, numStudents, perFem,
                                        satVerbal, satMath, tuition, perFinancialAid, numApplicants,
                                        perAccepted, perEnroll, academicScale, social, qualOfLife,
-                                       studyArea1, studyArea2, studyArea3, studyArea4, studyArea5);
+                                       studyArea1, studyArea2, studyArea3, studyArea4, studyArea5);*/
     adminController.setSchoolInfo(school);
   }
   
@@ -100,10 +102,9 @@ public class AdminInteractions {
    * 
    * @param username the username of the user to get info for
    */
-  public void getUserInfo(String username){
-    Account account = adminController.getUserInfo(username);
-    System.out.println("\tFirst: " + account.getFirstName()+ "\n\t" + "Last: " + account.getLastName() + "\n\t" + "Username: " + account.getUsername() + "\n\t" + "Password: " + account.getPassword()+ "\n\t" + "Type: " + account.getAccountType() + "\n\t" + "Status: " + account.getStatus());
-  }
+  public Account getUserInfo(String username){
+    	return adminController.getUserInfo(username);
+    }
   
   /**
    * Gets a schools info
@@ -167,8 +168,8 @@ public class AdminInteractions {
    * @param type
    * @param status
    */
-  public void editUser(String firstName, String lastName, String username, String password, char type, char status){
-      Account account = new Account(firstName, lastName, username, password, type, status);
+  public void editUser(Account account){
+      //Account account = new Account(firstName, lastName, username, password, type, status);
 	  adminController.editUser(account);
   }
   
@@ -188,5 +189,15 @@ public class AdminInteractions {
    */
   public void deactivateUser(String username) {
     adminController.deactivateUser(username);
+  }
+  
+  public Admin getAdmin() {
+	  return this.currentAdmin;
+  }
+  
+  public void setCurrentAdmin(String username) {
+	  Account acct = getUserInfo(username);
+	  this.currentAdmin = new Admin(acct.getFirstName(), acct.getLastName(), acct.getUsername(), acct.getPassword(), acct.getAccountType(), acct.getStatus());
+	  this.currentAdmin.logOn();
   }
 }

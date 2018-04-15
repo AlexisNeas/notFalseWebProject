@@ -199,11 +199,59 @@ public class DBController
    */
   public void setSchoolInformation(University univ) throws IllegalArgumentException
   {
+	University current =  this.getSchoolInfo(univ.getSchoolName());
     int edited = univDBlib.university_editUniversity(univ.getSchoolName(), univ.getState(), univ.getLocation(), 
                                         univ.getControl(),  univ.getNumStudents(),  univ.getPercentFemale(), 
                                         univ.getSatVerbal(),  univ.getSatMath(),  univ.getTuition(),  univ.getPercentRecFinAid(),
                                         univ.getNumApplicants(),  univ.getPercentAccepted(), 
                                         univ.getPercentEnroll(),  univ.getAcademicScale(),  univ.getSocial(),  univ.getQualOfLife());
+    try {
+
+    if(univ.getStudyArea1() != null)
+    {
+    	if(!current.getStudyArea1().equals(univ.getStudyArea1()))
+    	{
+    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea1());
+			
+    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea1());
+    	}
+    }
+    if(univ.getStudyArea2() != null)
+    {
+    	if(!current.getStudyArea2().equals(univ.getStudyArea2()))
+    	{
+    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea3());
+    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
+    	}
+    }
+    if(univ.getStudyArea3() != null)
+    {
+    	if(!current.getStudyArea3().equals(univ.getStudyArea3()))
+    	{
+    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea3());
+    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
+    	}
+    }
+    if(univ.getStudyArea4() != null)
+    {
+    	if(!current.getStudyArea4().equals(univ.getStudyArea4()))
+    	{
+    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea4());
+    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea4());
+    	}
+    }
+    if(univ.getStudyArea5() != null)
+    {
+    	if(!current.getStudyArea5().equals(univ.getStudyArea5()))
+    	{
+    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea5());
+    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea5());
+    	}
+    }
+    } catch (Exception e) {
+		
+		e.printStackTrace();
+	}
     if(edited <= 0) {
     	throw new IllegalArgumentException();
     }
@@ -778,47 +826,47 @@ public class DBController
    ArrayList<University> result = new ArrayList<University>();
    int total = 0;
 
-    if(!schoolName.equals("!"))
+    if(!schoolName.equals(""))
      total++; 
-    if(!stateName.equals("!"))
+    if(!stateName.equals(""))
      total++;
-    if(!location.equals("!"))
+    if(!location.equals(""))
      total++;
-    if(!control.equals("!"))
+    if(!control.equals(""))
      total++;
-    if(lowNumberOfStudents != -1)
+    if(lowNumberOfStudents != -1 && upNumberOfStudents != -1)
      total++;
-    if(lowPercentFemale != -1)
+    if(lowPercentFemale != -1 && upPercentFemale != -1)
      total++;  
-    if(lowSATVerbal != -1)
+    if(lowSATVerbal != -1 && upSATVerbal != -1)
      total++;
-    if(lowSATMath != -1)
+    if(lowSATMath != -1 && upSATMath != -1)
      total++;
-    if(lowExpenses != -1)
+    if(lowExpenses != -1 && upExpenses != -1)
      total++;
-    if(lowPercentRecFinAid != -1)
+    if(lowPercentRecFinAid != -1 && upPercentRecFinAid != -1)
      total++;
-    if(lowNumApplicants != -1)
+    if(lowNumApplicants != -1 && upNumApplicants != -1)
      total++;
-    if(lowPercentAccepted != -1)
+    if(lowPercentAccepted != -1 && upPercentAccepted != -1)
      total++;
-    if(lowPercentEnrolled != -1)
+    if(lowPercentEnrolled != -1 && upPercentEnrolled != -1)
      total++;
-    if(lowAcademicsScale != -1)
+    if(lowAcademicsScale != -1 && upAcademicsScale != -1)
      total++;
-    if(lowSocialScale != -1)
+    if(lowSocialScale != -1 && upSocialScale != -1)
      total++;
-    if(lowQualityOfLifeScale != -1)
+    if(lowQualityOfLifeScale != -1 && upQualityOfLifeScale != -1)
      total++;
-    if(!emphases1.equals("!"))
+    if(!emphases1.equals(""))
      total++;
-    if(!emphases2.equals("!"))
+    if(!emphases2.equals(""))
      total++;
-    if(!emphases3.equals("!"))
+    if(!emphases3.equals(""))
      total++;
-    if(!emphases4.equals("!"))
+    if(!emphases4.equals(""))
      total++;
-    if(!emphases5.equals("!"))
+    if(!emphases5.equals(""))
      total++;
 
     if(total==0) {

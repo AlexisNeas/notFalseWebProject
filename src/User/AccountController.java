@@ -26,37 +26,29 @@ public class AccountController {
    * @param password of the user trying to log on
    * @return Account of the account being logged in
    */
-  public Account logOn(String username, String password){
+  public int logOn(String username, String password){
 	   
     Account user = dbController.getUserInfo(username);
     
     if(user == null)
-      return user;
-    else if(user != null && password.equals(user.getPassword()))
+        return -1;
+    else if(user != null && !password.equals(user.getPassword()))
+    	return -1;
+    else if(user.getStatus() == 'N')
+    	return -2;
+    else
     {
       if(user.getAccountType() == 'u')
       {
-        user = new User(user.getFirstName(), user.getLastName(), user.getUsername(),
-                               user.getPassword(), user.getAccountType(), user.getStatus());
-        user.logOn();
-        return user;
+        return 1;
       }
-      else
+      else // admin signed in
       {
-        user =  new Admin(user.getFirstName(), user.getLastName(), user.getUsername(),
-                               user.getPassword(), user.getAccountType(), user.getStatus());
-        user.logOn();
-        return user;
+        return 2;
       }
-    }
-    else
-    {
-      return user;
     }
 	  
   }
-  
- // public void displayOptions(){}
   
   /**
    * If the user is logged on, 
