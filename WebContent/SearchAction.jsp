@@ -2,7 +2,7 @@
 <%
 
 //UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
-UserInteraction ui = new UserInteraction("juser");
+UserInteraction ui = new UserInteraction();
 String schoolName = request.getParameter("schoolName");
 String state = request.getParameter("state");
 String location = request.getParameter("location");
