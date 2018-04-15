@@ -1,16 +1,14 @@
 <%@ page language="java" import="User.*" import="University.*"%>
 <%
-
-//AdminInteractions ai = new AdminInteractions();
-AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
+//UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
+UserInteraction ui = new UserInteraction();
 String username = request.getParameter("Username");
 String password = request.getParameter("Password");
 String firstName = request.getParameter("FirstName");
 String lastName = request.getParameter("LastName");
-String status = request.getParameter("Status");
 String type = request.getParameter("Type");
-Account acc = new Account(firstName,lastName,username,password,type.charAt(0),status.charAt(0));
-ai.editUser(acc);
-//response.sendRedirect("Menu.jsp");
+char status = 'Y';
+int editError = ui.editProfile(firstName,lastName,username,password,type.charAt(0),status);
+response.sendRedirect("Edit.jsp?Edit=" + editError);
 
 %>

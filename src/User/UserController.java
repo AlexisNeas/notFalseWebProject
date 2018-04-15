@@ -192,18 +192,17 @@ public class UserController {
    * @param type the type of account
    * @param status the status of the account
    */
-  public void editProfile(String firstName, String lastName, String username, String password, char type, char status)
+  public int editProfile(String firstName, String lastName, String username, String password, char type, char status)
   {
 	  
 	  try {
-		  this.changes = dbController.setUserInfo(  firstName, lastName, username,  password,  type,  status);  
-		  System.out.println("Your changes have been saved.");
+		  this.changes = dbController.setUserInfo(firstName, lastName, username,  password,  type,  status);  
+		  return 0;
 	  }
 	  
 	  catch(IllegalArgumentException e)
 	  {
-		this.error = 2; 
-		System.out.println("Error occurred. Profile was not edited");
+		return -1;
 	  }
 	  
   }
