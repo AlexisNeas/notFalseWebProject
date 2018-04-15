@@ -70,12 +70,13 @@ public class AdminInteractions {
   /**
    * Gets all the users in the system
    */
-  public void getListOfUsers(){
+  public ArrayList<Account> getListOfUsers(){
     ArrayList<Account> array = adminController.getListOfUsers();
-    for(int i = 0; i < array.size();i++)
+    /*for(int i = 0; i < array.size();i++)
     {
      System.out.println(array.get(i).getUsername());
-    }
+    }*/
+    return array;
   }
   
   /**
