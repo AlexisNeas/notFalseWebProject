@@ -216,14 +216,14 @@ public class UserInteraction {
    * 
    * @param username the user's username
    */
-  public User viewProfile()
+  public Account viewProfile(String username)
   {
-    return (User)userController.viewProfile(user.getUsername());
+    return userController.viewProfile(username);
 
   }
   
   public User getUser() {
-	  return this.user;
+	  return this.currentUser;
   }
   
   public void setCurrentUser(String username) {
