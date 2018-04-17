@@ -1,3 +1,4 @@
+<%@include file="LogOut_Action.jsp" %>
 <html>
 <head>
 
@@ -16,7 +17,10 @@ else if(error !=null && error.equals("-2")){
 else if(error !=null && error.equals("-3")){
 	out.println("You must first be logged in to access that page.");
 }
-%>
+else if(error !=null && error.equals("1")){
+	out.println("You have been logged out.");
+}
+%><br>
 Login form:<br>
 <br>
 <form method="post" action="Login_Action.jsp" name="Login"><br>
