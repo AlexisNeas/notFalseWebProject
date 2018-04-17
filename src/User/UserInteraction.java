@@ -184,15 +184,10 @@ public class UserInteraction {
    * @param username the username of the account to view saved universities
  * @throws Exception 
    */
-  public void getSavedUniversities(String username) throws Exception
+  public ArrayList<String> getSavedUniversities(String username) throws Exception
   {
-    ArrayList<String> universities = userController.getSavedUniversities(username);
-    if(universities.size() == 0)
-      System.out.println("\tNo saved universities");
-    for (String u: universities)
-    {
-     System.out.println("\t"+u); 
-    }
+    return userController.getSavedUniversities(username);
+    
   }
   
   /**
