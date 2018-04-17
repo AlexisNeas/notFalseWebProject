@@ -26,7 +26,7 @@ else if(error != null && error.equals("0"))
 UserInteraction uc = new UserInteraction();
 Account user = uc.viewProfile("juser");
 %>
-<form method="post" action="EditUserAction.jsp" name="editUser"><br>
+<form method="post" action="EditUser_Action.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
 border="1" >
 <tbody>

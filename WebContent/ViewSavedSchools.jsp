@@ -7,7 +7,7 @@ http-equiv="content-type">
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*"%>
-<form method="post" action="viewSavedSchools.html"
+<form method="post" action="ViewSavedSchools.html"
 name="viewSavedSchools"><label></label>
 <br>
 <table style="text-align: left; width: 882px; height: 34px;"

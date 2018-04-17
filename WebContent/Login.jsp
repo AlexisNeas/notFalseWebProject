@@ -19,7 +19,7 @@ else if(error !=null && error.equals("-3")){
 %>
 Login form:<br>
 <br>
-<form method="post" action="Login_action.jsp" name="Login"><br>
+<form method="post" action="Login_Action.jsp" name="Login"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
