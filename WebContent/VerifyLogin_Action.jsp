@@ -3,17 +3,17 @@
     AdminInteractions Aadmin = (AdminInteractions)session.getAttribute("adminInter"); 
 	if(Auser == null && Aadmin == null)
 	{
-		response.sendRedirect("index.jsp?loggingIn=-3");
+		response.sendRedirect("Login.jsp?logIn=-3");
 		return;
 	}
 	else if(Auser != null && !Auser.getUser().isLoggedOn())
 	{
-		response.sendRedirect("index.jsp?loggingIn=-4");
+		response.sendRedirect("Login.jsp?logIn=-4");
 		return;
 	}
 	else if(Aadmin != null && !Aadmin.getAdmin().isLoggedOn())
 	{
-		response.sendRedirect("index.jsp?loggingIn=-5");
+		response.sendRedirect("Login.jsp?logIn=-5");
 	}
 	
 %>
