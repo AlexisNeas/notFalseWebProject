@@ -66,6 +66,11 @@ border="1" >
 <td style="vertical-align: top;"><input name="Type" value=<%=account.getAccountType()%> > </td>
 </tr>
 <tr>
+<td style="vertical-align: top;">Status<br>
+</td>
+<td style="vertical-align: top;"><input name="Status" value=<%=account.getStatus()%> > </td>
+</tr>
+<tr>
 <td style="vertical-align: top;"><input value="Edit"
 name="Edit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td style="vertical-align: top;"><input value="Reset"

@@ -19,7 +19,15 @@ Add User form:<br>
 String error = request.getParameter("Add");
 if (error != null && error.equals("-1"))
 {
-	out.println("Username must be unique.");
+	out.println("Remember: Username must be unique.");
+}
+if (error != null && error.equals("-2"))
+{
+out.println("Type can only be a or u.");
+}
+else if(error != null && error.equals("-3"))
+{
+	out.println("Must input valid information in all of the fields.");
 }
 
 %>
