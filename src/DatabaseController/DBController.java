@@ -133,7 +133,6 @@ public class DBController
                              password, type);
  if(i <= 0)
     	throw new IllegalArgumentException();
-
   }
   
   /**

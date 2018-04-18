@@ -6,6 +6,6 @@ http-equiv="content-type">
 </head>
 <body>
 <a href="ViewSchools.jsp">Manage Universities</a><br>
-<a href="ViewUsers.jsp">Manage Users</a><br>
+<a href="ManageUsers.jsp">Manage Users</a><br>
 </body>
 </html>

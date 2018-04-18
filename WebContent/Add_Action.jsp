@@ -1,4 +1,4 @@
-<%@ page language="java" import="User.*"%>%>
+<%@ page language="java" import="User.*"%>
     
 <%	
 	String firstName = request.getParameter("FirstName");
@@ -10,6 +10,14 @@
 	//User user = new User(firstName,lastName,username,password,type.charAt(0),status.charAt(0));
 	//AdminInteraction uc = (UserController)session.getAttribute("uc");
 	AdminInteractions interaction = new AdminInteractions();
-	interaction.addNewUser(firstName, lastName, username,password, type.charAt(0));
-	response.sendRedirect("ViewUsers.jsp");
+	int added = interaction.addNewUser(firstName, lastName, username,password, type.charAt(0));
+	if (added == 1)
+	{
+		response.sendRedirect("ManageUsers.jsp");
+	}
+	else if (added == -1)
+	{
+		response.sendRedirect("AddAccount.jsp?Add="+added);
+	}
+	
 %>

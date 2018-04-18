@@ -6,7 +6,7 @@
 
 
 
-<title>Add User Form</title>
+<title>Add User</title>
 
 </head>
 
@@ -15,7 +15,14 @@
 <br>
 
 Add User form:<br>
+<%
+String error = request.getParameter("Add");
+if (error != null && error.equals("-1"))
+{
+	out.println("Username must be unique.");
+}
 
+%>
 <br>
 
 <form method="post" action="Add_Action.jsp" name="addUser"><br>

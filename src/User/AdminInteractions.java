@@ -93,9 +93,10 @@ public class AdminInteractions {
    * @param password
    * @param type
    */
-  public void addNewUser(String firstName, String lastName, String username, String password, char type){
+  public int addNewUser(String firstName, String lastName, String username, String password, char type){
     User user = new User(firstName, lastName, username, password, type, 'Y');
-    adminController.addNewUser(user);
+    int added = adminController.addNewUser(user);
+    return added;
   }
   
   /**
@@ -169,9 +170,10 @@ public class AdminInteractions {
    * @param type
    * @param status
    */
-  public void editUser(Account account){
+  public int editUser(Account account){
       //Account account = new Account(firstName, lastName, username, password, type, status);
-	  adminController.editUser(account);
+	  int edit = adminController.editUser(account);
+	  return edit;
   }
   
   /**

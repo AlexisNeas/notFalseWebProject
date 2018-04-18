@@ -64,13 +64,16 @@ public class AdminController {
    * 
    * @param user to be added
    */
-  public void addNewUser(Account user){
+  public int addNewUser(Account user){
     try {
-	  dbController.addNewUser(user);
+	  int added = 1;
+      dbController.addNewUser(user);
+	  return added;
     }
     catch(IllegalArgumentException e){
     	//System.out.println("Username is already taken");
     	this.error = 1;
+    	return -1;
     }
   }
   
@@ -115,15 +118,17 @@ public class AdminController {
    * @param type
    * @param status
    */
-  public void editUser(Account account){
+  public int editUser(Account account){
 	  try {
-		  dbController.setUserInfo(account.getFirstName(), account.getLastName(),
+		  int edit = dbController.setUserInfo(account.getFirstName(), account.getLastName(),
 				  account.getUsername(), account.getPassword(), account.getAccountType(),
 				  account.getStatus());
+		  return edit;
 	  }
 	  catch(IllegalArgumentException e) {
 		  //System.out.println("The account does not exist.");
 		  error = 4;
+		  return -1;
 	  }
   }
   

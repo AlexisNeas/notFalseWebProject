@@ -43,8 +43,10 @@ cellpadding="2" cellspacing="2">
 <tr>
 <tr>
 <td style="vertical-align: top;">
+<form method="post" action="EditAccount.jps" name="Edit">
 <input name="Username" value="<%=accounts.get(i).getUsername() %>" type="hidden">
 <input name="Edit" value="Edit" type="submit">
+</form>
 <br>
 </td>
 <td style="vertical-align: top;"><%= accounts.get(i).getFirstName() + " "+accounts.get(i).getLastName() %><br>
@@ -58,7 +60,7 @@ cellpadding="2" cellspacing="2">
 <td style="vertical-align: top;"><%= accounts.get(i).getStatus() %><br>
 </td>
 <td style="vertical-align: top;">
-<form method="post" action="Deactivate.jsp" name="Deactivate">
+<form method="post" action="Deactivate_Action.jsp" name="Deactivate">
 	<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
 	<input name="Deactivate" value="Deactivate" type="submit"><br>
 </form>
