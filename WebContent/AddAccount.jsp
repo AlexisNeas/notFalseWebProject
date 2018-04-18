@@ -29,7 +29,7 @@ if (error != null && error.equals("-1"))
 
 <table style="text-align: left; width: 266px; height: 228px;"
 
-border="1" cellpadding="2" cellspacing="2">
+border="1">
 
 <tbody>
 

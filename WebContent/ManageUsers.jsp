@@ -14,8 +14,7 @@ http-equiv="content-type">
 <form method="post" action="AddAccount.jsp" name="Add Account">
 	<input name="Add" value="Add Account" type="submit"><br>
 </form>
-<table style="text-align: left; width: 809px; height: 60px;" border="1"
-cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 809px; height: 60px;" border="1">
 <tbody>
 <tr>
 <td style="vertical-align: top;">Edit</td>
@@ -43,7 +42,7 @@ cellpadding="2" cellspacing="2">
 <tr>
 <tr>
 <td style="vertical-align: top;">
-<form method="post" action="EditAccount.jps" name="Edit">
+<form method="post" action="EditAccount.jsp" name="Edit">
 <input name="Username" value="<%=accounts.get(i).getUsername() %>" type="hidden">
 <input name="Edit" value="Edit" type="submit">
 </form>

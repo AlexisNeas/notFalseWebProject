@@ -25,7 +25,7 @@ Login form:<br>
 <br>
 <form method="post" action="Login_Action.jsp" name="Login"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
-border="1" cellpadding="2" cellspacing="2">
+border="1">
 <tbody>
 <tr>
 <td style="vertical-align: top;">Username<br>
@@ -37,7 +37,7 @@ border="1" cellpadding="2" cellspacing="2">
 </td>
 <td style="vertical-align: top;"><input name="password"> </td>
 </tr>
-
+<tr>
 <td style="vertical-align: top;"><input value="Log in"
 name="Log in" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td style="vertical-align: top;"><input value="Reset"

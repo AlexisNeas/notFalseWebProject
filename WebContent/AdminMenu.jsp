@@ -14,7 +14,6 @@ if(error != null && error.equals("-1")){
 }
 %><br>
 <a href="ViewSchools.jsp">Manage Universities</a><br>
-<<<<<<< HEAD
 <a href="ManageUsers.jsp">Manage Users</a><br>
 <br><br>
 <form method="post" action="LogOut_Action.jsp" name="LogOut"><br>
