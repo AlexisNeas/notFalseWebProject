@@ -1,5 +1,6 @@
 <%@ page language="java" import="User.*" %>
 <%
+//UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
 
 String username = request.getParameter("Username");
 String password = request.getParameter("Password");

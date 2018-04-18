@@ -30,9 +30,10 @@ else if(error != null && error.equals("0"))
 //UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
 //Account user = uc.viewProfile(uc.getUser().getUsername());
 AdminInteractions ai = new AdminInteractions();
+session.setAttribute("adminInter", ai);
 Account account = ai.getUserInfo(username);
 %>
-<form method="post" action="EditUser_Action.jsp" name="editUser"><br>
+<form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
 border="1" >
 <tbody>
