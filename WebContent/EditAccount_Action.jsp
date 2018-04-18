@@ -15,10 +15,14 @@ AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 		int editError = ai.editUser(a);
 		if (editError == -1)
 		{
-			response.sendRedirect("EditAccount.jsp?Edit=" + editError);
+			response.sendRedirect("EditAccount.jsp?Edit="+editError+"&Username="+username);
+			return;
 		}
 		else
-			response.sendRedirect("EditAccount.jsp?Edit="+editError);
+		{
+			response.sendRedirect("EditAccount.jsp?Edit="+editError+"&Username="+username);
+			return;
+		}
 	}
 	
 	else if(ui != null){
