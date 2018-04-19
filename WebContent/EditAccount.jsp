@@ -27,12 +27,13 @@ else if(error != null && error.equals("0"))
 <br>
 
 <%
-//UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
+AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 //Account user = uc.viewProfile(uc.getUser().getUsername());
-AdminInteractions ai = new AdminInteractions();
+//AdminInteractions ai = new AdminInteractions();
+//session.setAttribute("adminInter", ai);
 Account account = ai.getUserInfo(username);
 %>
-<form method="post" action="EditUser_Action.jsp" name="editUser"><br>
+<form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
 border="1" >
 <tbody>
@@ -63,6 +64,11 @@ border="1" >
 <td style="vertical-align: top;">Type<br>
 </td>
 <td style="vertical-align: top;"><input name="Type" value=<%=account.getAccountType()%> > </td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Status<br>
+</td>
+<td style="vertical-align: top;"><input name="Status" value=<%=account.getStatus()%> > </td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><input value="Edit"

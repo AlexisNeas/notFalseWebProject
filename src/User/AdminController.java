@@ -126,10 +126,10 @@ public class AdminController {
    */
   public int editUser(Account account){
 	  try {
-		  int edit = dbController.setUserInfo(account.getFirstName(), account.getLastName(),
+		  dbController.setUserInfo(account.getFirstName(), account.getLastName(),
 				  account.getUsername(), account.getPassword(), account.getAccountType(),
 				  account.getStatus());
-		  return edit;
+		  return 0;
 	  }
 	  catch(IllegalArgumentException e) {
 		  //System.out.println("The account does not exist.");
