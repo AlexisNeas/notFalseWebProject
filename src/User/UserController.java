@@ -196,7 +196,7 @@ public class UserController {
   {
 	  
 	  try {
-		  this.changes = dbController.setUserInfo(firstName, lastName, username,  password,  type,  status);  
+		  dbController.setUserInfo(firstName, lastName, username,  password,  type,  status);  
 		  return 0;
 	  }
 	  

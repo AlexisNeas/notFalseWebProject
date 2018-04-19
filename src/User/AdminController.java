@@ -42,8 +42,14 @@ public class AdminController {
    * 
    * @return a list of the universities
    */
-  public ArrayList<String> viewUniversities(){
-    return dbController.getListOfSchools();
+  public ArrayList<University> viewUniversities(){
+    ArrayList<String> stringSchool = dbController.getListOfSchools();
+    ArrayList<University> univList = new ArrayList<>();
+    for(String school: stringSchool)
+    {
+    	univList.add(dbController.getSchoolInfo(school));
+    }
+    return univList;
   }
   
   /**
@@ -120,10 +126,10 @@ public class AdminController {
    */
   public int editUser(Account account){
 	  try {
-		  int edit = dbController.setUserInfo(account.getFirstName(), account.getLastName(),
+		  dbController.setUserInfo(account.getFirstName(), account.getLastName(),
 				  account.getUsername(), account.getPassword(), account.getAccountType(),
 				  account.getStatus());
-		  return edit;
+		  return 0;
 	  }
 	  catch(IllegalArgumentException e) {
 		  //System.out.println("The account does not exist.");

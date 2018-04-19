@@ -94,9 +94,15 @@ public class AdminInteractions {
    * @param type
    */
   public int addNewUser(String firstName, String lastName, String username, String password, char type){
-    User user = new User(firstName, lastName, username, password, type, 'Y');
-    int added = adminController.addNewUser(user);
-    return added;
+    try {
+    	Account user = new Account(firstName, lastName, username, password, type, 'Y');
+    	int added = adminController.addNewUser(user);
+        return added;  
+    }
+    catch(IllegalArgumentException e)
+    {
+    		return -2;
+    }
   }
   
   /**
@@ -179,10 +185,10 @@ public class AdminInteractions {
   /**
    * Gets all the universities and lists them off
    */
-  public void viewUniversities(){
-    ArrayList<String> names = adminController.viewUniversities();
-    for(String name : names)
-      System.out.println("\t"+name);
+  public ArrayList<University> viewUniversities(){
+    return adminController.viewUniversities();
+    
+   
   }
   
   /**
