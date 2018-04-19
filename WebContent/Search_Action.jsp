@@ -51,59 +51,129 @@ String study3 = request.getParameter("studyArea3");
 String study4 = request.getParameter("studyArea4");
 String study5 = request.getParameter("studyArea5");
 
-   if(lowNumStudents.equals(""))
+
+
+   if(schoolName==null || schoolName.equals(""))
+	   	schoolName = "-1";
+   if(state==null || state.equals(""))
+	   state = "-1";
+   if(location==null|| location.equals(""))
+	   location = "-1";
+   if(control==null|| control.equals(""))
+	   control = "-1";
+   
+   if(study1==null|| study1.equals(""))
+	   study1 = "-1";
+   if(study2==null|| study2.equals(""))
+	   study2 = "-1";
+   if(study3==null|| study3.equals(""))
+	   study3 = "-1";
+   if(study4==null|| study4.equals(""))
+	   study4 = "-1";
+   if(study5==null|| study5.equals(""))
+	   study5 = "-1";
+   
+   if(lowNumStudents == null || lowNumStudents.equals(""))
 	   lowNumStudents = "-1";
-   if(upNumStudents.equals(""))
+   
+   if(upNumStudents == null || upNumStudents.equals(""))
 	   upNumStudents = "-1";
-   if(lowPercentFemale.equals(""))
+   
+   if(lowPercentFemale == null || lowPercentFemale.equals(""))
 	lowPercentFemale = "-1";
-   if(upPercentFemale.equals(""))
+   
+   if(upPercentFemale == null || upPercentFemale.equals(""))
 	upPercentFemale = "-1";
-   if(lowSATVerbal.equals(""))
+   
+   if(lowSATVerbal == null || lowSATVerbal .equals(""))
 	   lowSATVerbal = "-1";
-   if(upSATVerbal.equals(""))
+   
+   if(upSATVerbal == null || upSATVerbal .equals(""))
 	    upSATVerbal = "-1";
-   if(lowSATMath.equals(""))
+   
+   if(lowSATMath == null || lowSATMath.equals(""))
 	     lowSATMath = "-1";
-   if(upSATMath.equals(""))
+   
+   if(upSATMath == null || upSATMath.equals(""))
 		upSATMath = "-1";
-   if(lowTuition.equals(""))
+   
+   if(lowTuition == null || lowTuition.equals(""))
 	   lowTuition = "-1";
-   if(upTuition.equals(""))
+   
+   if(upTuition == null || upTuition.equals(""))
 	   upTuition = "-1";
-   if(lowPercentRecFinAid.equals(""))
+   
+   if(lowPercentRecFinAid == null || lowPercentRecFinAid.equals(""))
 	   lowPercentRecFinAid = "-1";
-   if(upPercentRecFinAid.equals(""))
+   if(upPercentRecFinAid == null || upPercentRecFinAid.equals(""))
 	   upPercentRecFinAid = "-1";
-   if(lowNumApplicants.equals(""))
+   if(lowNumApplicants == null || lowNumApplicants.equals(""))
 	   lowNumApplicants = "-1";
-   if(upNumApplicants.equals(""))
+   if(upNumApplicants == null || upNumApplicants.equals(""))
 	   upNumApplicants= "-1";
-   if(lowPercentAccepted.equals(""))
+   if(lowPercentAccepted == null || lowPercentAccepted.equals(""))
 	   lowPercentAccepted = "-1";
-   if(upPercentAccepted.equals(""))
+   if(upPercentAccepted == null || upPercentAccepted.equals(""))
 	  upPercentAccepted = "-1";
-   if(lowPercentEnrolled.equals(""))
+   if(lowPercentEnrolled == null || lowPercentEnrolled.equals(""))
 	   lowPercentEnrolled = "-1";
-   if(upPercentEnrolled.equals(""))
+   if(upPercentEnrolled == null || upPercentEnrolled.equals(""))
 	  upPercentEnrolled= "-1";
-   if(lowAcademicsScale.equals(""))
+   if(lowAcademicsScale == null || lowAcademicsScale.equals(""))
 	   lowAcademicsScale  = "-1";
-   if(upAcademicsScale.equals(""))
+   if(upAcademicsScale == null || upAcademicsScale.equals(""))
 	   upAcademicsScale = "-1";
-   if(lowSocialScale.equals(""))
+   if(lowSocialScale == null || lowSocialScale.equals(""))
 	   lowSocialScale   = "-1";
-   if( upSocialScale.equals(""))
+   if( upSocialScale == null || upSocialScale.equals(""))
 	   upSocialScale = "-1";
-   if(lowQualityOfLifeScale.equals(""))
+   if(lowQualityOfLifeScale == null || lowQualityOfLifeScale.equals(""))
 	   lowQualityOfLifeScale = "-1";
-   if(upQualityOfLifeScale.equals(""))
+   if(upQualityOfLifeScale == null || upQualityOfLifeScale.equals(""))
 	   upQualityOfLifeScale = "-1";
-ArrayList<University> u = ui.searchSchool(schoolName, state, location, control, Integer.parseInt(lowNumStudents), Integer.parseInt(upNumStudents), 
-		Double.parseDouble(lowPercentFemale), Double.parseDouble(upPercentFemale), Double.parseDouble(lowSATVerbal), Double.parseDouble(upSATVerbal), Double.parseDouble(lowSATMath), Double.parseDouble(upSATMath), Double.parseDouble(lowTuition), 
-		Double.parseDouble(upTuition), Double.parseDouble(lowPercentRecFinAid), Double.parseDouble(upPercentRecFinAid), Integer.parseInt(lowNumApplicants), Integer.parseInt(upNumApplicants), 
-		Double.parseDouble(lowPercentAccepted), Double.parseDouble(upPercentAccepted), Double.parseDouble(lowPercentEnrolled), Double.parseDouble(upPercentEnrolled), Integer.parseInt(lowAcademicsScale), 
-		Integer.parseInt(upAcademicsScale), Integer.parseInt(lowSocialScale), Integer.parseInt(upSocialScale), Integer.parseInt(lowQualityOfLifeScale), Integer.parseInt(upQualityOfLifeScale), 
-		study1, study2, study3, study4, study5);
-response.sendRedirect("Results.jsp");
+ArrayList<University> u = ui.searchSchool(schoolName, 
+		state,
+		location,
+		control,
+		Integer.parseInt(lowNumStudents),
+		Integer.parseInt(upNumStudents),
+		
+		Double.parseDouble(lowPercentFemale),
+		Double.parseDouble(upPercentFemale),
+		
+		Double.parseDouble(lowSATVerbal),
+		Double.parseDouble(upSATVerbal),
+		
+		Double.parseDouble(lowSATMath),
+		Double.parseDouble(upSATMath),
+		
+		Double.parseDouble(lowTuition), 
+		Double.parseDouble(upTuition),
+		
+		Double.parseDouble(lowPercentRecFinAid), 
+		Double.parseDouble(upPercentRecFinAid),
+		
+		Integer.parseInt(lowNumApplicants), 
+		Integer.parseInt(upNumApplicants), 
+		
+		Double.parseDouble(lowPercentAccepted),
+	    Double.parseDouble(upPercentAccepted),
+	 
+	    Double.parseDouble(lowPercentEnrolled), 
+	    Double.parseDouble(upPercentEnrolled),
+	    
+	    Integer.parseInt(lowAcademicsScale), 
+		Integer.parseInt(upAcademicsScale),
+		
+		Integer.parseInt(lowSocialScale),
+		Integer.parseInt(upSocialScale), 
+		
+		Integer.parseInt(lowQualityOfLifeScale), 
+		Integer.parseInt(upQualityOfLifeScale), 
+		
+		study1,
+		study2, 
+		study3,
+		study4, 
+		study5);
 %>

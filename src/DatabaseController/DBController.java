@@ -825,13 +825,13 @@ public class DBController
    ArrayList<University> result = new ArrayList<University>();
    int total = 0;
 
-    if(!schoolName.equals(""))
+    if(!schoolName.equals("-1"))
      total++; 
-    if(!stateName.equals(""))
+    if(!stateName.equals("-1"))
      total++;
-    if(!location.equals(""))
+    if(!location.equals("-1"))
      total++;
-    if(!control.equals(""))
+    if(!control.equals("-1"))
      total++;
     if(lowNumberOfStudents != -1 && upNumberOfStudents != -1)
      total++;
@@ -857,15 +857,15 @@ public class DBController
      total++;
     if(lowQualityOfLifeScale != -1 && upQualityOfLifeScale != -1)
      total++;
-    if(!emphases1.equals(""))
+    if(!emphases1.equals("-1"))
      total++;
-    if(!emphases2.equals(""))
+    if(!emphases2.equals("-1"))
      total++;
-    if(!emphases3.equals(""))
+    if(!emphases3.equals("-1"))
      total++;
-    if(!emphases4.equals(""))
+    if(!emphases4.equals("-1"))
      total++;
-    if(!emphases5.equals(""))
+    if(!emphases5.equals("-1"))
      total++;
 
     if(total==0) {
