@@ -42,8 +42,14 @@ public class AdminController {
    * 
    * @return a list of the universities
    */
-  public ArrayList<String> viewUniversities(){
-    return dbController.getListOfSchools();
+  public ArrayList<University> viewUniversities(){
+    ArrayList<String> stringSchool = dbController.getListOfSchools();
+    ArrayList<University> univList = new ArrayList<>();
+    for(String school: stringSchool)
+    {
+    	univList.add(dbController.getSchoolInfo(school));
+    }
+    return univList;
   }
   
   /**

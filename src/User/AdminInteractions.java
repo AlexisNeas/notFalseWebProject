@@ -179,10 +179,10 @@ public class AdminInteractions {
   /**
    * Gets all the universities and lists them off
    */
-  public void viewUniversities(){
-    ArrayList<String> names = adminController.viewUniversities();
-    for(String name : names)
-      System.out.println("\t"+name);
+  public ArrayList<University> viewUniversities(){
+    return adminController.viewUniversities();
+    
+   
   }
   
   /**

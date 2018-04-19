@@ -13,7 +13,7 @@ if(error != null && error.equals("-1")){
 	out.println("You must be a logged in user to access that page.");
 }
 %><br>
-<a href="ViewSchools.jsp">Manage Universities</a><br>
+<a href="ManageUniversities.jsp">Manage Universities</a><br>
 <a href="ManageUsers.jsp">Manage Users</a><br>
 <br><br>
 <form method="post" action="LogOut_Action.jsp" name="LogOut"><br>
