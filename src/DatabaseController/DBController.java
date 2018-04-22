@@ -825,47 +825,47 @@ public class DBController
    ArrayList<University> result = new ArrayList<University>();
    int total = 0;
 
-    if(!schoolName.equals("-1"))
+    if(!schoolName.equals("-2"))
      total++; 
-    if(!stateName.equals("-1"))
+    if(!stateName.equals("-2"))
      total++;
-    if(!location.equals("-1"))
+    if(!location.equals("-2"))
      total++;
-    if(!control.equals("-1"))
+    if(!control.equals("-2"))
      total++;
-    if(lowNumberOfStudents != -1 && upNumberOfStudents != -1)
+    if(lowNumberOfStudents != -2 && upNumberOfStudents != -2)
      total++;
-    if(lowPercentFemale != -1 && upPercentFemale != -1)
+    if(lowPercentFemale != -2 && upPercentFemale != -2)
      total++;  
-    if(lowSATVerbal != -1 && upSATVerbal != -1)
+    if(lowSATVerbal != -2 && upSATVerbal != -2)
      total++;
-    if(lowSATMath != -1 && upSATMath != -1)
+    if(lowSATMath != -2 && upSATMath != -2)
      total++;
-    if(lowExpenses != -1 && upExpenses != -1)
+    if(lowExpenses != -2 && upExpenses != -2)
      total++;
-    if(lowPercentRecFinAid != -1 && upPercentRecFinAid != -1)
+    if(lowPercentRecFinAid != -2 && upPercentRecFinAid != -2)
      total++;
-    if(lowNumApplicants != -1 && upNumApplicants != -1)
+    if(lowNumApplicants != -2 && upNumApplicants != -2)
      total++;
-    if(lowPercentAccepted != -1 && upPercentAccepted != -1)
+    if(lowPercentAccepted != -2 && upPercentAccepted != -2)
      total++;
-    if(lowPercentEnrolled != -1 && upPercentEnrolled != -1)
+    if(lowPercentEnrolled != -2 && upPercentEnrolled != -2)
      total++;
-    if(lowAcademicsScale != -1 && upAcademicsScale != -1)
+    if(lowAcademicsScale != -2 && upAcademicsScale != -2)
      total++;
-    if(lowSocialScale != -1 && upSocialScale != -1)
+    if(lowSocialScale != -2 && upSocialScale != -2)
      total++;
-    if(lowQualityOfLifeScale != -1 && upQualityOfLifeScale != -1)
+    if(lowQualityOfLifeScale != -2 && upQualityOfLifeScale != -2)
      total++;
-    if(!emphases1.equals("-1"))
+    if(!emphases1.equals("-2"))
      total++;
-    if(!emphases2.equals("-1"))
+    if(!emphases2.equals("-2"))
      total++;
-    if(!emphases3.equals("-1"))
+    if(!emphases3.equals("-2"))
      total++;
-    if(!emphases4.equals("-1"))
+    if(!emphases4.equals("-2"))
      total++;
-    if(!emphases5.equals("-1"))
+    if(!emphases5.equals("-2"))
      total++;
 
     if(total==0) {
@@ -876,52 +876,52 @@ public class DBController
 	  for(int i = 0; i <array.length; i++) 
 	  {
 		  int searchTotal = 0;
-		  if(!schoolName.equals("!"))
+		  if(!schoolName.equals("-2"))
 			  if(array[i][0].indexOf(schoolName)>=0)
 				  searchTotal++;
-		  if(!stateName.equals("!"))
+		  if(!stateName.equals("-2"))
 			  if(array[i][1].indexOf(stateName)>=0)
 				  searchTotal++;
-		  if(!location.equals("!"))
+		  if(!location.equals("-2"))
 			  if(array[i][2].indexOf(location)>=0)
 				  searchTotal++;
-		  if(!control.equals("!"))
+		  if(!control.equals("-2"))
 			  if(array[i][3].indexOf(control)>=0)
 				  searchTotal++;
-		  if(lowNumberOfStudents != -1)
+		  if(lowNumberOfStudents != -2)
 			  if(lowNumberOfStudents < Integer.parseInt(array[i][4]) && upNumberOfStudents > Integer.parseInt(array[i][4]))
 				  searchTotal++;
-		  if(lowPercentFemale != -1)
+		  if(lowPercentFemale != -2)
 			  if(lowPercentFemale < Double.parseDouble(array[i][5]) && upPercentFemale > Double.parseDouble(array[i][5]))
 				  searchTotal++;  
-		  if(lowSATVerbal != -1)
+		  if(lowSATVerbal != -2)
 			  if(lowSATVerbal < Double.parseDouble(array[i][6]) && upSATVerbal > Double.parseDouble(array[i][6]))
 				  searchTotal++;
-		  if(lowSATMath != -1)
+		  if(lowSATMath != -2)
 			  if(lowSATMath < Double.parseDouble(array[i][7]) && upSATMath > Double.parseDouble(array[i][7]))
 				  searchTotal++;
-		  if(lowExpenses != -1)
+		  if(lowExpenses != -2)
 			  if(lowExpenses < Double.parseDouble(array[i][8]) && upExpenses > Double.parseDouble(array[i][8]))
 				  searchTotal++;
-		  if(lowPercentRecFinAid != -1)
+		  if(lowPercentRecFinAid != -2)
 			  if(lowPercentRecFinAid < Double.parseDouble(array[i][9]) && upPercentRecFinAid > Double.parseDouble(array[i][9]))
 				  searchTotal++;
-		  if(lowNumApplicants != -1)
+		  if(lowNumApplicants != -2)
 			  if(lowNumApplicants < Double.parseDouble(array[i][10]) && upNumApplicants > Double.parseDouble(array[i][10]))
 				  searchTotal++;
-		  if(lowPercentAccepted != -1)
+		  if(lowPercentAccepted != -2)
 			  if(lowPercentAccepted < Double.parseDouble(array[i][11]) && upPercentAccepted > Double.parseDouble(array[i][11]))
 				  searchTotal++;
-		  if(lowPercentEnrolled != -1)
+		  if(lowPercentEnrolled != -2)
 			  if(lowPercentEnrolled < Double.parseDouble(array[i][12]) && upPercentEnrolled > Double.parseDouble(array[i][12]))
 				  searchTotal++;
-		  if(lowAcademicsScale != -1)
+		  if(lowAcademicsScale != -2)
 			  if(lowAcademicsScale < Integer.parseInt(array[i][13]) && upAcademicsScale > Integer.parseInt(array[i][13]))
 				  searchTotal++;
-		  if(lowSocialScale != -1)
+		  if(lowSocialScale != -2)
 			  if(lowSocialScale < Integer.parseInt(array[i][14]) && upSocialScale > Integer.parseInt(array[i][14]))
 				  searchTotal++;
-		  if(lowQualityOfLifeScale != -1)
+		  if(lowQualityOfLifeScale != -2)
 			  if(lowQualityOfLifeScale < Integer.parseInt(array[i][15]) && upQualityOfLifeScale > Integer.parseInt(array[i][15]))
 				  searchTotal++;
 		  ArrayList<String> temps = new ArrayList<String>();
@@ -932,7 +932,7 @@ public class DBController
 			  if(arrayEmphases[j][0].equals(array[i][0]))
 			  {
 				  
-				  if(!emphases1.equals("!"))
+				  if(!emphases1.equals("-2"))
 				  {
 					  if(emphases1.equals(arrayEmphases[j][1]))
 					  {
@@ -941,7 +941,7 @@ public class DBController
 					  }
 				  }
 		  
-				  if(!emphases2.equals("!"))
+				  if(!emphases2.equals("-2"))
 				  {
 					  if(emphases2.equals(arrayEmphases[j][1]))
 					  {
@@ -949,7 +949,7 @@ public class DBController
 						  searchTotal++;
 					  }
 				  }
-				  if(!emphases3.equals("!"))
+				  if(!emphases3.equals("-2"))
 				  {
 					  if(emphases3.equals(arrayEmphases[j][1]))
 					  {
@@ -957,7 +957,7 @@ public class DBController
 						  searchTotal++;
 					  }
 				  }
-				  if(!emphases4.equals("!"))
+				  if(!emphases4.equals("-2"))
 				  {
 					  if(emphases4.equals(arrayEmphases[j][1]))
 					  {
@@ -965,7 +965,7 @@ public class DBController
 						  searchTotal++;
 					  }
 				  }
-				  if(!emphases5.equals("!"))
+				  if(!emphases5.equals("-2"))
 				  {
 					  if(emphases5.equals(arrayEmphases[j][1]))
 					  {

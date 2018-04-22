@@ -54,83 +54,83 @@ String study5 = request.getParameter("studyArea5");
 
 
    if(schoolName==null || schoolName.equals(""))
-	   	schoolName = "-1";
+	   	schoolName = "-2";
    if(state==null || state.equals(""))
-	   state = "-1";
+	   state = "-2";
    if(location==null|| location.equals(""))
-	   location = "-1";
+	   location = "-2";
    if(control==null|| control.equals(""))
-	   control = "-1";
+	   control = "-2";
    
    if(study1==null|| study1.equals(""))
-	   study1 = "-1";
+	   study1 = "-2";
    if(study2==null|| study2.equals(""))
-	   study2 = "-1";
+	   study2 = "-2";
    if(study3==null|| study3.equals(""))
-	   study3 = "-1";
+	   study3 = "-2";
    if(study4==null|| study4.equals(""))
-	   study4 = "-1";
+	   study4 = "-2";
    if(study5==null|| study5.equals(""))
-	   study5 = "-1";
+	   study5 = "-2";
    
    if(lowNumStudents == null || lowNumStudents.equals(""))
-	   lowNumStudents = "-1";
+	   lowNumStudents = "-2";
    
    if(upNumStudents == null || upNumStudents.equals(""))
-	   upNumStudents = "-1";
+	   upNumStudents = "-2";
    
    if(lowPercentFemale == null || lowPercentFemale.equals(""))
-	lowPercentFemale = "-1";
+	lowPercentFemale = "-2";
    
    if(upPercentFemale == null || upPercentFemale.equals(""))
-	upPercentFemale = "-1";
+	upPercentFemale = "-2";
    
    if(lowSATVerbal == null || lowSATVerbal .equals(""))
-	   lowSATVerbal = "-1";
+	   lowSATVerbal = "-2";
    
    if(upSATVerbal == null || upSATVerbal .equals(""))
-	    upSATVerbal = "-1";
+	    upSATVerbal = "-2";
    
    if(lowSATMath == null || lowSATMath.equals(""))
-	     lowSATMath = "-1";
+	     lowSATMath = "-2";
    
    if(upSATMath == null || upSATMath.equals(""))
-		upSATMath = "-1";
+		upSATMath = "-2";
    
    if(lowTuition == null || lowTuition.equals(""))
-	   lowTuition = "-1";
+	   lowTuition = "-2";
    
    if(upTuition == null || upTuition.equals(""))
-	   upTuition = "-1";
+	   upTuition = "-2";
    
    if(lowPercentRecFinAid == null || lowPercentRecFinAid.equals(""))
-	   lowPercentRecFinAid = "-1";
+	   lowPercentRecFinAid = "-2";
    if(upPercentRecFinAid == null || upPercentRecFinAid.equals(""))
-	   upPercentRecFinAid = "-1";
+	   upPercentRecFinAid = "-2";
    if(lowNumApplicants == null || lowNumApplicants.equals(""))
-	   lowNumApplicants = "-1";
+	   lowNumApplicants = "-2";
    if(upNumApplicants == null || upNumApplicants.equals(""))
-	   upNumApplicants= "-1";
+	   upNumApplicants= "-2";
    if(lowPercentAccepted == null || lowPercentAccepted.equals(""))
-	   lowPercentAccepted = "-1";
+	   lowPercentAccepted = "-2";
    if(upPercentAccepted == null || upPercentAccepted.equals(""))
-	  upPercentAccepted = "-1";
+	  upPercentAccepted = "-2";
    if(lowPercentEnrolled == null || lowPercentEnrolled.equals(""))
-	   lowPercentEnrolled = "-1";
+	   lowPercentEnrolled = "-2";
    if(upPercentEnrolled == null || upPercentEnrolled.equals(""))
-	  upPercentEnrolled= "-1";
+	  upPercentEnrolled= "-2";
    if(lowAcademicsScale == null || lowAcademicsScale.equals(""))
-	   lowAcademicsScale  = "-1";
+	   lowAcademicsScale  = "-2";
    if(upAcademicsScale == null || upAcademicsScale.equals(""))
-	   upAcademicsScale = "-1";
+	   upAcademicsScale = "-2";
    if(lowSocialScale == null || lowSocialScale.equals(""))
-	   lowSocialScale   = "-1";
+	   lowSocialScale   = "-2";
    if( upSocialScale == null || upSocialScale.equals(""))
-	   upSocialScale = "-1";
+	   upSocialScale = "-2";
    if(lowQualityOfLifeScale == null || lowQualityOfLifeScale.equals(""))
-	   lowQualityOfLifeScale = "-1";
+	   lowQualityOfLifeScale = "-2";
    if(upQualityOfLifeScale == null || upQualityOfLifeScale.equals(""))
-	   upQualityOfLifeScale = "-1";
+	   upQualityOfLifeScale = "-2";
 ArrayList<University> u = ui.searchSchool(schoolName, 
 		state,
 		location,
