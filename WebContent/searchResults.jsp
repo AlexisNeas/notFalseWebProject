@@ -32,8 +32,7 @@ for(int i = 0; i < size;i++)
 
 %>
 <form method="post" action="saveSchool" name="searchResult">
-<table style="text-align: left; width: 100%;" border="1"
-cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 100%;" border="1">
 <tbody>
 <tr>
 <td

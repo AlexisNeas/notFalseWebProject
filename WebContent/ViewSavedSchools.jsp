@@ -8,8 +8,7 @@ http-equiv="content-type">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*" %>
 <br>
-<table style="text-align: left; width: 536px; height: 40px;" border="1"
-cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 536px; height: 40px;" border="1">
 <tbody>
 <tr align="center">
 <td colspan="3" style="vertical-align: top;">School<br>
