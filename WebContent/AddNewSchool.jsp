@@ -131,9 +131,6 @@ cellspacing="2">
 <form method = "post" action = "ManageUniversities.jsp" name = "Cancel"><br>
 <input value = "Cancel" name = "Cancel" type = "submit"><br>
 </form>
-
-
-
 </body>
 </html>
 

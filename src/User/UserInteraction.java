@@ -191,7 +191,7 @@ public class UserInteraction {
   public Account viewProfile(String username)
   {
     return userController.viewProfile(username);
-
+    
   }
 
   
