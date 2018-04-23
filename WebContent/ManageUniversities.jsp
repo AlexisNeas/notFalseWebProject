@@ -11,7 +11,11 @@ AdminInteractions ai = new AdminInteractions();
 
 
 %>
-<a href="AddNewSchool.jsp">Add a new university</a><br>
+<center>
+<a href="AddNewSchool.jsp">Add a new university</a>
+</center>
+<br>
+
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
@@ -69,58 +73,59 @@ for (University univ: universityList)
 {
 %>
 <tr>
-<td style="vertical-align: top;"><input name="School Name" value=<%=univ.getSchoolName()%>>
+<td style="vertical-align: top;"><%=univ.getSchoolName()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name="State" value = <%=univ.getState()%>>
+<td style="vertical-align: top;"> <%=univ.getState()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Location" value = <%=univ.getLocation()%>> 
+<td style="vertical-align: top;"><%=univ.getLocation()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Control" value = <%=univ.getControl()%>>
+<td style="vertical-align: top;"><%=univ.getControl()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Number of Students" value = <%=univ.getNumStudents()%>>
+<td style="vertical-align: top;"><%=univ.getNumStudents()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "PercentFemale" value = <%=univ.getPercentFemale()%>>
+<td style="vertical-align: top;"><%=univ.getPercentFemale()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "SATVerbal" value = <%=univ.getSatVerbal()%>>
+<td style="vertical-align: top;"><%=univ.getSatVerbal()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "SATMath" value = <%=univ.getSatMath()%>>
+<td style="vertical-align: top;"><%=univ.getSatMath()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Expenses" value = <%=univ.getTuition()%>>
+<td style="vertical-align: top;"><%=univ.getTuition()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Percent with Financial Aid" value = <%=univ.getPercentRecFinAid()%>>
+<td style="vertical-align: top;"><%=univ.getPercentRecFinAid()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Number of Applicants" value = <%=univ.getNumApplicants()%>>
+<td style="vertical-align: top;"><%=univ.getNumApplicants()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Percent Admitted" value = <%=univ.getPercentAccepted()%>>
+<td style="vertical-align: top;"><%=univ.getPercentAccepted()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Percent Enrolled" value = <%=univ.getPercentEnroll()%>>
+<td style="vertical-align: top;"><%=univ.getPercentEnroll()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Academics Scale" value = <%=univ.getAcademicScale()%>>
+<td style="vertical-align: top;"><%=univ.getAcademicScale()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Social Scale" value = <%=univ.getSocial()%>>
+<td style="vertical-align: top;"><%=univ.getSocial()%>
 <br>
 </td>
-<td style="vertical-align: top;"><input name = "Quality of Life Scale" value = <%=univ.getQualOfLife()%>>
+<td style="vertical-align: top;"><%=univ.getQualOfLife()%>
 <br>
 </td>
-<form method="post" action="ViewSchoolInfo.jsp" name="Schools"><br>
-<td style="vertical-align: top;"><input name="Edit"  value="Edit" type="submit"></input>
+<td style="vertical-align: top;">
+<form method="post" action="ViewSchoolInfo.jsp" name="Schools">
+<input name="Edit"  value= "Edit" type="submit"></input>
+<input name="School" value= <%= univ.getSchoolName() %> type="hidden">
 <br>
-<input name="SchoolName" value=<%=univ.getSchoolName()%> type = "hidden">
 </form>
 </td>
 </tr>
