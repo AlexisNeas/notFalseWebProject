@@ -169,10 +169,6 @@ public class UserInteraction {
 	          lowQualityOfLifeScale,  upQualityOfLifeScale,
 	          emphases1, emphases2, emphases3,
 	          emphases4, emphases5);
-    for (int i = 0; i<universities.size();i++)
-    {
-     System.out.println(universities.get(i).getSchoolName()); 
-    }
     return universities;
   }  
   
