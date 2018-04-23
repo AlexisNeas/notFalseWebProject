@@ -34,7 +34,7 @@ public class UserInteraction {
    * 
    * @param schoolName the school that the schools should be similar to
    */
-  public void displaySimilarSchools(String schoolName)
+  public ArrayList<University> displaySimilarSchools(String schoolName)
   {
     University mainSchool = userController.getSchoolInfo(schoolName);
     
@@ -42,13 +42,8 @@ public class UserInteraction {
     
      if(universities == null)
        System.out.println("Error: No Similar Schools");
-     else 
-     {
-       for(University u : universities)
-       {
-        System.out.println(u.getSchoolName()); 
-       }
-     }
+
+     return universities;
   }
   
 /**

@@ -69,6 +69,6 @@ else{
 }
 %>
 <br>
-
+<%@include file="similarSchoolsAction.jsp" %>
 </body>
 </html>
