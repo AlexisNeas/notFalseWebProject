@@ -148,23 +148,33 @@ public class AdminInteractions {
    * @param perFinancialAid the percent of students receiving financial aid
    * @param numApplicants number of people who apply to the school
    * @param perAccepted the percent of applicants who get accepted
-   * @param perEnroll precent of people who actually enroll
+   * @param perEnroll percent of people who actually enroll
    * @param academicScale the academic scale of the school
    * @param social the scale of social life
    * @param qualOfLife scale of the quality of life of students
  * @throws Exception 
    */
-  public void addSchool(String name, String state, String loc, String control, int numStudents, double perFem,
+  public int addSchool(String name, String state, String loc, String control, int numStudents, double perFem,
                         int satVerbal, int satMath, double tuition, double perFinancialAid, int numApplicants,
                         double perAccepted, double perEnroll, int academicScale, int social, int qualOfLife,
-                        String emp1, String emp2, String emp3, String emp4, String emp5) {
+                        String emp1, String emp2, String emp3, String emp4, String emp5) { 
     
+	  try { 
     University school = new University(name, state, loc, control, numStudents, perFem,
                                        satVerbal, satMath, tuition, perFinancialAid, numApplicants,
                                        perAccepted, perEnroll, academicScale, social, qualOfLife,
                                        emp1, emp2, emp3, emp4, emp5);
-      adminController.addSchool(school);
+  
+      int add = adminController.addSchool(school);
+       return add;
+    }
+  catch(IllegalArgumentException e)
+  {
+  		return -1;
   }
+}
+      
+  
   
   /**
    * Edits a user

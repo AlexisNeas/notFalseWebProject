@@ -11,6 +11,7 @@ AdminInteractions ai = new AdminInteractions();
 
 
 %>
+<a href="AddNewSchool.jsp">Add a new university</a><br>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
