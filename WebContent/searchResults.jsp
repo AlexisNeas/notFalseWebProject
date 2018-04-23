@@ -31,14 +31,17 @@ for(int i = 0; i < size;i++)
 
 
 %>
-<form method="post" action="saveSchool" name="searchResult">
-<table style="text-align: left; width: 100%;" border="1"
-cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 100%;" border="1">
 <tbody>
-<tr>
-<td
-style="vertical-align: top; width: 100px; text-align: center;"><input
-name="saveSchool" value="Save" type="submit"><br>
+<tr><td
+style="vertical-align: top; width: 100px; text-align: center;">
+<form method="post" action="saveSchool" name="searchResult"><input
+name="saveSchool" value="Save" type="submit">
+
+
+
+</form>
+<br>
 </td>
 <td style="vertical-align: top;"><br>
 <%
@@ -46,8 +49,12 @@ out.println("School Name: " + u.get(i).getSchoolName() + "\n" + "State: " + u.ge
 %>
 </td>
 <td
-style="vertical-align: top; width: 150px; text-align: center;"><input
+style="vertical-align: top; width: 150px; text-align: center;">
+
+<form method="post" action="viewSchool" name="searchResult">
+<input
 name="viewSchool" value="View School" type="submit"><br>
+</form>
 </td>
 </tr>
 </tbody>
@@ -60,6 +67,5 @@ else{
 }
 %>
 <br>
-</form>
 </body>
 </html>
