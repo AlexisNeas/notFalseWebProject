@@ -31,9 +31,7 @@ for(int i = 0; i < size;i++)
 
 
 %>
-
-<table style="text-align: left; width: 100%;" border="1"
-cellpadding="2" cellspacing="2">
+<table style="text-align: left; width: 100%;" border="1">
 <tbody>
 <tr><td
 style="vertical-align: top; width: 100px; text-align: center;">
@@ -69,6 +67,5 @@ else{
 }
 %>
 <br>
-<%@include file="similarSchoolsAction.jsp" %>
 </body>
 </html>

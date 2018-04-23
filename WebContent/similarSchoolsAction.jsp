@@ -1,5 +1,5 @@
 <%
-ArrayList<University> us = interactions.displaySimilarSchools(u.get(0).getSchoolName());
+
 
 
 %>
