@@ -3,7 +3,7 @@
 <head>
 
 <title>Login Form</title>
-<link rel="stylesheet" type="text/css" href="build/CMC.css">
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <br> 

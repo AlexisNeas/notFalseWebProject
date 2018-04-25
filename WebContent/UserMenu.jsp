@@ -6,7 +6,7 @@
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title>MainMenu</title>
-<link rel="stylesheet" type="text/css" href="build/CMC.css">
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <h1>Welcome, User </h1>
