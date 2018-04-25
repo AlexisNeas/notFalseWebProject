@@ -6,7 +6,10 @@
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
+<header>
+<h2 class="Title" >Log In</h2>
 
+</header>
 <br> 
 <%  
 String error =request.getParameter("logIn");
@@ -23,10 +26,11 @@ else if(error !=null && error.equals("1")){
 	out.println("You have been logged out.");
 }
 %><br>
-Login form:<br>
+
 <br>
-<form method="post" action="Login_Action.jsp" name="Login"><br>
-<table style="text-align: left; width: 266px; height: 228px;"
+<center>
+<form method="post" action="Login_Action.jsp" name="Login" > <br>
+<table style="text-align: center; width: 266px; height: 228px;"
 border="1">
 <tbody>
 <tr>
@@ -49,6 +53,7 @@ name="Reset" type="reset"></td>
 </table>
 <br>
 </form>
+</center>
 <br>
 
 </body>

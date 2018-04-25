@@ -15,7 +15,7 @@ body{
 	font-size: 50px;
     color: White; 
 	text-align: center;
-	border: 2px solid grey;
+
 }
 w.3-container w3-red w3-center {
 	background-color: #c6def5;
@@ -88,7 +88,9 @@ address {
 	border-top: thin dotted 
 	}
 input{
-	color: white;
+	text-align:center;
+	color: Black;
+	font-weight: bold;
 	background-color: #dadfe0;
 }	
 

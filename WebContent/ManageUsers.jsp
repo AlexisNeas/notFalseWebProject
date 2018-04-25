@@ -3,6 +3,7 @@
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title>View Users</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

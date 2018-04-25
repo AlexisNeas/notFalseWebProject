@@ -13,7 +13,7 @@
   <h1 class="w3-margin w3-jumbo">WELCOME TO CSC</h1>
   <p class="w3-xlarge">Your college search starts here</p>
   <center><form class= "StartButton" align="center" method="post" action="Login.jsp" name="Log In"> <br>
-  <input value="Log In "name="Log In" type="submit"></form></center>
+  <input value="Go to Log In Page"name="Log In" type="submit"></form></center>
 </header>
 </body></form>
 </html>
