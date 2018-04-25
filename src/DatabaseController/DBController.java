@@ -385,8 +385,8 @@ public class DBController
   public int userSaveSchool(String username,String schoolName) throws Exception
   {
     int i = univDBlib.user_saveSchool(username, schoolName);
-    if(i == -1)
-    	throw new Exception("ERROR IN DATABASE");
+
+    	
     return i;
   }
   

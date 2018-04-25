@@ -2,7 +2,17 @@
     
 <%	
 	UserInteraction interactions = (UserInteraction)session.getAttribute("userInter");
-	interactions.addSchool(request.getParameter("saveSchool"),"juser");
-	int one = 1;
+
+		int i = interactions.addSchool(request.getParameter("saveSchool"),"juser");
+
+
+	if(i == -1)
+	{
+		response.sendRedirect("searchResults.jsp?result="+2);
+	}
+
+	else
+	{
 	response.sendRedirect("searchResults.jsp?result="+1);
+	}
 %>

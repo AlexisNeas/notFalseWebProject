@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyUser.jsp" %>
 <%@ page language="java" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*"%>
 <%@include file="Search_Action.jsp" %>
 <html>
@@ -21,15 +23,31 @@ Search Results<br>
 
 <%
 
+
+
 String error =request.getParameter("result");
-if(u != null ||(error != null && error.equals("1")))
+if(error != null && error.equals("2"))
+{
+	%>
+	
+	<script type="text/javascript">
+    var msg = "School did not save to profile.";
+    alert(msg);
+</script>
+	
+	
+	<%
+	
+}
+
+if(u != null ||(error != null) && session.getAttribute("u") != null)
 {
 
 if(u != null)
 	session.setAttribute("u", u);
 	
 
-if(error != null && error.equals("1"))
+if(error != null)
 {
 	u = (ArrayList<University>)session.getAttribute("u"); 
 	//u = (ArrayList<University>)at;
