@@ -4,7 +4,8 @@
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title></title>
+<title>Welcome, Admin</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%  
@@ -13,8 +14,9 @@ if(error != null && error.equals("-1")){
 	out.println("You must be a logged in user to access that page.");
 }
 %><br>
-<a href="ManageUniversities.jsp">Manage Universities</a><br>
-<a href="ManageUsers.jsp">Manage Users</a><br>
+<u1 class="navbar">
+<li><a href="ManageUniversities.jsp">Manage Universities</a></li><br>
+<li><a href="ManageUsers.jsp">Manage Users</a></li><br></u1> 
 <br><br>
 <form method="post" action="LogOut_Action.jsp" name="LogOut"><br>
 <input value="Log Out"name="Log out" type="submit"></form>
