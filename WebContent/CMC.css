@@ -1,10 +1,47 @@
  type="text/css">
+ 
+body,h1,h2,h3 {font-family: Georgia, "Times New Roman" Times, serif; }
+
 body{
 	padding-left: 0;
-	color: #27445c;
-	background-color: #93c5ed
+	color: White;
+	background: #d0d3d6;
+	background: linear-gradient( #386285, white);
 	margin: 0;
+	text-align: center;
 	}
+.StartButton{
+	font-weight: bold;
+	font-size: 50px;
+    color: White; 
+	text-align: center;
+	border: 2px solid grey;
+}
+w.3-container w3-red w3-center {
+	background-color: #c6def5;
+}
+.w3-margin w3-jumbo{
+	font-size: 300%;
+	font-family: Sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+	color: #c6def5;
+	
+	}
+h1 {
+	font-family: Georgia, "Times New Roman" Times, serif;
+	font-size: 200%
+	}	
+table,td,tr{
+	text-align: center;
+	font-family: Georgia, "Times New Roman" Times, serif; 
+	border: 1px solid grey;
+	color: #52575c;
+}	
+td,tr{
+	background-color: White;
+}
 u1.navbar {
 	list-style: none; 
 	overflow: hidden;
@@ -13,10 +50,7 @@ u1.navbar {
 	margin: 0;
 	background-color: White;
 	}
-h1 {
-	font-family: Georgia, "Times New Roman" Times, serif;
-	font-size: 200%
-	}
+
 u1.navbar li{
 	float:left ;
 	border-right: .4em solid Grey;
@@ -53,4 +87,9 @@ address {
 	padding-top: 1em;
 	border-top: thin dotted 
 	}
+input{
+	color: white;
+	background-color: #dadfe0;
+}	
+
 	

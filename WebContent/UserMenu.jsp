@@ -9,6 +9,7 @@ http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
+<center>
 <h1>Welcome, User </h1>
 <form align="right" method="post" action="LogOut_Action.jsp" name="LogOut"><br>
 <input value="Log Out"name="Log out" type="submit"></form>
@@ -22,9 +23,9 @@ if(error != null && error.equals("-1")){
 <u1 class="navbar">
 <li><a href="SearchMenu.jsp">Search for Schools</a><br>
 <li><a href="ViewSavedSchools.jsp">Manage My Saved Schools</a><br>
-<li><a href="EditProfile.jsp">Manage My Profile</a><br>
-</u1>
-<br><br>
+<li><a href="EditProfile.jsp">Manage My Profile</a><br></u1>
 
+<br><br>
+</center>
 </body>
 </html>

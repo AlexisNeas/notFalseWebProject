@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
+
 <br> 
 <%  
 String error =request.getParameter("logIn");
@@ -29,12 +30,12 @@ Login form:<br>
 border="1">
 <tbody>
 <tr>
-<td style="vertical-align: top;">Username<br>
+<td style="vertical-align: top;"><b>Username</b><br>
 </td>
 <td style="vertical-align: top;"><input name="username"> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Password<br>
+<td style="vertical-align: top;"><b>Password</b><br>
 </td>
 <td style="vertical-align: top;"><input name="password"> </td>
 </tr>
@@ -49,5 +50,6 @@ name="Reset" type="reset"></td>
 <br>
 </form>
 <br>
+
 </body>
 </html>
