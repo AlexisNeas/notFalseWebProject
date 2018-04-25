@@ -206,7 +206,7 @@ public class DBController
                                         univ.getPercentEnroll(),  univ.getAcademicScale(),  univ.getSocial(),  univ.getQualOfLife());
     try {
 
-    if(univ.getStudyArea1() != null)
+    if(univ.getStudyArea1() != null || univ.getStudyArea1().equals(""))
     {
     	if(!current.getStudyArea1().equals(univ.getStudyArea1()))
     	{
@@ -215,7 +215,7 @@ public class DBController
     		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea1());
     	}
     }
-    if(univ.getStudyArea2() != null)
+    if(univ.getStudyArea2() != null|| univ.getStudyArea2().equals(""))
     {
     	if(!current.getStudyArea2().equals(univ.getStudyArea2()))
     	{
@@ -223,7 +223,7 @@ public class DBController
     		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
     	}
     }
-    if(univ.getStudyArea3() != null)
+    if(univ.getStudyArea3() != null|| univ.getStudyArea3().equals(""))
     {
     	if(!current.getStudyArea3().equals(univ.getStudyArea3()))
     	{
@@ -231,7 +231,7 @@ public class DBController
     		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
     	}
     }
-    if(univ.getStudyArea4() != null)
+    if(univ.getStudyArea4() != null|| univ.getStudyArea4().equals(""))
     {
     	if(!current.getStudyArea4().equals(univ.getStudyArea4()))
     	{
@@ -239,7 +239,7 @@ public class DBController
     		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea4());
     	}
     }
-    if(univ.getStudyArea5() != null)
+    if(univ.getStudyArea5() != null|| univ.getStudyArea5().equals(""))
     {
     	if(!current.getStudyArea5().equals(univ.getStudyArea5()))
     	{
@@ -1137,13 +1137,14 @@ public class DBController
     try{
       DBController databasecontroller = new DBController("notfal", "csci230");
       //University u = databasecontroller.getSchoolInfo("UNIVERSITY OF MINNESOTA");
-      String[][] info = databasecontroller.univDBlib.user_getUsers();
+      //String[][] info = databasecontroller.univDBlib.user_getUsers();
       //ArrayList<String> emphases = new ArrayList<String>();
       //ArrayList<String> emp = databasecontroller.getEmphases();
-      for(int i = 0; i < info.length; i++)
+      /*for(int i = 0; i < info.length; i++)
       {for(int j = 0; j<info[i].length;j++)
     	  System.out.println(info[i][j]);
-      }
+      }*/
+      databasecontroller.userSaveSchool("juser", "UNIVERSITY OF MINNESOTA");
       
       
       
