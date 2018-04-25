@@ -34,7 +34,7 @@ if (ai != null)
 	
 	if (add == -1)
 	{
-		response.sendRedirect("AddNewSchool.jsp");
+		response.sendRedirect("AddNewSchool.jsp?addNewSchool="+add);
 	return;
 	}
 	else 

@@ -38,6 +38,7 @@ public class UserInteraction {
   {
     University mainSchool = userController.getSchoolInfo(schoolName);
     
+
     return userController.findSimilarSchools(mainSchool);
   }
   
@@ -190,7 +191,7 @@ public class UserInteraction {
   public Account viewProfile(String username)
   {
     return userController.viewProfile(username);
-
+    
   }
 
   
