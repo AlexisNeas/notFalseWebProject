@@ -25,6 +25,10 @@ double percentRecFinAid = Double.parseDouble(request.getParameter("FinAid"));
 int numApp = Integer.parseInt(request.getParameter("numApp"));
 int acScale = Integer.parseInt(request.getParameter("AcScale"));
 
+University univ = new University(schoolName, state, location, control, numStudents, percentFemale, 
+		satV, satM, tuition, percentRecFinAid, numApp, percentAccepted, 
+		percentEnrolled, acScale, social, qual, emp1, emp2, emp3, emp4, emp5);
+
 ArrayList<University> universityList = ai.viewUniversities();
 if (ai != null)
 {
@@ -40,8 +44,6 @@ if (ai != null)
 	else 
 	{
 		
-	}
-	
-	
+	}	
 }
 %>
