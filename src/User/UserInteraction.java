@@ -80,8 +80,7 @@ public class UserInteraction {
   {
    int response = userController.addSchool(username, school); 
    
-   if(response == 1)
-	   System.out.println("\tSchool has been added.");
+   
   }
   
   /**
