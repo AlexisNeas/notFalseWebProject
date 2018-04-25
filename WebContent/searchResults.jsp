@@ -21,10 +21,9 @@ Search Results<br>
 
 <%
 
-if(u != null)
-{
 int size = u.size();
-UserInteraction interactions = new UserInteraction();
+if(size != 0)
+{
 for(int i = 0; i < size;i++)
 {
 	
@@ -35,9 +34,10 @@ for(int i = 0; i < size;i++)
 <tbody>
 <tr><td
 style="vertical-align: top; width: 100px; text-align: center;">
-<form method="post" action="saveSchool" name="searchResult"><input
-name="saveSchool" value="Save" type="submit">
-
+<form method="post" action="addSchoolToProfileAction.jsp" name="searchResult">
+<input
+name="save" value="Save" type="submit">
+<input name="saveSchool" value= "<%= u.get(i).getSchoolName() %>" type="hidden">
 
 
 </form>
@@ -45,15 +45,17 @@ name="saveSchool" value="Save" type="submit">
 </td>
 <td style="vertical-align: top;"><br>
 <%
-out.println("School Name: " + u.get(i).getSchoolName() + "\n" + "State: " + u.get(i).getState());
+String name = u.get(i).getSchoolName();
+out.println("School Name: " + name + "\n" + "State: " + u.get(i).getState());
 %>
 </td>
 <td
 style="vertical-align: top; width: 150px; text-align: center;">
 
-<form method="post" action="viewSchool" name="searchResult">
-<input
-name="viewSchool" value="View School" type="submit"><br>
+<form method="post" action="ViewSchoolInfoUser.jsp" name="searchResult">
+<input name="Search" value="1" type="hidden">
+<input name="schoolName" value="<%=name %>" type="hidden">
+<input name="viewSchool" value="View School" type="submit"><br>
 </form>
 </td>
 </tr>

@@ -7,7 +7,7 @@ http-equiv="content-type">
 </head>
 <body>
 <%
-AdminInteractions ai = new AdminInteractions();
+AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 
 
 %>
@@ -124,7 +124,7 @@ for (University univ: universityList)
 <td style="vertical-align: top;">
 <form method="post" action="EditUniversity.jsp" name="Schools">
 <input name="Edit"  value= "Edit" type="submit"></input>
-<input name="School" value= <%= univ.getSchoolName() %> type="hidden">
+<input name="School" value= "<%= univ.getSchoolName() %>" type="hidden">
 <br>
 </form>
 </td>

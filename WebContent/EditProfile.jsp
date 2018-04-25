@@ -21,11 +21,8 @@ else if(error != null && error.equals("0"))
 <br>
 
 <%
-//UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
-//Account user = uc.viewProfile(uc.getUser().getUsername());
-UserInteraction uc = new UserInteraction();
-session.setAttribute("userInter", uc);
-Account user = uc.viewProfile("juser");
+UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
+Account user = uc.viewProfile(uc.getUser().getUsername());
 %>
 <form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
