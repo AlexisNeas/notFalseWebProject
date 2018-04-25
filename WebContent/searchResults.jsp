@@ -21,6 +21,24 @@ Search Results<br>
 
 <%
 
+String error =request.getParameter("result");
+if(u != null ||(error != null && error.equals("1")))
+{
+
+if(u != null)
+	session.setAttribute("u", u);
+	
+
+if(error != null && error.equals("1"))
+{
+	u = (ArrayList<University>)session.getAttribute("u"); 
+	//u = (ArrayList<University>)at;
+    //System.out.println(at.get(0).getSchoolName());
+	
+	//session.removeAttribute("u");
+
+}
+
 int size = u.size();
 if(size != 0)
 {
@@ -34,9 +52,10 @@ for(int i = 0; i < size;i++)
 <tbody>
 <tr><td
 style="vertical-align: top; width: 100px; text-align: center;">
-<form method="post" action="saveSchool" name="searchResult"><input
-name="saveSchool" value="Save" type="submit">
-
+<form method="post" action="addSchoolToProfileAction.jsp" name="searchResult">
+<input
+name="save" value="Save" type="submit">
+<input name="saveSchool" value= "<%= u.get(i).getSchoolName() %>" type="hidden">
 
 
 </form>
@@ -63,9 +82,12 @@ style="vertical-align: top; width: 150px; text-align: center;">
 <%
 }
 }
+	
+}
 else{
 	out.println("No Results for your search criteria :(");
 }
+
 %>
 <br>
 </body>

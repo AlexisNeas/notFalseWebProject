@@ -1,7 +1,8 @@
 <%@ page language="java" import="User.*" import = "University.*"%>
     
 <%	
-	UserInteraction interactions = new UserInteraction();
+	UserInteraction interactions = (UserInteraction)session.getAttribute("userInter");
 	interactions.addSchool(request.getParameter("saveSchool"),"juser");
-	response.sendRedirect("searchResults.jsp");
+	int one = 1;
+	response.sendRedirect("searchResults.jsp?result="+1);
 %>
