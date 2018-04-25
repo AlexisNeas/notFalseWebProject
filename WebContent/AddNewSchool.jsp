@@ -9,6 +9,12 @@ http-equiv="content-type">
 <body>
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
+String error =request.getParameter("addNewSchool");
+if(error != null)
+{
+	if(Integer.parseInt(error) == -1)
+		out.println("Failed to add new school. Try Again.");
+}
 %>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
@@ -125,9 +131,6 @@ cellspacing="2">
 <form method = "post" action = "ManageUniversities.jsp" name = "Cancel"><br>
 <input value = "Cancel" name = "Cancel" type = "submit"><br>
 </form>
-
-
-
 </body>
 </html>
 

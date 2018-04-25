@@ -34,21 +34,12 @@ public class UserInteraction {
    * 
    * @param schoolName the school that the schools should be similar to
    */
-  public void displaySimilarSchools(String schoolName)
+  public ArrayList<University> displaySimilarSchools(String schoolName)
   {
     University mainSchool = userController.getSchoolInfo(schoolName);
     
-    ArrayList<University> universities = userController.findSimilarSchools(mainSchool);
-    
-     if(universities == null)
-       System.out.println("Error: No Similar Schools");
-     else 
-     {
-       for(University u : universities)
-       {
-        System.out.println(u.getSchoolName()); 
-       }
-     }
+
+    return userController.findSimilarSchools(mainSchool);
   }
   
 /**
@@ -73,19 +64,9 @@ public class UserInteraction {
    * @param school the name of the school that's information is being retrieved
    * 
    */
-  public void viewSchoolInfo(String school)
+  public University viewSchoolInfo(String school)
   {
-    University u = userController.getSchoolInfo(school);
-    System.out.println("\tName: " + u.getSchoolName()+"\n\tState: " +
-                       u.getState()+"\n\tLocation: " + u.getLocation()+"\n\tControl: " + u.getControl()+ "\n\tNumber of Students: " +
-                       u.getNumStudents()+ "\n\t% Female: "+ u.getPercentFemale() + "\n\tSAT Verbal: " + u.getSatVerbal() + 
-                       "\n\tSAT Math: " + u.getSatMath()+ "\n\tTuition: " + u.getTuition()+ "\n\t% Receiving Financial Aid: " + 
-                       u.getPercentRecFinAid()+"\n\tNumber of Applications: " + u.getNumApplicants()+ "\n\t% Accepted: " + 
-                       u.getPercentAccepted()+ "\n\t% Enrolled: " + u.getPercentEnroll()  + "\n\tAcademic Scale: " +
-                       u.getAcademicScale() +"\n\tSocial Rating: "+ u.getSocial()+ "\n\tQuality of Life: " + u.getQualOfLife() +
-                       "\n\tStudy Area 1: " + u.getStudyArea1()+"\n\tStudy Area 2: " + u.getStudyArea2()+"\n\tStudy Area 3: " + 
-                       u.getStudyArea3()+"\n\tStudy Area 4: "  + u.getStudyArea4()+"\n\tStudy Area 5: " + u.getStudyArea5());
-
+    return userController.getSchoolInfo(school);
   } 
   
   /**
@@ -210,7 +191,7 @@ public class UserInteraction {
   public Account viewProfile(String username)
   {
     return userController.viewProfile(username);
-
+    
   }
 
   

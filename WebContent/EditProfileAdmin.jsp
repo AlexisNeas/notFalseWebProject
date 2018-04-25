@@ -21,8 +21,11 @@ else if(error != null && error.equals("0"))
 <br>
 
 <%
-UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
-Account user = uc.viewProfile(uc.getUser().getUsername());
+//UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
+//Account user = uc.viewProfile(uc.getUser().getUsername());
+UserInteraction uc = new UserInteraction();
+session.setAttribute("userInter", uc);
+Account user = uc.viewProfile("juser");
 %>
 <form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
@@ -54,8 +57,11 @@ border="1" >
 <tr>
 <td style="vertical-align: top;">Type<br>
 </td>
-<td style="vertical-align: top;"><input name="Type" value=<%=user.getAccountType()%> readonly> 
-<input name="Status" value=<%=user.getStatus()%> type="hidden"></td>
+<td style="vertical-align: top;"><input name="Type" value=<%=user.getAccountType()%>> </td>
+<tr>
+<td style="vertical-align: top;">Status<br>
+</td>
+<td style="vertical-align: top;"><input name="Status" value=<%=user.getStatus()%>></td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><input value="Edit"
