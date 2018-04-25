@@ -175,4 +175,5 @@ ArrayList<University> u = ui.searchSchool(schoolName,
 		study3,
 		study4, 
 		study5);
+
 %>
