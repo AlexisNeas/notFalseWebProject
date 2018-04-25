@@ -122,7 +122,7 @@ for (University univ: universityList)
 <br>
 </td>
 <td style="vertical-align: top;">
-<form method="post" action="ViewSchoolInfo.jsp" name="Schools">
+<form method="post" action="EditUniversity.jsp" name="Schools">
 <input name="Edit"  value= "Edit" type="submit"></input>
 <input name="School" value= <%= univ.getSchoolName() %> type="hidden">
 <br>
