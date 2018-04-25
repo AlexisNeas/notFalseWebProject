@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyAdmin.jsp" %>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1"

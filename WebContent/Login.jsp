@@ -18,6 +18,9 @@ else if(error !=null && error.equals("-2")){
 else if(error !=null && error.equals("-3")){
 	out.println("You must first be logged in to access that page.");
 }
+else if(error !=null && (error.equals("-4") || error.equals("-5"))){
+	out.println("Please sign in again.");
+}
 else if(error !=null && error.equals("1")){
 	out.println("You have been logged out.");
 }
