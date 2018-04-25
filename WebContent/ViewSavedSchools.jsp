@@ -15,13 +15,11 @@ http-equiv="content-type">
 </td>
 </tr>
 <%
-//UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
-//Account user = uc.viewProfile(uc.getUser().getUsername());
-//UserInteraction uc = new UserInteraction();
-UserInteraction interactions = new UserInteraction();
-ArrayList<String> schools = interactions.getSavedUniversities("juser");
-
-	//ArrayList<String> schools = interactions.getSavedUniversities(interactions.getUser().getUsername());
+	String error = request.getParameter("Error");
+	if(error != null && error.equals("-1"))
+			out.println("There was an error processing your request. School not removed");
+	UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
+	ArrayList<String> schools = uc.getSavedUniversities(uc.getUser().getUsername());
 
 	for(int i = 0; i<schools.size(); i++) 
 	{
@@ -30,18 +28,18 @@ ArrayList<String> schools = interactions.getSavedUniversities("juser");
 <tr>
 <td style="vertical-align: top;">
 <form method="post" action="RemoveUserSchoolAction.jsp" name="Remove">
-<input name="school" value="<%interactions.remove(schools.get(i), "juser"); %>" type="hidden">
+<input name="school" value="<%=schools.get(i) %>" type="hidden">
 <input name="Remove" value="Remove" type="submit">
 </form>
 <br>
 </td>
-<td style="vertical-align: top;"><%=schools.get(i)%><input readonly="readonly"
-name="school"><br>
+<td style="vertical-align: top;"><%=schools.get(i)%><br>
 </td>
-<td style="vertical-align: top;"><form method="post" action="ViewSchoolAction.jsp" name="ViewSchool">
-	<input name="school" value= <%=schools.get(i) %> type="hidden">
-	<input name="ViewSchool" value="ViewSchool" type="submit"><br>
-	</form>
+<td style="vertical-align: top;"><form method="post" action="ViewSchoolInfoUser.jsp" name="searchResult">
+	<input name="Search" value="0" type="hidden">
+	<input name="schoolName" value="<%=schools.get(i) %>" type="hidden">
+	<input name="viewSchool" value="View School" type="submit"><br>
+</form>
 </td>
 <%} %>
 </tr>
