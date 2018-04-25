@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyUser.jsp" %>
 <%@ page language="java" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*"%>
 <%@include file="Search_Action.jsp" %>
 <html>
@@ -21,10 +23,43 @@ Search Results<br>
 
 <%
 
-if(u != null)
+
+
+String error =request.getParameter("result");
+if(error != null && error.equals("2"))
 {
+	%>
+	
+	<script type="text/javascript">
+    var msg = "School did not save to profile.";
+    alert(msg);
+</script>
+	
+	
+	<%
+	
+}
+
+if(u != null ||(error != null) && session.getAttribute("u") != null)
+{
+
+if(u != null)
+	session.setAttribute("u", u);
+	
+
+if(error != null)
+{
+	u = (ArrayList<University>)session.getAttribute("u"); 
+	//u = (ArrayList<University>)at;
+    //System.out.println(at.get(0).getSchoolName());
+	
+	//session.removeAttribute("u");
+
+}
+
 int size = u.size();
-UserInteraction interactions = new UserInteraction();
+if(size != 0)
+{
 for(int i = 0; i < size;i++)
 {
 	
@@ -35,9 +70,10 @@ for(int i = 0; i < size;i++)
 <tbody>
 <tr><td
 style="vertical-align: top; width: 100px; text-align: center;">
-<form method="post" action="saveSchool" name="searchResult"><input
-name="saveSchool" value="Save" type="submit">
-
+<form method="post" action="addSchoolToProfileAction.jsp" name="searchResult">
+<input
+name="save" value="Save" type="submit">
+<input name="saveSchool" value= "<%= u.get(i).getSchoolName() %>" type="hidden">
 
 
 </form>
@@ -45,15 +81,17 @@ name="saveSchool" value="Save" type="submit">
 </td>
 <td style="vertical-align: top;"><br>
 <%
-out.println("School Name: " + u.get(i).getSchoolName() + "\n" + "State: " + u.get(i).getState());
+String name = u.get(i).getSchoolName();
+out.println("School Name: " + name + "\n" + "State: " + u.get(i).getState());
 %>
 </td>
 <td
 style="vertical-align: top; width: 150px; text-align: center;">
 
-<form method="post" action="viewSchool" name="searchResult">
-<input
-name="viewSchool" value="View School" type="submit"><br>
+<form method="post" action="ViewSchoolInfoUser.jsp" name="searchResult">
+<input name="Search" value="1" type="hidden">
+<input name="schoolName" value="<%=name %>" type="hidden">
+<input name="viewSchool" value="View School" type="submit"><br>
 </form>
 </td>
 </tr>
@@ -62,9 +100,12 @@ name="viewSchool" value="View School" type="submit"><br>
 <%
 }
 }
+	
+}
 else{
 	out.println("No Results for your search criteria :(");
 }
+
 %>
 <br>
 </body>

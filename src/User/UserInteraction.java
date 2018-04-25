@@ -49,13 +49,13 @@ public class UserInteraction {
    * @param user the user that the university is being removed from
    *
    */
-  public void remove(String school, String user)
+  public int remove(String school, String user)
   {
     boolean removed = userController.removeSchool(school, user);
    if( removed )
-    System.out.println("\tSchool has been removed");
+    return 1;
    else
-     System.out.println("\tError: School was not removed");
+     return -1;
   }
   
   /**
@@ -76,12 +76,11 @@ public class UserInteraction {
    * @param username the username that the school should be saved to
  * @throws Exception 
    */
-  public void addSchool(String school, String username)
+  public int addSchool(String school, String username)
   {
-   int response = userController.addSchool(username, school); 
+   return userController.addSchool(username, school); 
    
-   if(response == 1)
-	   System.out.println("\tSchool has been added.");
+   
   }
   
   /**

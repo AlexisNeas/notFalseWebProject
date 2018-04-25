@@ -3,8 +3,13 @@
 <head>
 
 <title>Login Form</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
+<header>
+<h2 class="Title" >Log In</h2>
+
+</header>
 <br> 
 <%  
 String error =request.getParameter("logIn");
@@ -17,23 +22,27 @@ else if(error !=null && error.equals("-2")){
 else if(error !=null && error.equals("-3")){
 	out.println("You must first be logged in to access that page.");
 }
+else if(error !=null && (error.equals("-4") || error.equals("-5"))){
+	out.println("Please sign in again.");
+}
 else if(error !=null && error.equals("1")){
 	out.println("You have been logged out.");
 }
 %><br>
-Login form:<br>
+
 <br>
-<form method="post" action="Login_Action.jsp" name="Login"><br>
-<table style="text-align: left; width: 266px; height: 228px;"
+<center>
+<form method="post" action="Login_Action.jsp" name="Login" > <br>
+<table style="text-align: center; width: 266px; height: 228px;"
 border="1">
 <tbody>
 <tr>
-<td style="vertical-align: top;">Username<br>
+<td style="vertical-align: top;"><b>Username</b><br>
 </td>
 <td style="vertical-align: top;"><input name="username"> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Password<br>
+<td style="vertical-align: top;"><b>Password</b><br>
 </td>
 <td style="vertical-align: top;"><input name="password"> </td>
 </tr>
@@ -47,6 +56,8 @@ name="Reset" type="reset"></td>
 </table>
 <br>
 </form>
+</center>
 <br>
+
 </body>
 </html>

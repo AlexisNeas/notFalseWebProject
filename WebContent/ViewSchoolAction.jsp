@@ -3,5 +3,5 @@
 <%	
 	UserInteraction interactions = new UserInteraction();
 	interactions.viewSchoolInfo(request.getParameter("school"));
-	response.sendRedirect("ViewSavedSchools.jsp");
+	response.sendRedirect("ViewSchoolInfoUser.jsp");
 %>

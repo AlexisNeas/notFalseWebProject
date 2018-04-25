@@ -1,0 +1,97 @@
+ type="text/css">
+ 
+body,h1,h2,h3 {font-family: Georgia, "Times New Roman" Times, serif; }
+
+body{
+	padding-left: 0;
+	color: White;
+	background: #d0d3d6;
+	background: linear-gradient( #386285, white);
+	margin: 0;
+	text-align: center;
+	}
+.StartButton{
+	font-weight: bold;
+	font-size: 50px;
+    color: White; 
+	text-align: center;
+
+}
+w.3-container w3-red w3-center {
+	background-color: #c6def5;
+}
+.w3-margin w3-jumbo{
+	font-size: 300%;
+	font-family: Sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+	color: #c6def5;
+	
+	}
+h1 {
+	font-family: Georgia, "Times New Roman" Times, serif;
+	font-size: 200%
+	}	
+table,td,tr{
+	text-align: center;
+	font-family: Georgia, "Times New Roman" Times, serif; 
+	border: 1px solid grey;
+	color: #52575c;
+}	
+td,tr{
+	background-color: White;
+}
+u1.navbar {
+	list-style: none; 
+	overflow: hidden;
+	text-align:center;
+	padding: 0;
+	margin: 0;
+	background-color: White;
+	}
+
+u1.navbar li{
+	float:left ;
+	border-right: .4em solid Grey;
+	font-family: Georgia, "Times New Roman" Times, serif;
+	font-size: 1.2em;
+	line-height: 40px;
+	height: 40px;
+	border-bottom: 1px solid #888;
+	/* display: inline;
+	background: White;
+	margin: 0.2em 0;
+	padding: 0.1em;
+	border-left: .7em solid black  */}
+
+u1.navbar a {
+	display: block;
+	color: Black;
+	text-decoration: none; 
+	transition: .3s background-color;
+	}
+u1.navbar a:hover {
+	background-color: #005f5f;
+}
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+address {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: thin dotted 
+	}
+input{
+	text-align:center;
+	color: Black;
+	font-weight: bold;
+	background-color: #dadfe0;
+}	
+
+	
