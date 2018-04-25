@@ -8,12 +8,10 @@ http-equiv="content-type">
 </head>
 <body>
 <%
-AdminController ai = new AdminController();
-//UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
-//Account user = uc.viewProfile(uc.getUser().getUsername());
-session.setAttribute("adminInter", ai);
+
+AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 String school = request.getParameter("School");
-University univ = ai.getSchoolInformation(school);
+University univ = ai.getSchoolInfo(school);
 %>
 <form method = "post" action = "EditUniversity_Action.jsp" name = "editUniversity"><br>
 <table style="text-align: left; width: 502px; height: 508px;" border="1"
@@ -151,8 +149,8 @@ cellpadding="2" cellspacing="2">
 <br>
 <br>
 <br>
-<button value="Apply Changes" name="applyChanges" type="submit">Apply Changes</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button value="Cancel Changes" name="cancelChanges" type="reset">Cancel Changes</button><br>
+<input  value="Apply Changes" name="applyChanges" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input  value="Cancel Changes" name="cancelChanges" type="reset"><br>
 <br>
 <br>
 </form>
