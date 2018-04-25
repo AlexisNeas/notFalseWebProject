@@ -10,17 +10,16 @@ http-equiv="content-type">
 <big><big style="font-weight: bold;"><big>School Info:</big></big></big><br>
 <br>
 <%
-	//UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
-	//String schoolName = request.getParameter("schoolName");
-	UserInteraction ui = new UserInteraction();
-	University u = ui.viewSchoolInfo("DARTMOUTH");
+	UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
+	String schoolName = request.getParameter("schoolName");
+	University u = ui.viewSchoolInfo(schoolName);
 %>
 <table style="text-align: left; width: 100%;" border="1">
 <tbody>
 <tr>
 <td style="vertical-align: top;">SCHOOL<br>
 </td>
-<td style="vertical-align: top;"><%= u.getSchoolName() %><br>
+<td style="vertical-align: top;"><%=u.getSchoolName()%><br>
 </td>
 </tr>
 <tr>
@@ -140,8 +139,7 @@ http-equiv="content-type">
 <br>
 <br>
 <%
-	//String searched = request.getParameter("Search");
-	String searched = "1";
+	String searched = request.getParameter("Search");
 	if(searched.equals("1")){ %>
 		<%@include file="SimilarSchools_Action.jsp" %><%
 	}

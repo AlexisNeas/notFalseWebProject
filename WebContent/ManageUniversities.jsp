@@ -7,7 +7,7 @@ http-equiv="content-type">
 </head>
 <body>
 <%
-AdminInteractions ai = new AdminInteractions();
+AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 
 
 %>
