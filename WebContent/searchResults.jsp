@@ -23,6 +23,24 @@ Search Results<br>
 
 <%
 
+String error =request.getParameter("result");
+if(u != null ||(error != null && error.equals("1")))
+{
+
+if(u != null)
+	session.setAttribute("u", u);
+	
+
+if(error != null && error.equals("1"))
+{
+	u = (ArrayList<University>)session.getAttribute("u"); 
+	//u = (ArrayList<University>)at;
+    //System.out.println(at.get(0).getSchoolName());
+	
+	//session.removeAttribute("u");
+
+}
+
 int size = u.size();
 if(size != 0)
 {
@@ -66,9 +84,12 @@ style="vertical-align: top; width: 150px; text-align: center;">
 <%
 }
 }
+	
+}
 else{
 	out.println("No Results for your search criteria :(");
 }
+
 %>
 <br>
 </body>

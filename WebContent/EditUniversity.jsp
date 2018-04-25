@@ -8,12 +8,10 @@ http-equiv="content-type">
 </head>
 <body>
 <%
-AdminController ai = new AdminController();
-//UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
-//Account user = uc.viewProfile(uc.getUser().getUsername());
-session.setAttribute("adminInter", ai);
+
+AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 String school = request.getParameter("School");
-University univ = ai.getSchoolInformation(school);
+University univ = ai.getSchoolInfo(school);
 %>
 <form method = "post" action = "EditUniversity_Action.jsp" name = "editUniversity"><br>
 <table style="text-align: left; width: 502px; height: 508px;" border="1"
@@ -22,18 +20,18 @@ cellpadding="2" cellspacing="2">
 <tr>
 <td style="vertical-align: top;">SCHOOL<br>
 </td>
-<td style="vertical-align: top;"><input name="school" value=<%=univ.getSchoolName()%>><br>
+<td style="vertical-align: top;"><input name="school" value="<%=univ.getSchoolName()%>"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">STATE<br>
 </td>
-<td style="vertical-align: top;"><input name="state" value=<%=univ.getState()%>></td>
+<td style="vertical-align: top;"><input name="state" value="<%=univ.getState()%>"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">LOCATION<br>
 </td>
-<td style="vertical-align: top;"><input name="location" value=<%=univ.getLocation()%>><br>
+<td style="vertical-align: top;"><input name="location" value="<%=univ.getLocation()%>"><br>
 </td>
 </tr>
 <tr>
@@ -122,23 +120,23 @@ cellpadding="2" cellspacing="2">
 cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
-<td style="vertical-align: top;"><input name="emphases1" value=<%=univ.getStudyArea1()%>><br>
+<td style="vertical-align: top;"><input name="emphases1" value="<%=univ.getStudyArea1()%>"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name="emphases2" value=<%=univ.getStudyArea2()%>><br>
+<td style="vertical-align: top;"><input name="emphases2" value="<%=univ.getStudyArea2()%>"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name="emphases3" value=<%=univ.getStudyArea3()%>><br>
+<td style="vertical-align: top;"><input name="emphases3" value="<%=univ.getStudyArea3()%>"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name="emphases4" value=<%=univ.getStudyArea4()%>><br>
+<td style="vertical-align: top;"><input name="emphases4" value="<%=univ.getStudyArea4()%>"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name="emphases5" value=<%=univ.getStudyArea5()%>><br>
+<td style="vertical-align: top;"><input name="emphases5" value="<%=univ.getStudyArea5()%>"><br>
 </td>
 </tr>
 </tbody>
@@ -151,8 +149,8 @@ cellpadding="2" cellspacing="2">
 <br>
 <br>
 <br>
-<button value="Apply Changes" name="applyChanges" type="submit">Apply Changes</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button value="Cancel Changes" name="cancelChanges" type="reset">Cancel Changes</button><br>
+<input  value="Apply Changes" name="applyChanges" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input  value="Cancel Changes" name="cancelChanges" type="reset"><br>
 <br>
 <br>
 </form>
