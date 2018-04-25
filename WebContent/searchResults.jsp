@@ -35,9 +35,10 @@ for(int i = 0; i < size;i++)
 <tbody>
 <tr><td
 style="vertical-align: top; width: 100px; text-align: center;">
-<form method="post" action="saveSchool" name="searchResult"><input
-name="saveSchool" value="Save" type="submit">
-
+<form method="post" action="addSchoolToProfileAction.jsp" name="searchResult">
+<input
+name="save" value="Save" type="submit">
+<input name="saveSchool" value= "<%= u.get(i).getSchoolName() %>" type="hidden">
 
 
 </form>
@@ -51,7 +52,7 @@ out.println("School Name: " + u.get(i).getSchoolName() + "\n" + "State: " + u.ge
 <td
 style="vertical-align: top; width: 150px; text-align: center;">
 
-<form method="post" action="viewSchool" name="searchResult">
+<form method="post" action="ViewSchoolInfoUser.jsp" name="searchResult">
 <input
 name="viewSchool" value="View School" type="submit"><br>
 </form>
