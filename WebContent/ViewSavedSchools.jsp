@@ -5,11 +5,13 @@
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title></title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*" %>
 <br>
+<%@include file="UserHeading.jsp" %>
 <table style="text-align: left; width: 536px; height: 40px;" border="1">
 <tbody>
 <tr align="center">

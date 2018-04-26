@@ -21,6 +21,8 @@ if(error != null && error.equals("-1")){
 }
 %>
 <br>
+
 <%@include file="UserHeading.jsp" %>
+
 </body>
 </html>
