@@ -12,10 +12,25 @@ http-equiv="content-type">
 <big><big style="font-weight: bold;"><big>School Info:</big></big></big><br>
 <br>
 <%
+	String result = request.getParameter("result");
+	if(result != null && result.equals("2")){
+		out.println("There was an error in saving your school.");
+	}
+	else if(result != null && result.equals("1")){
+		out.println("Your school has been saved.");
+	}
 	UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
 	String schoolName = request.getParameter("schoolName");
 	University u = ui.viewSchoolInfo(schoolName);
 %>
+<% String searched = request.getParameter("Search");
+	if(searched != null && searched.equals("1")){ %>
+<form method="post" action="addSchoolToProfileAction.jsp" name="searchResult">
+<input name="save" value="Save" type="submit">
+<input name="saveSchool" value="<%=u.getSchoolName() %>" type="hidden">
+<input name="viewing" value="1" type="hidden">
+</form>
+<% } %>
 <table style="text-align: left; width: 100%;" border="1">
 <tbody>
 <tr>
@@ -141,8 +156,7 @@ http-equiv="content-type">
 <br>
 <br>
 <%
-	String searched = request.getParameter("Search");
-	if(searched.equals("1")){ %>
+	if(searched != null && searched.equals("1")){ %>
 		<%@include file="SimilarSchools_Action.jsp" %><%
 	}
 %>

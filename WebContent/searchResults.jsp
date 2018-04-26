@@ -77,8 +77,7 @@ style="vertical-align: top; width: 100px; text-align: center;">
 <input
 name="save" value="Save" type="submit">
 <input name="saveSchool" value= "<%= u.get(i).getSchoolName() %>" type="hidden">
-
-
+<input name="viewing" value="0" type="hidden">
 </form>
 <br>
 </td>
