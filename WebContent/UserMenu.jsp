@@ -9,11 +9,11 @@ http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
-<center>
+
 <h1>Welcome, User </h1>
-<form align="right" method="post" action="LogOut_Action.jsp" name="LogOut"><br>
+<form style= "text-align: = "right" method="post" action="LogOut_Action.jsp" name="LogOut"><br>
 <input value="Log Out"name="Log out" type="submit"></form>
-<address>Made by !False</address>
+
 <%  
 String error =request.getParameter("notA");
 if(error != null && error.equals("-1")){
@@ -26,6 +26,8 @@ if(error != null && error.equals("-1")){
 <li><a href="EditProfile.jsp">Manage My Profile</a><br></u1>
 
 <br><br>
-</center>
+
+
 </body>
+<address>Made by !False</address>
 </html>
