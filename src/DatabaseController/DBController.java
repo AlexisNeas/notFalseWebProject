@@ -147,8 +147,9 @@ public class DBController
             	univ.getSatVerbal(),  univ.getSatMath(),  univ.getTuition(),  univ.getPercentRecFinAid(),
             	univ.getNumApplicants(),  univ.getPercentAccepted(), 
             	univ.getPercentEnroll(),  univ.getAcademicScale(),  univ.getSocial(),  univ.getQualOfLife());
-    if(!univ.getStudyArea1().equals(""))
+    
 		try {
+	if(!univ.getStudyArea1().equals(""))
 			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea1());
 		
     if(!univ.getStudyArea2().equals(""))
@@ -160,7 +161,7 @@ public class DBController
     if(!univ.getStudyArea5().equals(""))
     	this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea5());
 		} catch (Exception e) {
-			
+			add = -1;
 		}
     if(add <= 0) {
     	throw new IllegalArgumentException();
@@ -833,29 +834,53 @@ public class DBController
      total++;
     if(!control.equals("-2"))
      total++;
-    if(lowNumberOfStudents != -2 && upNumberOfStudents != -2)
+    if(lowNumberOfStudents != -2)
+    	total++;
+    if(upNumberOfStudents != -2)
      total++;
-    if(lowPercentFemale != -2 && upPercentFemale != -2)
+    if(lowPercentFemale != -2)
+    	total++;
+    if(upPercentFemale != -2)
      total++;  
-    if(lowSATVerbal != -2 && upSATVerbal != -2)
+    if(lowSATVerbal != -2)
+    	total++;
+    if(upSATVerbal != -2)
      total++;
-    if(lowSATMath != -2 && upSATMath != -2)
+    if(lowSATMath != -2)
+    	total++;
+    if(upSATMath != -2)
      total++;
-    if(lowExpenses != -2 && upExpenses != -2)
+    if(lowExpenses != -2)
+    	total++;
+    if(upExpenses != -2)		
      total++;
-    if(lowPercentRecFinAid != -2 && upPercentRecFinAid != -2)
+    if(lowPercentRecFinAid != -2)
+    	total++;
+    if(upPercentRecFinAid != -2)	
      total++;
-    if(lowNumApplicants != -2 && upNumApplicants != -2)
+    if(lowNumApplicants != -2) 
+    	total++;
+    if(upNumApplicants != -2)
      total++;
-    if(lowPercentAccepted != -2 && upPercentAccepted != -2)
+    if(lowPercentAccepted != -2)
+    	total++;
+    if(upPercentAccepted != -2)
      total++;
-    if(lowPercentEnrolled != -2 && upPercentEnrolled != -2)
+    if(lowPercentEnrolled != -2)
+    	total++;
+    if(upPercentEnrolled != -2)
      total++;
-    if(lowAcademicsScale != -2 && upAcademicsScale != -2)
+    if(lowAcademicsScale != -2)
+    	total++;
+    if(upAcademicsScale != -2)
      total++;
-    if(lowSocialScale != -2 && upSocialScale != -2)
+    if(lowSocialScale != -2)
+    	total++;
+    if( upSocialScale != -2)
      total++;
-    if(lowQualityOfLifeScale != -2 && upQualityOfLifeScale != -2)
+    if(lowQualityOfLifeScale != -2)
+    	total++;
+    if(upQualityOfLifeScale != -2)
      total++;
     if(!emphases1.equals("-2"))
      total++;
@@ -888,41 +913,87 @@ public class DBController
 		  if(!control.equals("-2"))
 			  if(array[i][3].indexOf(control)>=0)
 				  searchTotal++;
+		  
 		  if(lowNumberOfStudents != -2)
-			  if(lowNumberOfStudents < Integer.parseInt(array[i][4]) && upNumberOfStudents > Integer.parseInt(array[i][4]))
+			  if(lowNumberOfStudents < Integer.parseInt(array[i][4]))
 				  searchTotal++;
+		  if(upNumberOfStudents != -2)
+			  if(upNumberOfStudents > Integer.parseInt(array[i][4]))
+				  searchTotal++;
+		  
 		  if(lowPercentFemale != -2)
-			  if(lowPercentFemale < Double.parseDouble(array[i][5]) && upPercentFemale > Double.parseDouble(array[i][5]))
-				  searchTotal++;  
+			  if(lowPercentFemale < Double.parseDouble(array[i][5]))
+				  searchTotal++; 
+		  if(upPercentFemale != -2)
+			  if(upPercentFemale > Double.parseDouble(array[i][5]))
+				  searchTotal++; 
+		  
 		  if(lowSATVerbal != -2)
-			  if(lowSATVerbal < Double.parseDouble(array[i][6]) && upSATVerbal > Double.parseDouble(array[i][6]))
+			  if(lowSATVerbal < Double.parseDouble(array[i][6]) )
 				  searchTotal++;
+		  if(upSATVerbal != -2)
+			  if(upSATVerbal > Double.parseDouble(array[i][6]))
+				  searchTotal++;
+		  
 		  if(lowSATMath != -2)
-			  if(lowSATMath < Double.parseDouble(array[i][7]) && upSATMath > Double.parseDouble(array[i][7]))
+			  if(lowSATMath < Double.parseDouble(array[i][7]) )
 				  searchTotal++;
+		  if(upSATMath != -2)
+			  if(upSATMath > Double.parseDouble(array[i][7]))
+				  searchTotal++;
+		  
 		  if(lowExpenses != -2)
-			  if(lowExpenses < Double.parseDouble(array[i][8]) && upExpenses > Double.parseDouble(array[i][8]))
+			  if(lowExpenses < Double.parseDouble(array[i][8]))
 				  searchTotal++;
+		  if(upExpenses != -2)
+			  if(upExpenses > Double.parseDouble(array[i][8]))
+				  searchTotal++;
+		  
 		  if(lowPercentRecFinAid != -2)
-			  if(lowPercentRecFinAid < Double.parseDouble(array[i][9]) && upPercentRecFinAid > Double.parseDouble(array[i][9]))
+			  if(lowPercentRecFinAid < Double.parseDouble(array[i][9]))
 				  searchTotal++;
+		  if(upPercentRecFinAid != -2)
+			  if(upPercentRecFinAid > Double.parseDouble(array[i][9]))
+				  searchTotal++;
+		  
 		  if(lowNumApplicants != -2)
-			  if(lowNumApplicants < Double.parseDouble(array[i][10]) && upNumApplicants > Double.parseDouble(array[i][10]))
+			  if(lowNumApplicants < Double.parseDouble(array[i][10]))
 				  searchTotal++;
+		  if(upNumApplicants != -2)
+			  if(upNumApplicants > Double.parseDouble(array[i][10]))
+				  searchTotal++;
+		  
 		  if(lowPercentAccepted != -2)
-			  if(lowPercentAccepted < Double.parseDouble(array[i][11]) && upPercentAccepted > Double.parseDouble(array[i][11]))
+			  if(lowPercentAccepted < Double.parseDouble(array[i][11]) )
 				  searchTotal++;
+		  if(upPercentAccepted != -2)
+			  if(upPercentAccepted > Double.parseDouble(array[i][11]))
+				  searchTotal++;
+		  
 		  if(lowPercentEnrolled != -2)
-			  if(lowPercentEnrolled < Double.parseDouble(array[i][12]) && upPercentEnrolled > Double.parseDouble(array[i][12]))
+			  if(lowPercentEnrolled < Double.parseDouble(array[i][12]) )
 				  searchTotal++;
+		  if(upPercentEnrolled != -2)
+			  if(upPercentEnrolled > Double.parseDouble(array[i][12]))
+				  searchTotal++;
+		  
 		  if(lowAcademicsScale != -2)
-			  if(lowAcademicsScale < Integer.parseInt(array[i][13]) && upAcademicsScale > Integer.parseInt(array[i][13]))
+			  if(lowAcademicsScale < Integer.parseInt(array[i][13]) )
+				  searchTotal++;
+		  if(upAcademicsScale != -2)
+			  if(upAcademicsScale > Integer.parseInt(array[i][13]))
 				  searchTotal++;
 		  if(lowSocialScale != -2)
-			  if(lowSocialScale < Integer.parseInt(array[i][14]) && upSocialScale > Integer.parseInt(array[i][14]))
+			  if(lowSocialScale < Integer.parseInt(array[i][14]))
+				  searchTotal++;
+		  if(upSocialScale != -2)
+			  if(upSocialScale > Integer.parseInt(array[i][14]))
 				  searchTotal++;
 		  if(lowQualityOfLifeScale != -2)
-			  if(lowQualityOfLifeScale < Integer.parseInt(array[i][15]) && upQualityOfLifeScale > Integer.parseInt(array[i][15]))
+			  if(lowQualityOfLifeScale < Integer.parseInt(array[i][15]) )
+				  searchTotal++;
+		  if(upQualityOfLifeScale != -2)
+			  if(upQualityOfLifeScale > Integer.parseInt(array[i][15]))
 				  searchTotal++;
 		  ArrayList<String> temps = new ArrayList<String>();
 		  
