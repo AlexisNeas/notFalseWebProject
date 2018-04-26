@@ -8,6 +8,7 @@
 
 <title></title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
+<%@include file="UserHeading.jsp" %>
 </head>
 <body>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
@@ -26,7 +27,7 @@ Search Results<br>
 
 
 
-String error =request.getParameter("result");
+error =request.getParameter("result");
 if(error != null && error.equals("2"))
 {
 	%>
