@@ -7,6 +7,7 @@
 <meta content="text/html; charset=ISO-8859-1"http-equiv="content-type">
 
 <title></title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"

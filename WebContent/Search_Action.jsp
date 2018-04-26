@@ -130,10 +130,10 @@ String study5 = request.getParameter("studyArea5");
 	   lowQualityOfLifeScale = "-2";
    if(upQualityOfLifeScale == null || upQualityOfLifeScale.equals(""))
 	   upQualityOfLifeScale = "-2";
-ArrayList<University> u = ui.searchSchool(schoolName, 
-		state,
-		location,
-		control,
+ArrayList<University> u = ui.searchSchool(schoolName.toUpperCase(), 
+		state.toUpperCase(),
+		location.toUpperCase(),
+		control.toUpperCase(),
 		Integer.parseInt(lowNumStudents),
 		Integer.parseInt(upNumStudents),
 		
