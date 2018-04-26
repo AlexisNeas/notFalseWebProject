@@ -6,6 +6,7 @@
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title>ManageUniversities</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%

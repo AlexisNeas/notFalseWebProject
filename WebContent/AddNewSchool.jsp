@@ -5,6 +5,7 @@ import = "User.*" import = "University.*" import = "java.util.*"%>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title></title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%
@@ -15,6 +16,7 @@ if(error != null)
 	if(Integer.parseInt(error) == -1) out.println("Failed to add new school. Try Again.");
 }
 %>
+<form method="post" action="AddNewSchool_Action.jsp" name="addNewSchool">
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
@@ -151,7 +153,7 @@ cellpadding="2" cellspacing="2">
 </tbody>
 </table>
 <br>
-<form method="post" action="AddNewSchool_Action.jsp" name="addNewSchool"><br>
+<br>
 <input value="Add School" name="Add School" type="submit"><br>
 </form>
 <br>
