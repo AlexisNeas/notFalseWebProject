@@ -5,8 +5,11 @@
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title>searchMenu</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+
 <body>
+<%@include file="UserHeading.jsp" %>
 <div style="text-align: right;">
 <form method="post" action="searchResults.jsp" name="searchForm"><span
 style="font-family: DejaVu Sans;">Search Menu</span>

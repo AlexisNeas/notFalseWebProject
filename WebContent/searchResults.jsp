@@ -6,9 +6,11 @@
 <head>
 <meta content="text/html; charset=ISO-8859-1"http-equiv="content-type">
 
-<title></title>
+<title>Search Results</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
+
 </head>
+<%@include file="UserHeading.jsp" %>
 <body>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
@@ -26,8 +28,8 @@ Search Results<br>
 
 
 
-String error =request.getParameter("result");
-if(error != null && error.equals("2"))
+String error1 =request.getParameter("result");
+if(error1 != null && error1.equals("2"))
 {
 	%>
 	
@@ -41,14 +43,14 @@ if(error != null && error.equals("2"))
 	
 }
 
-if(u != null ||(error != null) && session.getAttribute("u") != null)
+if(u != null ||(error1 != null) && session.getAttribute("u") != null)
 {
 
 if(u != null)
 	session.setAttribute("u", u);
 	
 
-if(error != null)
+if(error1 != null)
 {
 	u = (ArrayList<University>)session.getAttribute("u"); 
 	//u = (ArrayList<University>)at;

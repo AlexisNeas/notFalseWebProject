@@ -5,9 +5,10 @@ body,h1,h2,h3 {font-family: Georgia, "Times New Roman" Times, serif; }
 body{
 	padding-left: 0;
 	color: White;
+
 	background: #d0d3d6;
-	background: linear-gradient( #386285, white);
-	
+	background-repeat: repeat-x;
+	background:linear-gradient( #386285, white) no-repeat;
 	}
 .StartButton{
 	font-weight: bold;

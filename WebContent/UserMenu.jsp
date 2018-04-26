@@ -19,15 +19,17 @@ String error =request.getParameter("notA");
 if(error != null && error.equals("-1")){
 	out.println("You must be a logged in admin to access that page.");
 }
-%><br>
-<u1 class="navbar">
-<li><a href="SearchMenu.jsp">Search for Schools</a><br>
-<li><a href="ViewSavedSchools.jsp">Manage My Saved Schools</a><br>
-<li><a href="EditProfile.jsp">Manage My Profile</a><br></u1>
+%>
+<br>
 
+<%@include file="UserHeading.jsp" %>
+
+<<<<<<< HEAD
 <br><br>
 
 
+=======
+>>>>>>> a0112ad97f72f10c154c3861514a536668905b62
 </body>
 <address>Made by !False</address>
 </html>
