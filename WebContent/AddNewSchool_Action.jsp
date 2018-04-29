@@ -28,7 +28,7 @@ String acScale = request.getParameter("AcScale");
 /* University univ = new University(schoolName, state, location, control, numStudents, percentFemale, 
 		satV, satM, tuition, percentRecFinAid, numApp, percentAccepted, 
 		percentEnrolled, acScale, social, qual, emp1, emp2, emp3, emp4, emp5); */
-		System.out.println(schoolName);
+		//System.out.println(schoolName);
 //ArrayList<University> universityList = ai.viewUniversities();
 
 	if (emp1 == null || emp1.equals(""))
