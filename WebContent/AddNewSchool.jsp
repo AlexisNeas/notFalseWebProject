@@ -115,35 +115,25 @@ cellspacing="2">
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">EMPHASES<br>
+<td colspan="1" rowspan="5" style="vertical-align: top;">EMPHASES<br>
 </td>
-<td style="vertical-align: top;">
-<table style="text-align: left; width: 100%;" border="1"
-cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top;"><input name = "Emp1"><br>
+<td style="vertical-align: top;"><input name = "emp1"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name = "Emp2"><br>
+<td style="vertical-align: top;"><input name = "emp2"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name = "Emp3"><br>
+<td style="vertical-align: top;"><input name = "emp3"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name = "Emp4"><br>
+<td style="vertical-align: top;"><input name = "emp4"><br>
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input name = "Emp5"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<br>
+<td style="vertical-align: top;"><input name = "emp5"><br>
 </td>
 </tr>
 <tr>
