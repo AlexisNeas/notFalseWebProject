@@ -62,10 +62,17 @@ http-equiv="content-type">
 <td style="vertical-align: top;"><%= accounts.get(i).getStatus() %><br>
 </td>
 <td style="vertical-align: top;">
+<%if(accounts.get(i).getStatus() == 'Y'){ %>
 <form method="post" action="Deactivate_Action.jsp" name="Deactivate">
 	<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
 	<input name="Deactivate" value="Deactivate" type="submit"><br>
 </form>
+<% } else { %>
+<form method="post" action="Activate_Action.jsp" name="Activate">
+	<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
+	<input name="Activate" value="Activate" type="submit"><br>
+</form>
+<% } %>
 </td>
 </tr>
 <% } %>
