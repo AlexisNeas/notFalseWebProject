@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyAdmin.jsp" %>
 
 <html>
 <head>
@@ -56,18 +58,18 @@ border="1" >
 <td style="vertical-align: top;"><input name="Username" value=<%=account.getUsername()%> readonly> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Password<br>
+<td style="vertical-align: top;">Password<br>Must exist
 </td>
 <td style="vertical-align: top;"><input name="Password" value=<%=account.getPassword()%>> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Type<br>
+<td style="vertical-align: top;">Type<br>Must be 'a' or 'u'
 </td>
 <td style="vertical-align: top;"><input name="Type" value=<%=account.getAccountType()%> 
 <% if(sameAcct){ out.println("readonly");}%>> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Status<br>
+<td style="vertical-align: top;">Status<br>Must be 'Y' or 'N'
 </td>
 <td style="vertical-align: top;"><input name="Status" value=<%=account.getStatus()%> 
 <% if(sameAcct){ out.println("readonly");}%>> </td>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyAdmin.jsp" %>
 <html>
 
 <head>
@@ -77,7 +77,7 @@ border="1">
 
 <tr>
 
-<td style="vertical-align: top;">Password<br>
+<td style="vertical-align: top;">Password<br>Must exist
 
 </td>
 
@@ -85,7 +85,7 @@ border="1">
 
 </tr>
 <tr>
-<td style="vertical-align: top;">Type<br>
+<td style="vertical-align: top;">Type<br>Must be 'a' or 'u'
 </td>
 <td style="vertical-align: top;"><input name="Type"> </td>
 </tr>
