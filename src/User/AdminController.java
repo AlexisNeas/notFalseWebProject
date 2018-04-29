@@ -106,13 +106,14 @@ public class AdminController {
    * 
    * @param school a University object with the updated school information
    */
-  public void setSchoolInfo(University school) {
+  public int setSchoolInfo(University school) {
     try {
     	dbController.setSchoolInformation(school);
+    	return 1;
     }
     catch(IllegalArgumentException e) {
     	//System.out.println("The school does not exist");
-    	error = 3;
+    	return -1;
     }
   }
   

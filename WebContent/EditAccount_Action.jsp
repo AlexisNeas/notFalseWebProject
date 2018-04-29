@@ -11,28 +11,20 @@ AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 	String type = request.getParameter("Type");
 	String status = request.getParameter("Status");
 	if(ai != null){
+		try{
 		Account a = new Account(firstName, lastName, username, password, type.charAt(0), status.charAt(0));
 		int editError = ai.editUser(a);
-		if (editError == -1)
-		{
-			response.sendRedirect("EditAccount.jsp?Edit="+editError+"&Username="+username);
-			return;
-		}
-		else
-		{
-			response.sendRedirect("EditAccount.jsp?Edit="+editError+"&Username="+username);
+		response.sendRedirect("EditAccount.jsp?Edit="+editError+"&Username="+username);
+		return;
+		} catch(IllegalArgumentException e) {
+			response.sendRedirect("EditAccount.jsp?Edit=-1&Username="+username);
 			return;
 		}
 	}
 	
 	else if(ui != null){
 		int error = ui.editProfile(firstName, lastName, username,password,type.charAt(0), status.charAt(0));
-		if (error == -1)
-		{
-			response.sendRedirect("EditProfile.jsp?Edit=" + error);
-		}
-		else
-			response.sendRedirect("EditProfile.jsp?Edit="+error);
+		response.sendRedirect("EditProfile.jsp?Edit="+error);
 	}
 
 %>

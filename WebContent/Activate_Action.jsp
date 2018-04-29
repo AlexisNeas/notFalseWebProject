@@ -2,6 +2,8 @@
     
 <%	
 	AdminInteractions interactions = (AdminInteractions)session.getAttribute("adminInter");
-	interactions.deactivateUser(request.getParameter("Username"));
+	Account acct = interactions.getUserInfo(request.getParameter("Username"));
+	acct.setStatus('Y');
+	interactions.editUser(acct);
 	response.sendRedirect("ManageUsers.jsp");
 %>

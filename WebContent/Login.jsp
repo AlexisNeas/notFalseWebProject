@@ -39,12 +39,12 @@ border="1">
 <tr>
 <td style="vertical-align: top;"><b>Username</b><br>
 </td>
-<td style="vertical-align: top;"><input name="username"> </td>
+<td style="vertical-align: top;"><input name="username" style="text-align: left;" > </td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><b>Password</b><br>
 </td>
-<td style="vertical-align: top;"><input name="password"> </td>
+<td style="vertical-align: top;"><input name="password" style="text-align: left;"> </td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><input value="Log in"
