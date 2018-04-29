@@ -7,8 +7,7 @@
 </head>
 <body>
 <header>
-<h2 class="Title" >Log In</h2>
-
+<h1>Log In</h1>
 </header>
 <br> 
 <%  
@@ -32,8 +31,8 @@ else if(error !=null && error.equals("1")){
 
 <br>
 <center>
-<form method="post" action="Login_Action.jsp" name="Login" > <br>
-<table style="text-align: center; width: 266px; height: 228px;"
+<form method="post" action="Login_Action.jsp" name="Log In" > <br>
+<table class= "login" style=" width: 266px; height: 228px;"
 border="1">
 <tbody>
 <tr>
@@ -44,12 +43,12 @@ border="1">
 <tr>
 <td style="vertical-align: top;"><b>Password</b><br>
 </td>
-<td style="vertical-align: top;"><input name="password" style="text-align: left;"> </td>
+<td style="vertical-align: top;"><input  name="password" style="text-align: left;"> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input value="Log in"
+<td style="vertical-align: top;"><input  value="Log in"
 name="Log in" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td style="vertical-align: top;"><input value="Reset"
+<td style="vertical-align: top;"><input  value="Reset"
 name="Reset" type="reset"></td>
 </tr>
 </tbody>

@@ -7,7 +7,7 @@
 
 
 <title>Add User</title>
-
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 
 <body>

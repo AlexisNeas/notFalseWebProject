@@ -16,9 +16,10 @@ if(error != null && error.equals("-1")){
 %><br>
 <u1 class="navbar">
 <li><a href="ManageUniversities.jsp">Manage Universities</a></li><br>
-<li><a href="ManageUsers.jsp">Manage Users</a></li><br></u1> 
-<br><br>
+<li><a href="ManageUsers.jsp">Manage Users</a></li><br>
 <form method="post" action="LogOut_Action.jsp" name="LogOut"><br>
-<input value="Log Out"name="Log out" type="submit"></form>
+<input value="LogOut"name="Log out" type="submit"></form></u1> 
+<br><br>
+
 </body>
 </html>

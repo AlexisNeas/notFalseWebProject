@@ -14,9 +14,9 @@ AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 
 
 %>
-<center>
-<a href="AddNewSchool.jsp">Add a new university</a>
-</center>
+<%@include file="AdminHeading.jsp" %>
+<form method="post" action="AddNewSchool.jsp" name="Add New School">
+	<input name="Add" value="Add New University" type="submit"><br>
 <br>
 
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
