@@ -1,3 +1,4 @@
+<%@include file="VerifyLogin_Action.jsp" %>
 <%@ page language="java" import="User.*"%>
 <%
 UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
@@ -8,8 +9,8 @@ AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 	String password = request.getParameter("Password");
 	String firstName = request.getParameter("FirstName");
 	String lastName = request.getParameter("LastName");
-	String type = request.getParameter("Type");
-	String status = request.getParameter("Status");
+	String type = request.getParameter("Type").toLowerCase();
+	String status = request.getParameter("Status").toUpperCase();
 	if(ai != null){
 		try{
 		Account a = new Account(firstName, lastName, username, password, type.charAt(0), status.charAt(0));

@@ -34,7 +34,7 @@ http-equiv="content-type">
 <td style="vertical-align: top;">Deactivate<br>
 </td>
 </tr>
-<%	AdminInteractions interactions = new AdminInteractions();
+<%	AdminInteractions interactions = (AdminInteractions)session.getAttribute("adminInter");
 	ArrayList<Account> accounts = interactions.getListOfUsers();
 
 	for(int i = 0; i<accounts.size(); i++) 
@@ -62,7 +62,9 @@ http-equiv="content-type">
 <td style="vertical-align: top;"><%= accounts.get(i).getStatus() %><br>
 </td>
 <td style="vertical-align: top;">
-<%if(accounts.get(i).getStatus() == 'Y'){ %>
+<%if(accounts.get(i).equals(interactions.getAdmin()))
+		out.println("This is you");
+else if(accounts.get(i).getStatus() == 'Y'){ %>
 <form method="post" action="Deactivate_Action.jsp" name="Deactivate">
 	<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
 	<input name="Deactivate" value="Deactivate" type="submit"><br>
