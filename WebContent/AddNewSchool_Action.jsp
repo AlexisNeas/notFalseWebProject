@@ -13,11 +13,13 @@ String percentAccepted = request.getParameter("PerAdmitted");
 String percentEnrolled = request.getParameter("PerEnrolled");
 String qual = request.getParameter("QualOflife");
 String social = request.getParameter("SocialScale");
-String emp1 = request.getParameter("Emp1");
-String emp2 = request.getParameter("Emp2");
-String emp3 = request.getParameter("Emp3");
-String emp4 = request.getParameter("Emp4");
-String emp5 = request.getParameter("Emp5");
+
+String emp1 = request.getParameter("emp1");
+String emp2 = request.getParameter("emp2");
+String emp3 = request.getParameter("emp3");
+String emp4 = request.getParameter("emp4");
+String emp5 = request.getParameter("emp5");
+
 String satM = request.getParameter("satMath");
 String satV = request.getParameter("satVerbal");
 String tuition = request.getParameter("Expenses");
@@ -25,13 +27,12 @@ String percentRecFinAid = request.getParameter("FinAid");
 String numApp = request.getParameter("NumApp");
 String acScale = request.getParameter("AcScale");
 
-/* University univ = new University(schoolName, state, location, control, numStudents, percentFemale, 
-		satV, satM, tuition, percentRecFinAid, numApp, percentAccepted, 
-		percentEnrolled, acScale, social, qual, emp1, emp2, emp3, emp4, emp5); */
-		//System.out.println(schoolName);
-//ArrayList<University> universityList = ai.viewUniversities();
 
-	if (emp1 == null || emp1.equals(""))
+//ArrayList<University> universityList = ai.viewUniversities();
+if (ai != null)
+{
+	if (emp1 == null || emp1 == "")
+
 	{
 		emp1 = "";
 	}
@@ -85,6 +86,14 @@ String acScale = request.getParameter("AcScale");
 	if(control == null || control.equals(""))
 		control = "-1";
 	
+<<<<<<< HEAD
+	int add = ai.addSchool(schoolName,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Integer.parseInt(satV),Integer.parseInt(satM),
+			Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApp),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(acScale),Integer.parseInt(social),Integer.parseInt(qual));
+	
+	if (add == -1)
+	{
+		response.sendRedirect("AddNewSchool.jsp?Error=" +add);
+=======
 
 	int add = ai.addSchool(schoolName,state,location,control,Integer.parseInt(numStudents),
 			Double.parseDouble(percentFemale),Integer.parseInt(satV),Integer.parseInt(satM),
@@ -96,12 +105,19 @@ String acScale = request.getParameter("AcScale");
 	{
 		response.sendRedirect("AddNewSchool.jsp?addNewSchool="+add);
 	
+>>>>>>> efef55b69f6222e4d50207611ede09e1a5afb202
 	}
 	else
 	{
+<<<<<<< HEAD
+		response.sendRedirect("ManageUniversities.jsp");
+	}	
+}
+=======
 		response.sendRedirect("AddNewSchool.jsp?addNewSchool="+add);
 	}
 	
 
 
+>>>>>>> efef55b69f6222e4d50207611ede09e1a5afb202
 %>
