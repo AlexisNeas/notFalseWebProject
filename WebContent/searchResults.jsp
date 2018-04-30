@@ -85,7 +85,7 @@ out.println("School Name: " + name + "\n" + "State: " + u.get(i).getState());
 <td
 style="vertical-align: top; width: 150px; text-align: center;">
 
-<form method="post" action="ViewSchoolInfoUser.jsp" name="searchResult">
+<form method="post" action="ViewSchoolInfoUser.jsp?from=0" name="searchResult">
 <input name="Search" value="1" type="hidden">
 <input name="schoolName" value="<%=name %>" type="hidden">
 <input name="viewSchool" value="View School" type="submit"><br>

@@ -5,6 +5,7 @@
 <head>
 
 <title>View Profile</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <br>

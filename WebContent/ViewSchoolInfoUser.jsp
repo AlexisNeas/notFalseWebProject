@@ -6,8 +6,28 @@
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
 <title>View School Info</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
+<%String from = request.getParameter("from");
+String theURL = "UserMenu.jsp";
+if(from != null)
+{
+	if(from.equals("0")) //search
+	{
+		theURL = "searchResults.jsp?result=3";
+	}
+	else if(from.equals("1"))//savedSchools
+	{
+		theURL = "ViewSavedSchools.jsp";
+	}
+	
+}
+%>
+
+<form method="post" action =<%=theURL%>  name="searchResult">
+<input name="goBack" value="Back to Results" type="submit">
+</form>
 <br>
 <big><big style="font-weight: bold;"><big>School Info:</big></big></big><br>
 <br>
