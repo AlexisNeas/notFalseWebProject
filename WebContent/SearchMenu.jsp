@@ -1,20 +1,30 @@
+
 <%@include file="VerifyLogin_Action.jsp" %>
 <%@include file="VerifyUser.jsp" %>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title>searchMenu</title>
+<title>Search Menu</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 
+<header>
+<div>
+<h1>Search for a school</h1>
+<h2>Enter desired search criteria</h2>
+</div>
+
+</header>
 <body>
-<!--  <%@include file="UserHeading.jsp" %>-->
-<div style="text-align: right;">
+<div>
+<%@include file="UserHeading.jsp" %>
+</div>
+<br><br><br><br>
 <form method="post" action="searchResults.jsp?result=1" name="searchForm"><span
-style="font-family: DejaVu Sans;">Search Menu</span>
-<div style="text-align: left;">
-<table style="text-align: left; width: 100%;" border="1"
+style="font-family: DejaVu Sans;"></span>
+
+<table class= "search" style="text-align: left; width: 100%;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -135,6 +145,11 @@ name="lowQualityOfLifeScale"> High:<input name="upQualityOfLifeScale"></td>
 </table>
 <span style="font-family: DejaVu Sans;"></span></div>
 </form>
-</div>
+
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*"%>
 <%@include file="VerifyLogin_Action.jsp" %>
 <%@include file="VerifyAdmin.jsp" %>
 <html>
@@ -7,18 +9,20 @@ http-equiv="content-type">
 <title>View Users</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<header>
+<div>
+<h1>Manage Users</h1>
+</div>
+</header>
+
 <body>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*"%>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
+<br><br><br>
 
-<font size = "18">View Users:</font>
-<br>
-
-<form method="post" action="AddAccount.jsp" name="Add Account">
-	<input name="Add" value="Add Account" type="submit"><br>
-</form>
-<table style="text-align: left; width: 809px; height: 60px;" border="1">
-<tbody>
+<table style="text-align: center; width: 809px; height: 60px;" border="1" >
+<tbody >
 <tr>
 <td style="vertical-align: top;">Edit</td>
 <td style="vertical-align: top;">Full Name<br>
@@ -80,5 +84,12 @@ else if(accounts.get(i).getStatus() == 'Y'){ %>
 <% } %>
 </tbody>
 </table>
+
 </body>
+<br><br>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

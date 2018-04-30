@@ -10,15 +10,22 @@
 <link rel="stylesheet" type="text/css" href="CMC.css">
 
 </head>
-<!-- <%@include file="UserHeading.jsp" %>-->
+
+<header>
+<div>
+<h1>Search Results</h1>
+</div>
+</header>
 <body>
+<div>
+<%@include file="UserHeading.jsp" %>
+</div>
+<br><br><br><br>
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr>
-<form method="post" action="SearchMenu.jsp" name="goBack">
-<input name="viewSchool" value="New Search" type="submit">
-</form>
+
 <th
 style="vertical-align: top; text-align: center; background-color: rgb(172, 148, 168);">Your
 Search Results<br>
@@ -28,7 +35,9 @@ Search Results<br>
 </tr>
 </tbody>
 </table>
-
+<form class= "searchBtn" method="post" action="SearchMenu.jsp" name="goBack">
+	<input name="viewSchool" value="New Search" type="submit">
+</form>
 <%
 ArrayList<University> u  = null;
 String error1 =request.getParameter("result");
@@ -105,4 +114,9 @@ else{
 %>
 <br>
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

@@ -1,7 +1,19 @@
 <br>
-
+<form class= "LogOut"  method="post" action="LogOut_Action.jsp" name="LogOut"><br>
+<input value="LogOut"name="Log out" type="submit"></form>
 <u1 class="navbar">
-<li><a href="ManageUniversities.jsp">Manage Universities</a></li>
-<li><a href="ManageUsers.jsp">Manage Users</a></li>
-<li><form class= "LogOut" style="text-align:right; color: white;" method="post" action="LogOut_Action.jsp" name="LogOut"><br>
-	<input value="Log Out"name="Log out" type="submit"></form><li></u1>
+<li><a href="AdminMenu.jsp">Home</a><br>
+<li class="dropdown">
+    <a  class="dropbtn">Manage Universities</a>
+    <div class="dropdown-content">
+      <a href="ManageUniversities.jsp">View Universities</a>
+      <a href="AddNewSchool.jsp">Add New School</a>
+    </div><br>
+<li class="dropdown">
+    <a  class="dropbtn">Manage Accounts</a>
+    <div class="dropdown-content">
+      <a href="ManageUsers.jsp">View Accounts</a>
+      <a href="AddAccount.jsp">Add New Account</a>
+    </div><br><br><br><br>
+</u1>
+

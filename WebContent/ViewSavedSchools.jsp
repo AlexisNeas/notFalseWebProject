@@ -12,11 +12,7 @@ http-equiv="content-type">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*" %>
 <br>
-<form method="post" action="UserMenu.jsp" name="goBack">
 
-<input name="goBack" value="Go Back" type="submit"></td>
-
-</form>
 <!-- <%@include file="UserHeading.jsp" %>-->
 <table style="text-align: left; width: 536px; height: 40px;" border="1">
 <tbody>
@@ -57,4 +53,9 @@ http-equiv="content-type">
 </table>
 <br>
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

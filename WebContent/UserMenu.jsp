@@ -8,11 +8,16 @@ http-equiv="content-type">
 <title>MainMenu</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<header>
+<div>
+<h1>Welcome to CMC</h1>
+<h2>Main Menu</h2>
+</div>
+</header>
 <body>
-
-<h1>Welcome, User </h1>
-<form style= "text-align: = "right" method="post" action="LogOut_Action.jsp" name="LogOut"><br>
-<input value="Log Out"name="Log out" type="submit"></form>
+<div>
+<%@include file="UserHeading.jsp" %>
+</div>
 
 <%  
 String error =request.getParameter("notA");
@@ -21,11 +26,12 @@ if(error != null && error.equals("-1")){
 }
 %>
 <br>
-
-<%@include file="UserHeading.jsp" %>
-
-
 <br><br>
 </body>
-<address>Made by !False</address>
+<br><br><br><br><br><br><br><br><br>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

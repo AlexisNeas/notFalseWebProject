@@ -1,25 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0>
 <%@include file="VerifyLogin_Action.jsp" %>
 <%@include file="VerifyAdmin.jsp" %>
 <html>
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title>Welcome, Admin</title>
+<title>MainMenu</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<header>
+<div>
+<h1>Welcome to CMC</h1>
+<h2>Main Menu</h2>
+</div>
+</header>
 <body>
-<%  
-String error =request.getParameter("notU");
-if(error != null && error.equals("-1")){
-	out.println("You must be a logged in user to access that page.");
-}
-%><br>
-<u1 class="navbar">
-<li><a href="ManageUniversities.jsp">Manage Universities</a></li><br>
-<li><a href="ManageUsers.jsp">Manage Users</a></li><br>
-<form method="post" action="LogOut_Action.jsp" name="LogOut"><br>
-<input value="LogOut"name="Log out" type="submit"></form></u1> 
-<br><br>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
 
+<%  
+String error =request.getParameter("notA");
+if(error != null && error.equals("-1")){
+	out.println("You must be a logged in admin to access that page.");
+}
+%>
+<br>
+<br><br>
 </body>
+<br><br><br><br><br><br><br><br><br>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

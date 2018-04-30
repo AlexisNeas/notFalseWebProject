@@ -8,25 +8,23 @@ http-equiv="content-type">
 <title>ManageUniversities</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<header>
+<div>
+<h1>Manage Universities</h1>
+</div>
+</header>
 <body>
-<form method="post" action="LogOut_Action.jsp" name="LogOut"><br>
-<input value="Log Out"name="Log out" type="submit"></form>
-<br>
-<form method = "post" action = "AdminMenu.jsp" name = "Back"><br>
-<input value = "Back" name= "Back" type = "submit">
-</form>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
+
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 
 
 %>
-<%@include file="AdminHeading.jsp" %>
-<form method="post" action="AddNewSchool.jsp" name="Add New School">
-	<input name="Add" value="Add New University" type="submit"><br>
-<br>
-
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
+<br><br><br><br>
+<table style="text-align: center; width: 80%;">
 <tbody>
 <tr>
 <td style="vertical-align: top;">School<br>
@@ -147,5 +145,10 @@ for (University univ: universityList)
 <br>
 
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>
 

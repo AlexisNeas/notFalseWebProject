@@ -10,11 +10,18 @@
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 
+<header>
+<div>
+<h1>Add Account</h1>
+</div>
+</header>
 <body>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
 
 <br>
-
-Add User form:<br>
+<br>
 <%
 String error = request.getParameter("Add");
 if (error != null && error.equals("-1"))
@@ -110,4 +117,9 @@ name="Reset" type="reset"></td>
 </form>
 <br>
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

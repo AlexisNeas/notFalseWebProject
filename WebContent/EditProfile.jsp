@@ -7,29 +7,20 @@
 <title>View Profile</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
-<link rel="stylesheet" type="text/css" href="CMC.css">
+<header>
+<div>
+<h1>Edit Profile</h1>
+</div>
+</header>
+
 <body>
 <br>
+<div>
+<%@include file="UserHeading.jsp" %>
+</div>
+<br><br>
 
-
-Edit User form:<br>
-<form method="post" action="UserMenu.jsp" name="goBack">
-
-<input name="goBack" value="Go Back" type="submit"></td>
-
-</form>
 <% String error = request.getParameter("Edit");
-%>
-<form method = "post" action = "LogOut_Action.jsp" name = "LogOut">
-<input name = "Log Out" value = "Log Out" type = "submit">
-</form>
-
-<form method = "post" action = "UserMenu.jsp" name = "Back"><br>
-<input name = "Back" value = "Back" type = "submit"><br>
-</form>
-
-Edit User Form:
-<%
 
 if(error !=null && error.equals("-1"))
 {
@@ -47,8 +38,7 @@ UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
 Account user = uc.viewProfile(uc.getUser().getUsername());
 %>
 <form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
-<table style="text-align: left; width: 266px; height: 228px;"
-border="1" >
+<table style="text-align: left; " border="1" >
 <tbody>
 <tr>
 <td style="vertical-align: top;">First Name<br>
@@ -56,7 +46,6 @@ border="1" >
 <td style="vertical-align: top;"><input name="FirstName" value=<%=user.getFirstName()%>><br>
 </td>
 </tr>
-<tr>
 <tr>
 <td style="vertical-align: top;">Last Name<br>
 </td>
@@ -91,5 +80,10 @@ name="Reset" type="reset"></td>
 </form>
 <br>
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>
 

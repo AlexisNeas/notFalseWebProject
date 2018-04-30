@@ -9,7 +9,17 @@ http-equiv="content-type">
 <title>Edit University</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<header>
+<div>
+<h1>Edit University</h1>
+</div>
+</header>
+
 <body>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
+<br>
 <%
 String result = request.getParameter("edit");
 if(result != null && result.equals("1")){
@@ -165,4 +175,9 @@ cellpadding="2" cellspacing="2">
 </form>
 <br>
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

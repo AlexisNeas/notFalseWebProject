@@ -7,14 +7,25 @@
 <title>Edit Account</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<header>
+<div>
+<h1>Edit Account</h1>
+<h2>Edit 
+<%String username= request.getParameter("Username");
+ out.print( username);
+ %> </h2>
+</div>
+</header>
+<body>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" %>
 <br>
  Edit
-<%String username= request.getParameter("Username");
- out.print( username);
- %>
+<
 <br>
 <%
 String error = request.getParameter("Edit");
@@ -87,4 +98,9 @@ name="Reset" type="reset"></td>
 </form>
 <br>
 </body>
+<footer>
+
+<address> <p>Made By !False</p> </address>
+
+</footer>
 </html>

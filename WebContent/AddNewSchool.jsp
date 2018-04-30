@@ -7,7 +7,15 @@ http-equiv="content-type">
 <title>Add New School</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<header>
+<div>
+<h1>Add New School</h1>
+</div>
+</header>
 <body>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 String error =request.getParameter("add");
