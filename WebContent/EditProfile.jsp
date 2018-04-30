@@ -9,9 +9,14 @@
 </head>
 <body>
 <br>
+
 Edit User form:<br>
-<%
-String error = request.getParameter("Edit");
+<form method="post" action="UserMenu.jsp" name="goBack">
+
+<input name="goBack" value="Go Back" type="submit"></td>
+
+</form>
+<% String error = request.getParameter("Edit");
 if(error !=null && error.equals("-1"))
 {
 	out.println("User information not edited.");

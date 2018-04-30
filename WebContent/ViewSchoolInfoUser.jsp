@@ -19,14 +19,14 @@ if(from != null)
 	}
 	else if(from.equals("1"))//savedSchools
 	{
-		theURL = "ViewSavedSchools.jsp";
+		theURL = "ViewSavedSchools.jsp?from="+from;
 	}
 	
 }
 %>
 
 <form method="post" action =<%=theURL%>  name="searchResult">
-<input name="goBack" value="Back to Results" type="submit">
+<input name="goBack" value="Go Back" type="submit">
 </form>
 <br>
 <big><big style="font-weight: bold;"><big>School Info:</big></big></big><br>
