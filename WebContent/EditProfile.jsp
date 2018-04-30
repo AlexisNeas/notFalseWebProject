@@ -7,8 +7,10 @@
 <title>View Profile</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 <body>
 <br>
+
 
 Edit User form:<br>
 <form method="post" action="UserMenu.jsp" name="goBack">
@@ -17,6 +19,18 @@ Edit User form:<br>
 
 </form>
 <% String error = request.getParameter("Edit");
+%>
+<form method = "post" action = "LogOut_Action.jsp" name = "LogOut">
+<input name = "Log Out" value = "Log Out" type = "submit">
+</form>
+
+<form method = "post" action = "UserMenu.jsp" name = "Back"><br>
+<input name = "Back" value = "Back" type = "submit"><br>
+</form>
+
+Edit User Form:
+<%
+
 if(error !=null && error.equals("-1"))
 {
 	out.println("User information not edited.");
