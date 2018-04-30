@@ -58,7 +58,9 @@ public class AdminInteractions {
                                        satVerbal, satMath, tuition, perFinancialAid, numApplicants,
                                        perAccepted, perEnroll, academicScale, social, qualOfLife,
                                        studyArea1, studyArea2, studyArea3, studyArea4, studyArea5);*/
+	  
     return adminController.setSchoolInfo(school);
+  
   }
   
   /**
