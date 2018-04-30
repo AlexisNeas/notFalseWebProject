@@ -302,11 +302,29 @@ div{
 }
 
 .search td{
-	height: 50px;
+	height: 30px;
+	width: 25px;
 }
 .search input{
-	padding: 0;
-	font-size: 110%;
+	padding: 3;
+	font-size: 150%;
+	height: 20%;
+}
+.search input[name = "lowNumStudents"],input[name= "upNumStudents"],
+input[name = lowPercentFemale],input[name = "upPercentFemale"],
+input[name = "lowSATVerbal"],input[name = "upSATVerbal"],
+input[name = "lowSATMath"],input[name="upSATMath"],
+input[name="schoolName"],input[name="state"],input[name = "location"],
+input[name="control"],input[name="lowTuition"],input[name="upTuition"],
+input[name="lowPercentRecFinAid" ],input[name="upPercentRecFinAid"],
+input[name="lowNumApplicants"],input[name="upNumApplicants"],
+input[name="lowPercentAccepted"],input[name="upPercentAccepted"],
+input[name="upPercentEnrolled"],input[name="lowPercentEnrolled"],
+input[name="lowAcademicsScale"],input[name="upAcademicsScale"],
+input[name="lowSocialScale"],input[name="upSocialScale"],
+input[name="lowQualityOfLifeScale"],input[name="upQualityOfLifeScale"]{
+	
+	height: 15px;
 }
 
 .searchBtn{
