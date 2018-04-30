@@ -25,7 +25,7 @@ http-equiv="content-type">
 style="font-family: DejaVu Sans;"></span>
 
 <table class= "search" style="text-align: left; width: 100%;" border="1"
-cellpadding="2" cellspacing="2">
+cellpadding="1" cellspacing="1">
 <tbody>
 <tr>
 <td style="vertical-align: top;">School Name</td>
@@ -54,7 +54,7 @@ cellpadding="2" cellspacing="2">
 <td style="vertical-align: top;">Number of Students<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowNumStudents"> High:<input name="upNumStudents"><br>
+name="lowNumStudents"> High:<input name="upNumStudents">
 </td>
 </tr>
 <tr>
