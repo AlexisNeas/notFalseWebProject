@@ -9,6 +9,12 @@ http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
+<form method="post" action="LogOut_Action.jsp" name="LogOut"><br>
+<input value="Log Out"name="Log out" type="submit"></form>
+<br>
+<form method = "post" action = "AdminMenu.jsp" name = "Back"><br>
+<input value = "Back" name= "Back" type = "submit">
+</form>
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 
@@ -127,10 +133,10 @@ for (University univ: universityList)
 <td style="vertical-align: top;">
 <form method="post" action="EditUniversity.jsp" name="Schools">
 <input name="Edit"  value= "Edit" type="submit"></input>
-<input name="School" value= "<%= univ.getSchoolName() %>" type="hidden">
+<input name="School" value= "<%= univ.getSchoolName() %>" type="hidden"></input>
 <br>
 </form>
-</td>
+</td> 
 </tr>
 <%
 }
@@ -139,6 +145,7 @@ for (University univ: universityList)
 </table>
 <br>
 <br>
+
 </body>
 </html>
 

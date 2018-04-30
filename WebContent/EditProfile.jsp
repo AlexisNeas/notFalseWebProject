@@ -6,9 +6,17 @@
 
 <title>View Profile</title>
 </head>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 <body>
 <br>
-Edit User form:<br>
+<form method = "post" action = "LogOut_Action.jsp" name = "LogOut"><br>
+<input name = "Log Out" value = "Log Out" type = "submit"><br>
+</form>
+<form method = "post" action = "UserMenu.jsp" name = "Back"><br>
+<input name = "Back" value = "Back" type = "submit"><br>
+</form>
+
+Edit User Form:
 <%
 String error = request.getParameter("Edit");
 if(error !=null && error.equals("-1"))

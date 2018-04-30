@@ -4,13 +4,13 @@ import = "User.*" import = "University.*" import = "java.util.*"%>
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title></title>
+<title>Add New School</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
-String error =request.getParameter("addNewSchool");
+String error =request.getParameter("add");
 if(error != null)
 { 
 	if(Integer.parseInt(error) == -1) out.println("Failed to add new school. Try Again.");
