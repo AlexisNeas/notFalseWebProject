@@ -211,41 +211,50 @@ public class DBController
     {
     	if(!current.getStudyArea1().equals(univ.getStudyArea1()))
     	{
-    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea1());
-			
-    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea1());
+    		if(!current.getStudyArea1().equals(""))
+    			this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea1());
+			if(!univ.getStudyArea1().equals(""))
+				this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea1());
     	}
     }
     if(univ.getStudyArea2() != null|| univ.getStudyArea2().equals(""))
     {
     	if(!current.getStudyArea2().equals(univ.getStudyArea2()))
     	{
-    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea3());
-    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
+    		if(!current.getStudyArea2().equals(""))
+    			this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea2());
+    		if(!univ.getStudyArea2().equals(""))
+    			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea2());
     	}
     }
     if(univ.getStudyArea3() != null|| univ.getStudyArea3().equals(""))
     {
     	if(!current.getStudyArea3().equals(univ.getStudyArea3()))
     	{
-    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea3());
-    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
+    		if(!current.getStudyArea3().equals(""))
+    			this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea3());
+    		if(!univ.getStudyArea3().equals(""))	
+    			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
     	}
     }
     if(univ.getStudyArea4() != null|| univ.getStudyArea4().equals(""))
     {
     	if(!current.getStudyArea4().equals(univ.getStudyArea4()))
     	{
-    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea4());
-    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea4());
+    		if(!current.getStudyArea4().equals(""))
+    			this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea4());
+    		if(!univ.getStudyArea4().equals(""))
+    			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea4());
     	}
     }
     if(univ.getStudyArea5() != null|| univ.getStudyArea5().equals(""))
     {
     	if(!current.getStudyArea5().equals(univ.getStudyArea5()))
     	{
-    		this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea5());
-    		this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea5());
+    		if(!current.getStudyArea5().equals(""))
+    			this.removeUnivEmp(univ.getSchoolName(), current.getStudyArea5());
+    		if(!univ.getStudyArea5().equals(""))
+    			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea5());
     	}
     }
     } catch (Exception e) {
