@@ -8,6 +8,16 @@ http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 
+<header>
+<div>
+<h1>Your Saved Schools</h1>
+</div>
+</header>
+<br>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
+<br><br><br><br>
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*" %>

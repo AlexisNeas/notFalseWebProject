@@ -13,18 +13,21 @@ http-equiv="content-type">
 <h1>Manage Universities</h1>
 </div>
 </header>
-<body>
+<br>
 <div>
 <%@include file="AdminHeading.jsp" %>
 </div>
+<br><br><br><br>
+<body>
+
 
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 
 
 %>
-<br><br><br><br>
-<table style="text-align: center; width: 80%;">
+
+<table style="text-align: center; width: 60%;">
 <tbody>
 <tr>
 <td style="vertical-align: top;">School<br>

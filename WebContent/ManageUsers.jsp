@@ -46,24 +46,23 @@ http-equiv="content-type">
 		
 	%>
 
-<tr>
+
 <tr>
 <td style="vertical-align: top;">
 <form method="post" action="EditAccount.jsp" name="Edit">
 <input name="Username" value="<%=accounts.get(i).getUsername() %>" type="hidden">
 <input name="Edit" value="Edit" type="submit">
 </form>
-<br>
 </td>
-<td style="vertical-align: top;"><%= accounts.get(i).getFirstName() + " "+accounts.get(i).getLastName() %><br>
+<td style="vertical-align: top;"><%= accounts.get(i).getFirstName() + " "+accounts.get(i).getLastName() %>
 </td>
-<td style="vertical-align: top;"><%= accounts.get(i).getUsername() %><br>
+<td style="vertical-align: top;"><%= accounts.get(i).getUsername() %>
 </td>
-<td style="vertical-align: top;"><%= accounts.get(i).getPassword() %><br>
+<td style="vertical-align: top;"><%= accounts.get(i).getPassword() %>
 </td>
-<td style="vertical-align: top;"><%= accounts.get(i).getAccountType() %><br>
+<td style="vertical-align: top;"><%= accounts.get(i).getAccountType() %>
 </td>
-<td style="vertical-align: top;"><%= accounts.get(i).getStatus() %><br>
+<td style="vertical-align: top;"><%= accounts.get(i).getStatus() %>
 </td>
 <td style="vertical-align: top;">
 <%if(accounts.get(i).equals(interactions.getAdmin()))
@@ -71,12 +70,12 @@ http-equiv="content-type">
 else if(accounts.get(i).getStatus() == 'Y'){ %>
 <form method="post" action="Deactivate_Action.jsp" name="Deactivate">
 	<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
-	<input name="Deactivate" value="Deactivate" type="submit"><br>
+	<input name="Deactivate" value="Deactivate" type="submit">
 </form>
 <% } else { %>
 <form method="post" action="Activate_Action.jsp" name="Activate">
 	<input name="Username" value= <%= accounts.get(i).getUsername() %> type="hidden">
-	<input name="Activate" value="Activate" type="submit"><br>
+	<input name="Activate" value="Activate" type="submit">
 </form>
 <% } %>
 </td>

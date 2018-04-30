@@ -68,7 +68,7 @@ h2{
 }
 table,td,tr,post{
 	text-align: center;
-
+	margin: auto;
 	font-family: Georgia, "Times New Roman" Times, serif; 
 	border: 1px solid grey;
 	color: #52575c;
@@ -82,6 +82,7 @@ table{
 td,tr{
 	background-color: White;
 	height: 50px;
+	margin:auto;
 	
 }
 
@@ -97,7 +98,7 @@ td,tr{
 	top: calc(50% - 75px);
 	left: calc(50% - 50px);
 	height: 50%;
-	width: 40%;
+	width: 100%;
 	padding: 10px;
 	z-index: 2;
 	border-color: transparent;
@@ -107,9 +108,10 @@ td,tr{
 	font-family: 'Exo', sans-serif;
 	font-size: 20px;
 	color: White;
+	
 }
 .login input{
-	width: 70%;
+	width: 100%;
 	height: 100%;
 	background: transparent;
 	border: 1px solid rgba(255,255,255,0.6);
@@ -125,7 +127,7 @@ td,tr{
 
 
 .login input[type=button],input[type=submit],input[type=reset]{
-	width: 250px;
+	width: 50%;
 	height: 35px;
 	background: #fff;
 	border: 1px solid #fff;
