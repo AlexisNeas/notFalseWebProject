@@ -5,12 +5,37 @@
 <title>Login Form</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
-<body>
 <header>
-<h2 class="Title" >Log In</h2>
-
+<h1>Log In</h1>
 </header>
+<body>
 <br> 
+<br>
+<center>
+<form method="post" action="Login_Action.jsp" name="Log In" > <br>
+<table class= "login" style=" width: 266px; height: 228px;"
+border="1">
+<tbody>
+<tr>
+<td style="vertical-align: top;"><b>Username</b><br>
+</td>
+<td style="vertical-align: top;"><input name="username" style="text-align: left;" > </td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><b>Password</b><br>
+</td>
+<td style="vertical-align: top;"><input  name="password" style="text-align: left;"> </td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><input  value="LogIn"
+name="Log in" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top;"><input  value="Reset"
+name="Reset" type="reset"></td>
+</tr>
+</tbody>
+</table>
+</form>
+<p class= "LogInError">
 <%  
 String error =request.getParameter("logIn");
 if(error != null && error.equals("-1")){
@@ -28,34 +53,8 @@ else if(error !=null && (error.equals("-4") || error.equals("-5"))){
 else if(error !=null && error.equals("1")){
 	out.println("You have been logged out.");
 }
-%><br>
-
-<br>
-<center>
-<form method="post" action="Login_Action.jsp" name="Login" > <br>
-<table style="text-align: center; width: 266px; height: 228px;"
-border="1">
-<tbody>
-<tr>
-<td style="vertical-align: top;"><b>Username</b><br>
-</td>
-<td style="vertical-align: top;"><input name="username" style="text-align: left;" > </td>
-</tr>
-<tr>
-<td style="vertical-align: top;"><b>Password</b><br>
-</td>
-<td style="vertical-align: top;"><input name="password" style="text-align: left;"> </td>
-</tr>
-<tr>
-<td style="vertical-align: top;"><input value="Log in"
-name="Log in" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td style="vertical-align: top;"><input value="Reset"
-name="Reset" type="reset"></td>
-</tr>
-</tbody>
-</table>
-<br>
-</form>
+%>
+</p>
 </center>
 <br>
 

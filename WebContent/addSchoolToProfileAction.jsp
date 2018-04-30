@@ -20,12 +20,12 @@
 		if(i == -1)
 		{
 			response.sendRedirect("ViewSchoolInfoUser.jsp?result="+2
-					+"&schoolName="+saveSchoolName+"&Search=1");
+					+"&schoolName="+saveSchoolName+"&Search=1"+"&from="+0);
 		}
 		else
 		{
 			response.sendRedirect("ViewSchoolInfoUser.jsp?result="+1
-					+"&schoolName="+saveSchoolName+"&Search=1");
+					+"&schoolName="+saveSchoolName+"&Search=1"+"&from="+0);
 		}
 	}
 %>

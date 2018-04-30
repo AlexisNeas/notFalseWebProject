@@ -5,6 +5,7 @@
 <head>
 
 <title>Edit Account</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

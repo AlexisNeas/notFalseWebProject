@@ -7,11 +7,17 @@ http-equiv="content-type">
 <title></title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
+
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*" %>
 <br>
-<%@include file="UserHeading.jsp" %>
+<form method="post" action="UserMenu.jsp" name="goBack">
+
+<input name="goBack" value="Go Back" type="submit"></td>
+
+</form>
+<!-- <%@include file="UserHeading.jsp" %>-->
 <table style="text-align: left; width: 536px; height: 40px;" border="1">
 <tbody>
 <tr align="center">
@@ -39,7 +45,7 @@ http-equiv="content-type">
 </td>
 <td style="vertical-align: top;"><%=schools.get(i)%><br>
 </td>
-<td style="vertical-align: top;"><form method="post" action="ViewSchoolInfoUser.jsp" name="searchResult">
+<td style="vertical-align: top;"><form method="post" action="ViewSchoolInfoUser.jsp?from=1" name="searchResult">
 	<input name="Search" value="0" type="hidden">
 	<input name="schoolName" value="<%=schools.get(i) %>" type="hidden">
 	<input name="viewSchool" value="View School" type="submit"><br>

@@ -6,7 +6,8 @@
 <head>
 <meta content="text/html; charset=ISO-8859-1"
 http-equiv="content-type">
-<title></title>
+<title>Edit University</title>
+<link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <body>
 <%
