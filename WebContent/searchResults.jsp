@@ -16,6 +16,7 @@
 <h1>Search Results</h1>
 </div>
 </header>
+
 <body>
 <div>
 <%@include file="UserHeading.jsp" %>

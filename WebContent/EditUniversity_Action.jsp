@@ -85,11 +85,42 @@ if(control == null || control.equals(""))
 	control = "-1";
 
 
-University univ = new University(schoolName,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Double.parseDouble(SATVerbal),Double.parseDouble(SATMath),
-		Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApplicants),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(academicScale),Integer.parseInt(socialScale),Integer.parseInt(qualOfLife),study1,study2,study3,study4,study5);
+University school = ai.getSchoolInfo(schoolName);
+		//,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Double.parseDouble(SATVerbal),Double.parseDouble(SATMath),
+		//Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApplicants),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(academicScale),Integer.parseInt(socialScale),Integer.parseInt(qualOfLife),study1,study2,study3,study4,study5);
+
+school.setState(state);
+school.setLocation(location);
+school.setControl(control);
+school.setNumStudents(Integer.parseInt(numStudents));
+school.setPercentFemale(Double.parseDouble(percentFemale));
+school.setSatVerbal(Double.parseDouble(SATVerbal));
+school.setSatMath(Double.parseDouble(SATMath));
+school.setTuition(Double.parseDouble(tuition));
+school.setPercentRecFinAid(Double.parseDouble(percentRecFinAid));
+school.setNumApplicants(Integer.parseInt(numApplicants));
+school.setPercentAccepted(Double.parseDouble(percentAccepted));
+school.setPercentEnroll(Double.parseDouble(percentEnrolled));
+school.setAcademicScale(Integer.parseInt(academicScale));
+school.setSocial(Integer.parseInt(socialScale));
+school.setQualOfLife(Integer.parseInt(qualOfLife));
+school.setStudyArea1(study1);
+school.setStudyArea1(study2);
+school.setStudyArea1(study3);
+school.setStudyArea1(study4);
+school.setStudyArea1(study5);
 
 
-int edit = ai.editSchool(univ);
+
+
+ int edit = ai.editSchool(school);
+ if(edit == -1)
+	{
+		response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
+		return;
+	}
+ else{
+
 response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
-
+ }
 %>

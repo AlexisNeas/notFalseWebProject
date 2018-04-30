@@ -131,6 +131,45 @@ String study5 = request.getParameter("studyArea5");
 	   lowQualityOfLifeScale = "-2";
    if(upQualityOfLifeScale == null || upQualityOfLifeScale.equals(""))
 	   upQualityOfLifeScale = "-2";
+   
+   try{
+  /*  int lowStud = Integer.parseInt(lowNumStudents);
+   int upStud = Integer.parseInt(upNumStudents);
+	
+	double lowFe = Double.parseDouble(lowPercentFemale);
+	double highFe = Double.parseDouble(upPercentFemale);
+	
+	double lowSATV = Double.parseDouble(lowSATVerbal);
+	double highSATV = Double.parseDouble(upSATVerbal);
+	
+	double lowMath = Double.parseDouble(lowSATMath);
+	double highMath = Double.parseDouble(upSATMath);
+	
+	double lowExp = Double.parseDouble(lowTuition) ;
+	double highExp = Double.parseDouble(upTuition);
+	
+	double lowRec = Double.parseDouble(lowPercentRecFinAid);
+	double highRec = Double.parseDouble(upPercentRecFinAid);
+	
+	int lowApp = Integer.parseInt(lowNumApplicants) ;
+	int highApp = Integer.parseInt(upNumApplicants);
+	
+	double lowAcc = Double.parseDouble(lowPercentAccepted);
+   double highAcc = Double.parseDouble(upPercentAccepted);
+
+   double lowPer = Double.parseDouble(lowPercentEnrolled);
+  double highPer=  Double.parseDouble(upPercentEnrolled);
+   
+   int lowAc = Integer.parseInt(lowAcademicsScale) ;
+	int highAc = Integer.parseInt(upAcademicsScale);
+	
+	int lowS = Integer.parseInt(lowSocialScale);
+	int highS = Integer.parseInt(upSocialScale);
+	
+	int lowQ = Integer.parseInt(lowQualityOfLifeScale);
+	int highQ = Integer.parseInt(upQualityOfLifeScale); */
+
+   
  	u = (ArrayList<University>) ui.searchSchool(schoolName.toUpperCase(), 
 		state.toUpperCase(),
 		location.toUpperCase(),
@@ -177,5 +216,12 @@ String study5 = request.getParameter("studyArea5");
 		study4, 
 		study5);
 	   ui.getUser().setRecentSearch(u);
+   }
+   catch(NumberFormatException e){
+		%> <script type="text/javascript">
+	    var msg = "Invalid Input.";
+	    alert(msg);
+	</script> <%
+   }
 
 %>
