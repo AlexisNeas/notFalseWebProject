@@ -24,12 +24,7 @@ if(error != null && error.equals("-1")){
 
 <%@include file="UserHeading.jsp" %>
 
-<<<<<<< HEAD
-<br><br>
 
-
-=======
->>>>>>> a0112ad97f72f10c154c3861514a536668905b62
 </body>
 <address>Made by !False</address>
 </html>

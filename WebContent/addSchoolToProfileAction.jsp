@@ -9,11 +9,11 @@
 	if(viewing == 0){
 		if(i == -1)
 		{
-			response.sendRedirect("searchResults.jsp?result="+2);
+			response.sendRedirect("searchResults.jsp?result="+3+"&failure="+10);
 		}
 		else
 		{
-			response.sendRedirect("searchResults.jsp?result="+1);
+			response.sendRedirect("searchResults.jsp?result="+3);
 		}
 	}
 	else{

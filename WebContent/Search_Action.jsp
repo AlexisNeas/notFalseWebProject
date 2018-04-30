@@ -2,6 +2,7 @@
 <%
 
 UserInteraction ui = (UserInteraction)session.getAttribute("userInter");
+
 String schoolName = request.getParameter("schoolName");
 String state = request.getParameter("state");
 String location = request.getParameter("location");
@@ -130,7 +131,7 @@ String study5 = request.getParameter("studyArea5");
 	   lowQualityOfLifeScale = "-2";
    if(upQualityOfLifeScale == null || upQualityOfLifeScale.equals(""))
 	   upQualityOfLifeScale = "-2";
-ArrayList<University> u = ui.searchSchool(schoolName.toUpperCase(), 
+ 	u = (ArrayList<University>) ui.searchSchool(schoolName.toUpperCase(), 
 		state.toUpperCase(),
 		location.toUpperCase(),
 		control.toUpperCase(),
@@ -175,5 +176,6 @@ ArrayList<University> u = ui.searchSchool(schoolName.toUpperCase(),
 		study3,
 		study4, 
 		study5);
+	   ui.getUser().setRecentSearch(u);
 
 %>

@@ -9,9 +9,9 @@ http-equiv="content-type">
 </head>
 
 <body>
-<%@include file="UserHeading.jsp" %>
+<!--  <%@include file="UserHeading.jsp" %>-->
 <div style="text-align: right;">
-<form method="post" action="searchResults.jsp" name="searchForm"><span
+<form method="post" action="searchResults.jsp?result=1" name="searchForm"><span
 style="font-family: DejaVu Sans;">Search Menu</span>
 <div style="text-align: left;">
 <table style="text-align: left; width: 100%;" border="1"
