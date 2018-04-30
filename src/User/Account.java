@@ -66,6 +66,10 @@ public class Account {
     {
     	throw new IllegalArgumentException("Status must be 'Y' or 'N'");
     }
+    if(password.equals(""))
+    {
+    	throw new IllegalArgumentException("Password cannot be empty");
+    }
     this.firstName = firstName;
     this.lastName = lastName;
     this.username = username;
@@ -153,7 +157,11 @@ public class Account {
    * @param pass the new password
    */
   public void setPassword(String pass){
-    this.password = pass;
+    if(!pass.equals("")){
+    	this.password = pass;
+    }
+    else
+    	throw new IllegalArgumentException("Password cannot be empty");
   }
   
   /**

@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyAdmin.jsp" %>
 
 <html>
 <head>
@@ -18,7 +20,7 @@
 String error = request.getParameter("Edit");
 if(error !=null && error.equals("-1"))
 {
-	out.println("Account information not edited.");
+	out.println("There was an invalid input. Please try again.");
 }
 else if(error != null && error.equals("0"))
 {
@@ -29,10 +31,10 @@ else if(error != null && error.equals("0"))
 
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
-//Account user = uc.viewProfile(uc.getUser().getUsername());
-//AdminInteractions ai = new AdminInteractions();
-//session.setAttribute("adminInter", ai);
 Account account = ai.getUserInfo(username);
+boolean sameAcct = false;
+if(account.equals(ai.getAdmin()))
+	sameAcct = true;
 %>
 <form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
 <table style="text-align: left; width: 266px; height: 228px;"
@@ -57,19 +59,21 @@ border="1" >
 <td style="vertical-align: top;"><input name="Username" value=<%=account.getUsername()%> readonly> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Password<br>
+<td style="vertical-align: top;">Password<br>Must exist
 </td>
 <td style="vertical-align: top;"><input name="Password" value=<%=account.getPassword()%>> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Type<br>
+<td style="vertical-align: top;">Type<br>Must be 'a' or 'u'
 </td>
-<td style="vertical-align: top;"><input name="Type" value=<%=account.getAccountType()%> > </td>
+<td style="vertical-align: top;"><input name="Type" value=<%=account.getAccountType()%> 
+<% if(sameAcct){ out.println("readonly");}%>> </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">Status<br>
+<td style="vertical-align: top;">Status<br>Must be 'Y' or 'N'
 </td>
-<td style="vertical-align: top;"><input name="Status" value=<%=account.getStatus()%> > </td>
+<td style="vertical-align: top;"><input name="Status" value=<%=account.getStatus()%> 
+<% if(sameAcct){ out.println("readonly");}%>> </td>
 </tr>
 <tr>
 <td style="vertical-align: top;"><input value="Edit"

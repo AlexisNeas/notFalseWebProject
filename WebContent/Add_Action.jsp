@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyAdmin.jsp" %>
 <%@ page language="java" import="User.*"%>
     
 <%	
@@ -6,18 +8,15 @@
 	String lastName = request.getParameter("LastName");
 	String username = request.getParameter("Username");
 	String password = request.getParameter("Password");
-	String type = request.getParameter("Type");
+	String type = request.getParameter("Type").toLowerCase();
 	
-	if(firstName == "" || lastName=="" || username=="" || password=="" || type =="")
+	if(username=="" || password=="" || type =="")
 	{
 		added = -3;
 	}
 	
 	else{
-	//String status = request.getParameter("Status");
-	//User user = new User(firstName,lastName,username,password,type.charAt(0),status.charAt(0));
-	//AdminInteraction uc = (UserController)session.getAttribute("uc");
-	AdminInteractions interaction = new AdminInteractions();
+	AdminInteractions interaction = (AdminInteractions)session.getAttribute("adminInter");
 	added = interaction.addNewUser(firstName, lastName, username,password, type.charAt(0));
 	}
 	

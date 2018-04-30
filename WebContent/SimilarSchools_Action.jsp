@@ -28,7 +28,8 @@ School
 Name:&nbsp;&nbsp; <input name="schoolName" value="<%= schools.get(i).getSchoolName() %>"><br>
 Location:&nbsp;&nbsp; <input name="location" value="<%= schools.get(i).getLocation() %>"><br>
 State:&nbsp;&nbsp; <input name="state" value="<%= schools.get(i).getState() %>"><br>
-<form method="post" action="ViewSchoolInfoUser.jsp" name="similar">
+
+<form method="post" action="ViewSchoolInfoUser.jsp?from=0" name="similar">
 <input name="Search" value="1" type="hidden">
 <input name="schoolName" value="<%= schools.get(i).getSchoolName() %>" type="hidden">
 <input name="viewSchool" value="View School" type="submit"><br>
