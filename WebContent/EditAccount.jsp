@@ -54,10 +54,9 @@ border="1" >
 <tr>
 <td style="vertical-align: top;">First Name<br>
 </td>
-<td style="vertical-align: top;"><input name="FirstName" value=<%=account.getFirstName()%>><br>
+<td style="vertical-align: top;"><input name="FirstName" value=<%=account.getFirstName()%>>
 </td>
 </tr>
-<tr>
 <tr>
 <td style="vertical-align: top;">Last Name<br>
 </td>
@@ -86,7 +85,7 @@ border="1" >
 <td style="vertical-align: top;"><input name="Status" value=<%=account.getStatus()%> 
 <% if(sameAcct){ out.println("readonly");}%>> </td>
 </tr>
-<tr>
+<tr style="height: 50px;">
 <td style="vertical-align: top;"><input value="Edit"
 name="Edit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td style="vertical-align: top;"><input value="Reset"

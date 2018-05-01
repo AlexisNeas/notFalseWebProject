@@ -1,6 +1,7 @@
-<br>
+<br><br>
 <form class= "LogOut"  method="post" action="LogOut_Action.jsp" name="LogOut"><br>
 <input value="LogOut"name="Log out" type="submit"></form>
+<br><br><br>
 <u1 class="navbar">
 <li><a href="AdminMenu.jsp">Home</a><br>
 <li class="dropdown">
@@ -16,4 +17,4 @@
       <a href="AddAccount.jsp">Add New Account</a>
     </div><br><br><br><br>
 </u1>
-
+<br>

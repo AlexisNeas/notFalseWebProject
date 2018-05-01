@@ -15,7 +15,7 @@ http-equiv="content-type">
 </header>
 <br>
 <div>
-<%@include file="AdminHeading.jsp" %>
+<%@include file="UserHeading.jsp" %>
 </div>
 <br><br><br><br>
 <body>
@@ -23,7 +23,7 @@ http-equiv="content-type">
     pageEncoding="UTF-8" import ="User.*" import = "java.util.ArrayList" import = "DatabaseController.*" import = "University.*" %>
 <br>
 
-<!-- <%@include file="UserHeading.jsp" %>-->
+
 <table style="text-align: left; width: 536px; height: 40px;" border="1">
 <tbody>
 <tr align="center">

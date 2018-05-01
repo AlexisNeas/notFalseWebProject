@@ -13,23 +13,22 @@
 <br>
 <center>
 <form method="post" action="Login_Action.jsp" name="Log In" > <br>
-<table class= "login" style=" width: 266px; height: 228px;"
-border="1">
+<table class= "login" border="1">
 <tbody>
 <tr>
-<td style="vertical-align: top;"><b>Username</b><br>
+<td style="vertical-align: top; width:60px;text-align: left;"><b>Username</b><br>
 </td>
-<td style="vertical-align: top;"><input name="username" style="text-align: left;" > </td>
+<td style="vertical-align: top;width:200px;"><input name="username" style="text-align: left;" > </td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><b>Password</b><br>
+<td style="vertical-align: top;width:60px;text-align: left;"><b>Password</b><br>
 </td>
-<td style="vertical-align: top;"><input  name="password" style="text-align: left;"> </td>
+<td style="vertical-align: top;width:200px;"><input  name="password" style="text-align: left;" type="password"> </td>
 </tr>
-<tr>
-<td style="vertical-align: top;"><input  value="LogIn"
+<tr >
+<td style="vertical-align: top"><input  value="LogIn"
 name="Log in" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td style="vertical-align: top;"><input  value="Reset"
+<td style="vertical-align: top; "><input  value="Reset"
 name="Reset" type="reset"></td>
 </tr>
 </tbody>

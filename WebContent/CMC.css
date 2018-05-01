@@ -23,6 +23,8 @@ footer{
 	color: Grey;
 	align: center;
 	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
 	display: inline-block;
 	padding: 2% 3%;
 	border: 2px solid Grey;
@@ -76,13 +78,12 @@ table,td,tr,post{
 
 table{
 	float:center;
-	width: 50%;
+	width: 55%;
 	text-align: center;
+	height: 50%;
 }
 td,tr{
 	background-color: White;
-	height: 50px;
-	margin:auto;
 	
 }
 
@@ -90,27 +91,25 @@ td,tr{
 	border-color:transparent;
 	border-bottom: 20%;
 	background: transparent;
-	color:	
+	font-family: 'Exo', sans-serif;
+	font-size: 20px;
+	height:20px;
+	color: White;
 }
 
 
 .login{
 	top: calc(50% - 75px);
 	left: calc(50% - 50px);
-	height: 50%;
-	width: 100%;
-	padding: 10px;
+	height: 200px;
+	width: 400px;
 	z-index: 2;
 	border-color: transparent;
-	
+	text-align: left;
+	margin:auto;
 }
-.login td,tr{
-	font-family: 'Exo', sans-serif;
-	font-size: 20px;
-	color: White;
 	
-}
-.login input{
+.login input,input[type=password]{
 	width: 100%;
 	height: 100%;
 	background: transparent;
@@ -125,10 +124,11 @@ td,tr{
 	display:block;
 }
 
-
+.login input[type=text][type=password]{
+	width: 200px;
+}
 .login input[type=button],input[type=submit],input[type=reset]{
-	width: 50%;
-	height: 35px;
+	height: 30px;
 	background: #fff;
 	border: 1px solid #fff;
 	cursor: pointer;
@@ -234,7 +234,7 @@ address {
 	
 input{
 	height: 90%;
-	width: 80%;
+	width: 85%;
 	font-size: 75%;
 	font-family: Cambria;
 	color: Black;
@@ -243,7 +243,7 @@ input{
 	border-radius: 4px;
 	border: none;
 	border-bottom: 2px solid grey;	
-	
+	margin: auto;
 }
 input[type=text]{
 	height: 100%;
@@ -261,15 +261,16 @@ input[type=button], input[type=submit],input[type=reset]
 	text-align:center;
 	color: black;
 	border-color: Black;
-	width: 80%;
+	width: 90%;
 	text-decoration: none;
 	cursor: pointer;
 	border-radius: 3px;
 	font-size: 70%;
 	font-family: Cambria;
 	letter-spacing: 1px;
-	
+	height: 40%;
 	white-space: normal;
+	
 }
 input[type=button]:hover, input[type=submit]:hover,input[type=reset]:hover{
 	color: White;
@@ -285,6 +286,9 @@ input[type=button]:focus, input[type=submit]:focus,input[type=reset]:focus{
 	font-family: Cambria;
 	font-size: 25px;
 	width: 20%;
+}
+.LogOut input{
+	height: 35px;
 }
 title{
 	font-family: Cambria;
@@ -304,11 +308,11 @@ div{
 }
 
 .search td{
-	height: 30px;
+	height: 50px;
 	width: 25px;
 }
 .search input{
-	padding: 3;
+	padding: 3px;
 	font-size: 150%;
 	height: 20%;
 }
@@ -326,7 +330,7 @@ input[name="lowAcademicsScale"],input[name="upAcademicsScale"],
 input[name="lowSocialScale"],input[name="upSocialScale"],
 input[name="lowQualityOfLifeScale"],input[name="upQualityOfLifeScale"]{
 	
-	height: 15px;
+	height: 20px;
 }
 
 .searchBtn{

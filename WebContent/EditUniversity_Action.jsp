@@ -117,7 +117,7 @@ school.setStudyArea1(study5);
  if(edit == -1)
 	{
 		response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
-		return;
+		
 	}
  else{
 
