@@ -38,7 +38,7 @@ UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
 Account user = uc.viewProfile(uc.getUser().getUsername());
 %>
 <form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
-<table style="text-align: left; width:40%;" border="1" >
+<table style="text-align: left; width:40%; " border="1" >
 <tbody>
 <tr>
 <td style="vertical-align: top;">First Name<br>

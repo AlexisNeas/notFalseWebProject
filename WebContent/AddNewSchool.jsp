@@ -25,7 +25,7 @@ if(error != null)
 }
 %>
 <form method="post" action="AddNewSchool_Action.jsp" name="addNewSchool">
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+<table style="text-align: left;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr>
@@ -147,15 +147,14 @@ cellspacing="2">
 </td>
 </tr>
 <tr>
+<td style="vertical-align: top;"><input style="width: 200px; height: 80px; word-wrap:normal; text-spacing:1px; margin:auto;"value="AddSchool" name="Add School" type="submit"><br>
+</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<br>
-<br>
-<input value="Add School" name="Add School" type="submit"><br>
 </form>
-<br>
-<form method="post" action="ManageUniversities.jsp" name="Cancel"><br>
+<form method="post" action="ManageUniversities.jsp" name="Cancel">
 <input value="Cancel" name="Cancel" type="submit"><br>
 </form>
 </body>

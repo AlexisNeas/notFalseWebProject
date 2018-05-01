@@ -84,7 +84,7 @@ table{
 }
 td,tr{
 	background-color: White;
-	
+	height: auto;
 }
 
 .login td,tr{
@@ -233,9 +233,9 @@ address {
 	}
 	
 input{
-	height: 90%;
+	height: auto;
 	width: 85%;
-	font-size: 75%;
+	font-size: 18px;
 	font-family: Cambria;
 	color: Black;
 	font-weight: bold;
@@ -246,7 +246,7 @@ input{
 	margin: auto;
 }
 input[type=text]{
-	height: 100%;
+	height: auto;;
 	width: 100%;
 }
 input[type=text]:focus{
@@ -265,10 +265,9 @@ input[type=button], input[type=submit],input[type=reset]
 	text-decoration: none;
 	cursor: pointer;
 	border-radius: 3px;
-	font-size: 70%;
 	font-family: Cambria;
 	letter-spacing: 1px;
-	height: 40%;
+	height: auto;
 	white-space: normal;
 	
 }
@@ -306,15 +305,18 @@ div{
 	display: block;
 	
 }
-
+.search{
+	width: auto;
+}
 .search td{
-	height: 50px;
-	width: 25px;
+	height: 60px;
+	width: auto;
 }
 .search input{
 	padding: 3px;
-	font-size: 150%;
+	font-size: 18px;
 	height: 20%;
+	width:auto;
 }
 .search input[name = "lowNumStudents"],input[name= "upNumStudents"],
 input[name = lowPercentFemale],input[name = "upPercentFemale"],
@@ -330,10 +332,17 @@ input[name="lowAcademicsScale"],input[name="upAcademicsScale"],
 input[name="lowSocialScale"],input[name="upSocialScale"],
 input[name="lowQualityOfLifeScale"],input[name="upQualityOfLifeScale"]{
 	
-	height: 20px;
+	height: 30px;
 }
-
+.search input[type=submit], input[type=reset]{
+	width:auto;
+	height:auto;
+}
 .searchBtn{
-	width:30%;
+	width:auto;
+	height:auto;
 	font-size: 30px;
+}
+th{
+	height: 20px;
 }
