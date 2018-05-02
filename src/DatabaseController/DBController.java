@@ -206,7 +206,7 @@ public class DBController
                                         univ.getNumApplicants(),  univ.getPercentAccepted(), 
                                         univ.getPercentEnroll(),  univ.getAcademicScale(),  univ.getSocial(),  univ.getQualOfLife());
     try {
-
+    	System.out.println(univ.getStudyArea1());
     if(univ.getStudyArea1() != null || univ.getStudyArea1().equals(""))
     {
     	if(!current.getStudyArea1().equals(univ.getStudyArea1()))

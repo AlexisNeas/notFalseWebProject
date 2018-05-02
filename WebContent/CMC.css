@@ -295,10 +295,10 @@ title{
 	color: White;
 	font-weight: bold;
 }
-.LogInError{
-	font-style: italic;
-	font-size: 18px;
-	color: Red;
+.Error{
+	
+	font-size: 30px;
+	color: Orange;
 	font-family: Cambria;
 }
 div{
@@ -345,4 +345,8 @@ input[name="lowQualityOfLifeScale"],input[name="upQualityOfLifeScale"]{
 }
 th{
 	height: 20px;
+}
+
+.UpperInput input{
+	 text-transform: uppercase;
 }

@@ -20,7 +20,7 @@ http-equiv="content-type">
 <%@include file="AdminHeading.jsp" %>
 </div>
 <br>
-<p class=" LogInError">
+<p class="Error">
 <%
 String result = request.getParameter("edit");
 if(result != null && result.equals("1")){
@@ -35,7 +35,7 @@ University univ = ai.getSchoolInfo(school);
 %>
 </p>
 <form method = "post" action = "EditUniversity_Action.jsp" name = "editUniversity"><br>
-<table style="text-align: left; width: 502px; height: 508px;" border="1"
+<table class = "UpperInput" style="text-align: left; width: 502px; height: 508px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
