@@ -1,3 +1,4 @@
+
 <br><br>
 <form class= "LogOut"  method="post" action="LogOut_Action.jsp" name="LogOut"><br>
 <input value="LogOut"name="Log out" type="submit"></form>

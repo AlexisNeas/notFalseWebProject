@@ -1,5 +1,4 @@
 <%@include file="VerifyLogin_Action.jsp" %>
-<%@include file="VerifyAdmin.jsp" %>
 
 <html>
 <head>

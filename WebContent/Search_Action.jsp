@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyUser.jsp" %>
 <%@ page language="java" import="User.*" import="University.*" import="DBController.*" import="java.util.ArrayList"%>
 <%
 
