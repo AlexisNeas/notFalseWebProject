@@ -34,7 +34,7 @@ name="Reset" type="reset"></td>
 </tbody>
 </table>
 </form>
-<p class= "LogInError">
+<p class= "Error">
 <%  
 String error =request.getParameter("logIn");
 if(error != null && error.equals("-1")){
