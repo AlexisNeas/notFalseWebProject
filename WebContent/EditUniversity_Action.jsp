@@ -75,8 +75,6 @@ if(socialScale == null || socialScale.equals(""))
 	socialScale = "-1";
 if(qualOfLife == null || qualOfLife.equals(""))
 	qualOfLife = "-1";
-if(schoolName == null || schoolName.equals(""))
-	schoolName = "-1";
 if(state == null || state.equals(""))
 	state = "-1";
 if(location == null || location.equals(""))
