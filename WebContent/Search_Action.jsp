@@ -170,7 +170,7 @@ String study5 = request.getParameter("studyArea5");
 	int highQ = Integer.parseInt(upQualityOfLifeScale); */
 
    
- 	ArrayList<University> u = (ArrayList<University>) ui.searchSchool(schoolName.toUpperCase(), 
+ 	u = (ArrayList<University>) ui.searchSchool(schoolName.toUpperCase(), 
 		state.toUpperCase(),
 		location.toUpperCase(),
 		control.toUpperCase(),

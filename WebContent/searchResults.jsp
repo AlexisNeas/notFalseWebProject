@@ -22,10 +22,11 @@
 <%@include file="UserHeading.jsp" %>
 </div>
 <br><br><br><br>
-<form class= "searchBtn" method="post" action="SearchMenu.jsp" name="goBack">
-	<input name="viewSchool" value="New Search" type="submit">
+
+<form class= "searchBtn" method="post" action="SearchMenu.jsp" name="goBack" >
+	<input name="newSearch" value="New Search" type="submit">
 </form>
-<table style=" width: 100%;height:20px;" border="1" cellpadding="2"
+<table style=" width: 100%;height:10px;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr>
@@ -74,10 +75,10 @@ for(int i = 0; i < size;i++)
 
 
 %>
-<table style="text-align: left; width: 60%;" border="1">
+<table class= "searchResult" style="text-align: left; width: 1200px; height: 150px;" border="1">
 <tbody>
 <tr><td
-style="vertical-align: top;  text-align: center;">
+style="vertical-align: top;  text-align: center; width: 225;">
 <form method="post" action="addSchoolToProfileAction.jsp" name="searchResult">
 <input
 name="save" value="Save" type="submit">
@@ -93,7 +94,7 @@ out.println("School Name: " + name + "\n" + "State: " + u.get(i).getState());
 %>
 </td>
 <td
-style="vertical-align: top;  text-align: center;">
+style="vertical-align: top; width: 225; text-align: center;">
 
 <form method="post" action="ViewSchoolInfoUser.jsp?from=0" name="searchResult">
 <input name="Search" value="1" type="hidden">
