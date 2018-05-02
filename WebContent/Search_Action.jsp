@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyUser.jsp" %>
 <%@ page language="java" import="User.*" import="University.*" import="DBController.*" import="java.util.ArrayList"%>
 <%
 
@@ -170,7 +172,7 @@ String study5 = request.getParameter("studyArea5");
 	int highQ = Integer.parseInt(upQualityOfLifeScale); */
 
    
- 	ArrayList<University> u = (ArrayList<University>) ui.searchSchool(schoolName.toUpperCase(), 
+ 	u = (ArrayList<University>) ui.searchSchool(schoolName.toUpperCase(), 
 		state.toUpperCase(),
 		location.toUpperCase(),
 		control.toUpperCase(),
