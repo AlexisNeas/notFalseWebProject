@@ -73,17 +73,23 @@ if (ai != null)
 		location = "-1";
 	if(control == null || control.equals(""))
 		control = "-1";
-	
-
-	int add = ai.addSchool(schoolName.toUpperCase(),state.toUpperCase(),location.toUpperCase(),control.toUpperCase(),Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Integer.parseInt(satV),Integer.parseInt(satM),
+	int add =-1;
+try{
+	add = ai.addSchool(schoolName.toUpperCase(),state.toUpperCase(),location.toUpperCase(),control.toUpperCase(),Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Integer.parseInt(satV),Integer.parseInt(satM),
 			Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApp),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(acScale),Integer.parseInt(social),Integer.parseInt(qual));
-	
+}
+catch(NumberFormatException e){
+		%> <script type="text/javascript">
+	    var msg = "Invalid Input.";
+	    alert(msg);
+	</script> <%
+}
 	if (add == -1)
 		response.sendRedirect("AddNewSchool.jsp?add=" +add);
 
 	else
 	{
-		response.sendRedirect("ManageUniversities.jsp");
+		response.sendRedirect("AddNewSchool.jsp?add="+add);
 	}	
 }
 

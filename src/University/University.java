@@ -690,7 +690,7 @@ public class University
   public void setPercentFemale(double percentFemale) 
     
   {
-    if (percentFemale != -1 && percentFemale > 100 || percentFemale < 0)
+    if (percentFemale != -1.0 && percentFemale > 100.0 || percentFemale < 0.0)
     {
       throw new IllegalArgumentException("Invalid female percentage.");
     }
@@ -708,7 +708,7 @@ public class University
   public void setSatVerbal(double satVerbal) 
     
   {
-	  if (satVerbal != -1 && satVerbal > 800 || satVerbal < 0)
+	  if (satVerbal != -1.0 && satVerbal > 800.0 || satVerbal < 0.0)
 	    {
 	      throw new IllegalArgumentException("Invalid sat verbal");
 	    }
@@ -727,7 +727,7 @@ public class University
    */
   public void setSatMath(double satMath)   
   {
-   if (satMath != -1 && satMath>800 || satMath<0)
+   if (satMath != -1.0 && satMath>800.0 || satMath<0.0)
    {
 	   throw new IllegalArgumentException("Invalid sat math score");
    }
@@ -746,7 +746,7 @@ public class University
    */
   public void setTuition(double tuition)  
   {
-	  if (tuition != -1 && tuition < 0)
+	  if (tuition != -1.0 && tuition < 0.0)
 	    {
 	      throw new IllegalArgumentException("Invalid tuition");
 	    }
@@ -764,7 +764,7 @@ public class University
    */
   public void setPercentRecFinAid(double percentRecFinAid)     
   {  
-    if (percentRecFinAid != -1 && percentRecFinAid > 100 || percentRecFinAid < 0)
+    if (percentRecFinAid != -1.0 && percentRecFinAid > 100.0 || percentRecFinAid < 0.0)
     {
       throw new IllegalArgumentException("Illegal financial aid percentage");
     }
@@ -783,7 +783,7 @@ public class University
   public void setPercentAccepted(double percentAccepted) 
     
   {
-    if (percentAccepted != -1 && percentAccepted > 100 || percentAccepted < 0)
+    if (percentAccepted != -1.0 && percentAccepted > 100.0 || percentAccepted < 0.0)
     {
       throw new IllegalArgumentException("Invalid acceptance percentage.");
     }
@@ -800,7 +800,7 @@ public class University
    */
   public void setPercentEnroll(double percentEnroll)    
   {
-	  if (percentEnroll != -1 && percentEnroll > 100 || percentEnroll < 0)
+	  if (percentEnroll != -1.0 && percentEnroll > 100.0 || percentEnroll < 0.0)
 	    {
 	      throw new IllegalArgumentException("Invalid enroll percentage");
 	    }

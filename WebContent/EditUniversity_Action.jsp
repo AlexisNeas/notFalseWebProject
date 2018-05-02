@@ -84,11 +84,12 @@ if(location == null || location.equals(""))
 if(control == null || control.equals(""))
 	control = "-1";
 
-System.out.println(study1);
 University school = ai.getSchoolInfo(schoolName.toUpperCase());
 		//,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Double.parseDouble(SATVerbal),Double.parseDouble(SATMath),
 		//Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApplicants),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(academicScale),Integer.parseInt(socialScale),Integer.parseInt(qualOfLife),study1,study2,study3,study4,study5);
 
+System.out.println("In Action ---- Editted University:   "   + study1 +"\n"+study2+"\n"+study3+"\n"+study4+"\n"+study5);
+System.out.println("In Action ---- Current Emphases 1    " + school.getStudyArea1());
 try{
 school.setState(state);
 school.setLocation(location);
@@ -112,10 +113,10 @@ school.setAcademicScale(Integer.parseInt(academicScale));
 school.setSocial(Integer.parseInt(socialScale));
 school.setQualOfLife(Integer.parseInt(qualOfLife));
 school.setStudyArea1(study1);
-school.setStudyArea1(study2);
-school.setStudyArea1(study3);
-school.setStudyArea1(study4);
-school.setStudyArea1(study5);
+school.setStudyArea2(study2);
+school.setStudyArea3(study3);
+school.setStudyArea4(study4);
+school.setStudyArea5(study5);
 int edit = ai.editSchool(school);
 
 

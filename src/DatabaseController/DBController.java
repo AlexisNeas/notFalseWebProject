@@ -206,8 +206,9 @@ public class DBController
                                         univ.getNumApplicants(),  univ.getPercentAccepted(), 
                                         univ.getPercentEnroll(),  univ.getAcademicScale(),  univ.getSocial(),  univ.getQualOfLife());
     try {
-    	System.out.println(univ.getStudyArea1());
-    if(univ.getStudyArea1() != null || univ.getStudyArea1().equals(""))
+    	System.out.println("In DBController: Edit---" + univ.getStudyArea1()+"  "+ univ.getStudyArea2() + "   "+ univ.getStudyArea3()+"   "+ univ.getStudyArea4()+"   " + univ.getStudyArea5());
+    	System.out.println("In DBController: Current----" + current.getStudyArea1()+"  "+ current.getStudyArea2() + "   "+ current.getStudyArea3()+"   "+ current.getStudyArea4()+"   " + current.getStudyArea5());
+    if(univ.getStudyArea1() != null || !univ.getStudyArea1().equals(""))
     {
     	if(!current.getStudyArea1().equals(univ.getStudyArea1()))
     	{
@@ -217,7 +218,7 @@ public class DBController
 				this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea1());
     	}
     }
-    if(univ.getStudyArea2() != null|| univ.getStudyArea2().equals(""))
+    if(univ.getStudyArea2() != null|| !univ.getStudyArea2().equals(""))
     {
     	if(!current.getStudyArea2().equals(univ.getStudyArea2()))
     	{
@@ -227,7 +228,7 @@ public class DBController
     			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea2());
     	}
     }
-    if(univ.getStudyArea3() != null|| univ.getStudyArea3().equals(""))
+    if(univ.getStudyArea3() != null|| !univ.getStudyArea3().equals(""))
     {
     	if(!current.getStudyArea3().equals(univ.getStudyArea3()))
     	{
@@ -237,7 +238,7 @@ public class DBController
     			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea3());
     	}
     }
-    if(univ.getStudyArea4() != null|| univ.getStudyArea4().equals(""))
+    if(univ.getStudyArea4() != null|| !univ.getStudyArea4().equals(""))
     {
     	if(!current.getStudyArea4().equals(univ.getStudyArea4()))
     	{
@@ -247,7 +248,7 @@ public class DBController
     			this.addNewEmphases(univ.getSchoolName(), univ.getStudyArea4());
     	}
     }
-    if(univ.getStudyArea5() != null|| univ.getStudyArea5().equals(""))
+    if(univ.getStudyArea5() != null|| !univ.getStudyArea5().equals(""))
     {
     	if(!current.getStudyArea5().equals(univ.getStudyArea5()))
     	{
@@ -261,6 +262,8 @@ public class DBController
 		
 		e.printStackTrace();
 	}
+     current =  this.getSchoolInfo(univ.getSchoolName());
+    System.out.println("In DBController: Current----" + current.getStudyArea1()+"  "+ current.getStudyArea2() + "   "+ current.getStudyArea3()+"   "+ current.getStudyArea4()+"   " + current.getStudyArea5());
     if(edited <= 0) {
     	throw new IllegalArgumentException();
     }

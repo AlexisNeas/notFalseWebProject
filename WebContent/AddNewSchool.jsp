@@ -17,6 +17,7 @@ String error =request.getParameter("add");
 if(error != null)
 { 
 	if(Integer.parseInt(error) == -1) out.println("Failed to add new school. Try Again.");
+	if(Integer.parseInt(error) == 1) out.println("Added Your School!");
 }
 %>
 </h2>
