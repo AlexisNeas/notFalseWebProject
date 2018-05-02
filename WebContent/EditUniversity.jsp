@@ -12,7 +12,6 @@ http-equiv="content-type">
 <header>
 <div>
 <h1>Edit University</h1>
-<h2>Editting <% Un %></h2>
 </div>
 </header>
 
