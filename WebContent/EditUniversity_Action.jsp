@@ -84,7 +84,7 @@ if(location == null || location.equals(""))
 if(control == null || control.equals(""))
 	control = "-1";
 
-
+System.out.println(study1);
 University school = ai.getSchoolInfo(schoolName.toUpperCase());
 		//,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Double.parseDouble(SATVerbal),Double.parseDouble(SATMath),
 		//Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApplicants),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(academicScale),Integer.parseInt(socialScale),Integer.parseInt(qualOfLife),study1,study2,study3,study4,study5);
