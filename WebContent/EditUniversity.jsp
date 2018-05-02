@@ -12,7 +12,9 @@ http-equiv="content-type">
 <header>
 <div>
 <h1>Edit University</h1>
-<h2>Editting <% Un %></h2>
+<h2>Editing
+<% String school = request.getParameter("School");
+out.print(school);%></h2>
 </div>
 </header>
 
@@ -31,7 +33,6 @@ else if(result != null && result.equals("-1")){
 	out.println("There was invalid input. Please fix your changes and try again.");
 }
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
-String school = request.getParameter("School");
 University univ = ai.getSchoolInfo(school);
 %>
 </p>

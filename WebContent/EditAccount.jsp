@@ -23,11 +23,8 @@
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" %>
-<br>
- Edit
-<
-<br>
-<%
+<p class="Error">
+<% 
 String error = request.getParameter("Edit");
 if(error !=null && error.equals("-1"))
 {
@@ -38,6 +35,7 @@ else if(error != null && error.equals("0"))
 	out.println("Account information edited.");
 }
 %>
+</p>
 <br>
 
 <%

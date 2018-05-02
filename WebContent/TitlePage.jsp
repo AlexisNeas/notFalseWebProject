@@ -9,9 +9,9 @@
 
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">WELCOME TO CSC</h1>
-  <p class="w3-xlarge">Your college search starts here</p>
+<header class="Header in Title" style="padding:128px 16px">
+  <h1 class="Hello CSC">WELCOME TO CSC</h1>
+  <p class="College">Your college search starts here</p>
   
   </header>
   <body>
