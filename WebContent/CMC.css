@@ -85,6 +85,7 @@ table{
 td,tr{
 	background-color: White;
 	height: auto;
+	
 }
 
 .login td,tr{
@@ -349,4 +350,18 @@ th{
 
 .UpperInput input{
 	 text-transform: uppercase;
+}
+
+.searchResult input[name="save"]{
+	width: 80px;
+	
+}
+.searchResult input[name="viewSchool"]{
+	
+	width: 120px;
+}
+.searchResult input[name="newSearch"]
+{
+	float: center;
+	
 }

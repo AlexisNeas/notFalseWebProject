@@ -924,85 +924,85 @@ public class DBController
 				  searchTotal++;
 		  
 		  if(lowNumberOfStudents != -2)
-			  if(lowNumberOfStudents < Integer.parseInt(array[i][4]))
+			  if(lowNumberOfStudents > Integer.parseInt(array[i][4]))
 				  searchTotal++;
 		  if(upNumberOfStudents != -2)
-			  if(upNumberOfStudents > Integer.parseInt(array[i][4]))
+			  if(upNumberOfStudents < Integer.parseInt(array[i][4]))
 				  searchTotal++;
 		  
 		  if(lowPercentFemale != -2)
-			  if(lowPercentFemale < Double.parseDouble(array[i][5]))
+			  if(lowPercentFemale > Double.parseDouble(array[i][5]))
 				  searchTotal++; 
 		  if(upPercentFemale != -2)
-			  if(upPercentFemale > Double.parseDouble(array[i][5]))
+			  if(upPercentFemale < Double.parseDouble(array[i][5]))
 				  searchTotal++; 
 		  
 		  if(lowSATVerbal != -2)
-			  if(lowSATVerbal < Double.parseDouble(array[i][6]) )
+			  if(lowSATVerbal > Double.parseDouble(array[i][6]) )
 				  searchTotal++;
 		  if(upSATVerbal != -2)
-			  if(upSATVerbal > Double.parseDouble(array[i][6]))
+			  if(upSATVerbal < Double.parseDouble(array[i][6]))
 				  searchTotal++;
 		  
 		  if(lowSATMath != -2)
-			  if(lowSATMath < Double.parseDouble(array[i][7]) )
+			  if(lowSATMath > Double.parseDouble(array[i][7]) )
 				  searchTotal++;
 		  if(upSATMath != -2)
-			  if(upSATMath > Double.parseDouble(array[i][7]))
+			  if(upSATMath < Double.parseDouble(array[i][7]))
 				  searchTotal++;
 		  
 		  if(lowExpenses != -2)
-			  if(lowExpenses < Double.parseDouble(array[i][8]))
+			  if(lowExpenses > Double.parseDouble(array[i][8]))
 				  searchTotal++;
 		  if(upExpenses != -2)
-			  if(upExpenses > Double.parseDouble(array[i][8]))
+			  if(upExpenses < Double.parseDouble(array[i][8]))
 				  searchTotal++;
 		  
 		  if(lowPercentRecFinAid != -2)
-			  if(lowPercentRecFinAid < Double.parseDouble(array[i][9]))
+			  if(lowPercentRecFinAid > Double.parseDouble(array[i][9]))
 				  searchTotal++;
 		  if(upPercentRecFinAid != -2)
-			  if(upPercentRecFinAid > Double.parseDouble(array[i][9]))
+			  if(upPercentRecFinAid < Double.parseDouble(array[i][9]))
 				  searchTotal++;
 		  
 		  if(lowNumApplicants != -2)
-			  if(lowNumApplicants < Double.parseDouble(array[i][10]))
+			  if(lowNumApplicants > Double.parseDouble(array[i][10]))
 				  searchTotal++;
 		  if(upNumApplicants != -2)
-			  if(upNumApplicants > Double.parseDouble(array[i][10]))
+			  if(upNumApplicants < Double.parseDouble(array[i][10]))
 				  searchTotal++;
 		  
 		  if(lowPercentAccepted != -2)
-			  if(lowPercentAccepted < Double.parseDouble(array[i][11]) )
+			  if(lowPercentAccepted > Double.parseDouble(array[i][11]) )
 				  searchTotal++;
 		  if(upPercentAccepted != -2)
-			  if(upPercentAccepted > Double.parseDouble(array[i][11]))
+			  if(upPercentAccepted < Double.parseDouble(array[i][11]))
 				  searchTotal++;
 		  
 		  if(lowPercentEnrolled != -2)
-			  if(lowPercentEnrolled < Double.parseDouble(array[i][12]) )
+			  if(lowPercentEnrolled > Double.parseDouble(array[i][12]) )
 				  searchTotal++;
 		  if(upPercentEnrolled != -2)
-			  if(upPercentEnrolled > Double.parseDouble(array[i][12]))
+			  if(upPercentEnrolled < Double.parseDouble(array[i][12]))
 				  searchTotal++;
 		  
 		  if(lowAcademicsScale != -2)
-			  if(lowAcademicsScale < Integer.parseInt(array[i][13]) )
+			  if(lowAcademicsScale > Integer.parseInt(array[i][13]) )
 				  searchTotal++;
 		  if(upAcademicsScale != -2)
-			  if(upAcademicsScale > Integer.parseInt(array[i][13]))
+			  if(upAcademicsScale < Integer.parseInt(array[i][13]))
 				  searchTotal++;
 		  if(lowSocialScale != -2)
-			  if(lowSocialScale < Integer.parseInt(array[i][14]))
+			  if(lowSocialScale > Integer.parseInt(array[i][14]))
 				  searchTotal++;
 		  if(upSocialScale != -2)
-			  if(upSocialScale > Integer.parseInt(array[i][14]))
+			  if(upSocialScale < Integer.parseInt(array[i][14]))
 				  searchTotal++;
 		  if(lowQualityOfLifeScale != -2)
-			  if(lowQualityOfLifeScale < Integer.parseInt(array[i][15]) )
+			  if(lowQualityOfLifeScale > Integer.parseInt(array[i][15]) )
 				  searchTotal++;
 		  if(upQualityOfLifeScale != -2)
-			  if(upQualityOfLifeScale > Integer.parseInt(array[i][15]))
+			  if(upQualityOfLifeScale < Integer.parseInt(array[i][15]))
 				  searchTotal++;
 		  ArrayList<String> temps = new ArrayList<String>();
 		  
