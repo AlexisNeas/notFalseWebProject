@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyAdmin.jsp" %>
 <%@ page language="java" import="User.*" %>
 <%
 //UserInteraction ui = (UserInteraction)session.getAttribute("userInter");

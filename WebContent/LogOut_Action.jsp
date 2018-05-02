@@ -1,3 +1,4 @@
+
 <%@page language="java" import="User.*"%>
 <%  UserInteraction LOuser = (UserInteraction)session.getAttribute("userInter"); 
     AdminInteractions LOadmin = (AdminInteractions)session.getAttribute("adminInter"); 
