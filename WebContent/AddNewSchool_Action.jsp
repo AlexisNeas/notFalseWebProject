@@ -78,7 +78,8 @@ if (ai != null)
 	int add =-1;
 try{
 	add = ai.addSchool(schoolName.toUpperCase(),state.toUpperCase(),location.toUpperCase(),control.toUpperCase(),Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Integer.parseInt(satV),Integer.parseInt(satM),
-			Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApp),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(acScale),Integer.parseInt(social),Integer.parseInt(qual));
+			Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApp),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(acScale),Integer.parseInt(social),Integer.parseInt(qual),
+			emp1, emp2, emp3, emp4, emp5);
 }
 catch(NumberFormatException e){
 		%> <script type="text/javascript">

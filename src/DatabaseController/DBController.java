@@ -206,9 +206,7 @@ public class DBController
                                         univ.getNumApplicants(),  univ.getPercentAccepted(), 
                                         univ.getPercentEnroll(),  univ.getAcademicScale(),  univ.getSocial(),  univ.getQualOfLife());
     try {
-    	System.out.println("In DBController: Edit---" + univ.getStudyArea1()+"  "+ univ.getStudyArea2() + "   "+ univ.getStudyArea3()+"   "+ univ.getStudyArea4()+"   " + univ.getStudyArea5());
-    	System.out.println("In DBController: Current----" + current.getStudyArea1()+"  "+ current.getStudyArea2() + "   "+ current.getStudyArea3()+"   "+ current.getStudyArea4()+"   " + current.getStudyArea5());
-    if(univ.getStudyArea1() != null || !univ.getStudyArea1().equals(""))
+    	if(univ.getStudyArea1() != null || !univ.getStudyArea1().equals(""))
     {
     	if(!current.getStudyArea1().equals(univ.getStudyArea1()))
     	{
@@ -262,9 +260,7 @@ public class DBController
 		
 		e.printStackTrace();
 	}
-     current =  this.getSchoolInfo(univ.getSchoolName());
-    System.out.println("In DBController: Current----" + current.getStudyArea1()+"  "+ current.getStudyArea2() + "   "+ current.getStudyArea3()+"   "+ current.getStudyArea4()+"   " + current.getStudyArea5());
-    if(edited <= 0) {
+      if(edited <= 0) {
     	throw new IllegalArgumentException();
     }
   }

@@ -149,14 +149,10 @@ public class AdminInteractions {
    */
   public int addSchool(String name, String state, String loc, String control, int numStudents, double perFem,
                         int satVerbal, int satMath, double tuition, double perFinancialAid, int numApplicants,
-                        double perAccepted, double perEnroll, int academicScale, int social, int qualOfLife) { 
+                        double perAccepted, double perEnroll, int academicScale, int social, int qualOfLife,
+                        String emp1, String emp2, String emp3, String emp4, String emp5) { 
     
 	  try { 
-		  String emp1 ="";
-		  String emp2 ="";
-		  String emp3 ="";
-		  String emp4 ="";
-		  String emp5 =""; 
     University school = new University(name, state, loc, control, numStudents, perFem,
                                        satVerbal, satMath, tuition, perFinancialAid, numApplicants,
                                        perAccepted, perEnroll, academicScale, social, qualOfLife,
