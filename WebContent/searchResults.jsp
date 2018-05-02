@@ -69,6 +69,7 @@ if(u != null)
 int size = u.size();
 if(size != 0)
 {
+	System.out.println(size);
 for(int i = 0; i < size;i++)
 {
 	
@@ -108,10 +109,11 @@ style="vertical-align: top; width: 225; text-align: center;">
 <%
 }
 }
-}
 else{
 	out.println("No Results for your search criteria :(");
 }
+}
+
 
 %>
 <br>
