@@ -88,7 +88,7 @@ if(control == null || control.equals(""))
 University school = ai.getSchoolInfo(schoolName);
 		//,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Double.parseDouble(SATVerbal),Double.parseDouble(SATMath),
 		//Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApplicants),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(academicScale),Integer.parseInt(socialScale),Integer.parseInt(qualOfLife),study1,study2,study3,study4,study5);
-
+try{
 school.setState(state);
 school.setLocation(location);
 school.setControl(control);
@@ -109,18 +109,18 @@ school.setStudyArea1(study2);
 school.setStudyArea1(study3);
 school.setStudyArea1(study4);
 school.setStudyArea1(study5);
+int edit = ai.editSchool(school);
 
 
 
-
- int edit = ai.editSchool(school);
- if(edit == -1)
-	{
-		response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
-		return;
-	}
- else{
 
 response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
- }
+ 
+}
+
+catch(Exception e){
+	int edit = -1;
+	response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
+}
+
 %>
