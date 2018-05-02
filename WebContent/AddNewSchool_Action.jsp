@@ -75,7 +75,7 @@ if (ai != null)
 		control = "-1";
 	
 
-	int add = ai.addSchool(schoolName,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Integer.parseInt(satV),Integer.parseInt(satM),
+	int add = ai.addSchool(schoolName.toUpperCase(),state.toUpperCase(),location.toUpperCase(),control.toUpperCase(),Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Integer.parseInt(satV),Integer.parseInt(satM),
 			Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApp),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(acScale),Integer.parseInt(social),Integer.parseInt(qual));
 	
 	if (add == -1)
