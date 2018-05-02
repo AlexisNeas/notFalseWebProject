@@ -10,12 +10,7 @@ http-equiv="content-type">
 <header>
 <div>
 <h1>Add New School</h1>
-</div>
-</header>
-<body>
-<div>
-<%@include file="AdminHeading.jsp" %>
-</div>
+<h2 class="Error">
 <%
 AdminInteractions ai = (AdminInteractions)session.getAttribute("adminInter");
 String error =request.getParameter("add");
@@ -24,8 +19,15 @@ if(error != null)
 	if(Integer.parseInt(error) == -1) out.println("Failed to add new school. Try Again.");
 }
 %>
+</h2>
+</div>
+</header>
+<body>
+<div>
+<%@include file="AdminHeading.jsp" %>
+</div>
 <form method="post" action="AddNewSchool_Action.jsp" name="addNewSchool">
-<table style="text-align: left;" border="1" cellpadding="2"
+<table class = "UpperInput" style="text-align: left; text-transform: capitalize;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr>
