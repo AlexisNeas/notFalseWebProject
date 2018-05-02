@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<title>View Profile</title>
+<title>Edit Profile</title>
 <link rel="stylesheet" type="text/css" href="CMC.css">
 </head>
 <header>
@@ -38,7 +38,7 @@ UserInteraction uc = (UserInteraction)session.getAttribute("userInter");
 Account user = uc.viewProfile(uc.getUser().getUsername());
 %>
 <form method="post" action="EditAccount_Action.jsp" name="editUser"><br>
-<table style="text-align: left; " border="1" >
+<table style="text-align: left; width:40%; " border="1" >
 <tbody>
 <tr>
 <td style="vertical-align: top;">First Name<br>
@@ -69,7 +69,7 @@ Account user = uc.viewProfile(uc.getUser().getUsername());
 <input name="Status" value=<%=user.getStatus()%> type="hidden"></td>
 </tr>
 <tr>
-<td style="vertical-align: top;"><input value="Edit"
+<td style="vertical-align: top; height: 10%;"><input value="Edit"
 name="Edit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td style="vertical-align: top;"><input value="Reset"
 name="Reset" type="reset"></td>

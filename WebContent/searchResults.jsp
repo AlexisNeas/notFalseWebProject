@@ -22,23 +22,23 @@
 <%@include file="UserHeading.jsp" %>
 </div>
 <br><br><br><br>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+<form class= "searchBtn" method="post" action="SearchMenu.jsp" name="goBack">
+	<input name="viewSchool" value="New Search" type="submit">
+</form>
+<table style=" width: 100%;height:20px;" border="1" cellpadding="2"
 cellspacing="2">
 <tbody>
 <tr>
 
-<th
-style="vertical-align: top; text-align: center; background-color: rgb(172, 148, 168);">Your
-Search Results<br>
 
+<th style="vertical-align: top; text-align: center; background-color: rgb(172, 148, 168);height:20px;">Your
+Search Results<br>
 </th>
 
 </tr>
 </tbody>
 </table>
-<form class= "searchBtn" method="post" action="SearchMenu.jsp" name="goBack">
-	<input name="viewSchool" value="New Search" type="submit">
-</form>
+
 <%
 ArrayList<University> u  = null;
 String error1 =request.getParameter("result");
@@ -74,10 +74,10 @@ for(int i = 0; i < size;i++)
 
 
 %>
-<table style="text-align: left; width: 100%;" border="1">
+<table style="text-align: left; width: 60%;" border="1">
 <tbody>
 <tr><td
-style="vertical-align: top; width: 100px; text-align: center;">
+style="vertical-align: top;  text-align: center;">
 <form method="post" action="addSchoolToProfileAction.jsp" name="searchResult">
 <input
 name="save" value="Save" type="submit">
@@ -93,12 +93,12 @@ out.println("School Name: " + name + "\n" + "State: " + u.get(i).getState());
 %>
 </td>
 <td
-style="vertical-align: top; width: 150px; text-align: center;">
+style="vertical-align: top;  text-align: center;">
 
 <form method="post" action="ViewSchoolInfoUser.jsp?from=0" name="searchResult">
 <input name="Search" value="1" type="hidden">
 <input name="schoolName" value="<%=name %>" type="hidden">
-<input name="viewSchool" value="View School" type="submit"><br>
+<input name="viewSchool" value="ViewSchool" type="submit"><br>
 </form>
 </td>
 </tr>

@@ -131,7 +131,7 @@ for (University univ: universityList)
 <td style="vertical-align: top;"><%=univ.getQualOfLife()%>
 <br>
 </td>
-<td style="vertical-align: top;">
+<td style="vertical-align: top; width: 30px;">
 <form method="post" action="EditUniversity.jsp" name="Schools">
 <input name="Edit"  value= "Edit" type="submit"></input>
 <input name="School" value= "<%= univ.getSchoolName() %>" type="hidden"></input>

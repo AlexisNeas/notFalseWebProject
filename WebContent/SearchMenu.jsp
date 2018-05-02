@@ -24,7 +24,7 @@ http-equiv="content-type">
 <form method="post" action="searchResults.jsp?result=1" name="searchForm"><span
 style="font-family: DejaVu Sans;"></span>
 
-<table class= "search" style="text-align: left; width: 100%;" border="1"
+<table class= "search" style="text-align: left;" border="1"
 cellpadding="1" cellspacing="1">
 <tbody>
 <tr>
@@ -54,83 +54,82 @@ cellpadding="1" cellspacing="1">
 <td style="vertical-align: top;">Number of Students<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowNumStudents"> High:<input name="upNumStudents">
+name="lowNumStudents"><br>High:<input name="upNumStudents">
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">% Female<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowPercentFemale"> High:<input name="upPercentFemale"><br>
+name="lowPercentFemale"> <br>High:<input name="upPercentFemale"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">SAT Verbal<br>
 </td>
 <td style="vertical-align: top;">Low:<input name="lowSATVerbal">
-High:<input name="upSATVerbal"><br>
+<br>High:<input name="upSATVerbal"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">SAT Math<br>
 </td>
 <td style="vertical-align: top;">Low:<input name="lowSATMath">
-High:<input name="upSATMath"><br>
+<br>High:<input name="upSATMath"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Tuition<br>
 </td>
 <td style="vertical-align: top;">Low:<input name="lowTuition">
-High:<input name="upTuition"><br>
+<br>High:<input name="upTuition"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">% Receiving Financial Aid<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowPercentRecFinAid"> High:<input name="upPercentRecFinAid"><br>
+name="lowPercentRecFinAid"> <br>High:<input name="upPercentRecFinAid"><br>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Number of Applicants<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowNumApplicants"> High:<input name="upNumApplicants"></td>
+name="lowNumApplicants"><br>High:<input name="upNumApplicants"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">% Accepted<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowPercentAccepted"> High:<input name="upPercentAccepted"></td>
+name="lowPercentAccepted"><br>High:<input name="upPercentAccepted"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">% Enrolled<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowPercentEnrolled"> High:<input name="upPercentEnrolled"></td>
+name="lowPercentEnrolled"><br>High:<input name="upPercentEnrolled"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Academics Scale (1-5)<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowAcademicsScale"> High:<input name="upAcademicsScale"></td>
+name="lowAcademicsScale"><br>High:<input name="upAcademicsScale"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Social Scale (1-5)<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowSocialScale"> High:<input name="upSocialScale"></td>
+name="lowSocialScale"><br>High:<input name="upSocialScale"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Quality of Life (1-5)<br>
 </td>
 <td style="vertical-align: top;">Low:<input
-name="lowQualityOfLifeScale"> High:<input name="upQualityOfLifeScale"></td>
+name="lowQualityOfLifeScale"><br>High:<input name="upQualityOfLifeScale"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">Emphases<br>
-<br>
 <br>
 <input name="submitButton" type="submit"><br>
 <input name="reset" type="reset"><br>
