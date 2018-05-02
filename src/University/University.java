@@ -594,7 +594,7 @@ public class University
    */
   public void setSocial(int social)
   {
-	  if (social < 1 || social > 5)
+	  if (social != -1 && social < 1 || social > 5)
 	    {
 	      throw new IllegalArgumentException("Invalid social scale");
 	    }
@@ -612,7 +612,7 @@ public class University
    */
   public void setNumApplicants(int numApplicants)   
   {
-	  if (numApplicants < 0)
+	  if (numApplicants != -1 && numApplicants < 0)
 	    {
 	      throw new IllegalArgumentException("Invalid num applicants");
 	    }
@@ -632,7 +632,7 @@ public class University
   public void setNumStudents(int numStudents) 
     
   {
-	  if (numStudents < 0)
+	  if (numStudents != -1 && numStudents < 0)
 	    {
 	      throw new IllegalArgumentException("Invalid number of students");
 	    }
@@ -651,7 +651,7 @@ public class University
    */
   public void setAcademicScale(int academicScale)  
   {
-	  if (academicScale < 1 || academicScale > 5)
+	  if (academicScale != -1 && academicScale < 1 || academicScale > 5)
 	    {
 	      throw new IllegalArgumentException("Invalid academic scale");
 	    }
@@ -670,7 +670,7 @@ public class University
    */
   public void setQualOfLife(int qualOfLife)    
   {
-	  if (qualOfLife < 1 || qualOfLife > 5)
+	  if (qualOfLife != -1 && qualOfLife < 1 || qualOfLife > 5)
 	    {
 	      throw new IllegalArgumentException("Invalid qual of life");
 	    }
@@ -690,7 +690,7 @@ public class University
   public void setPercentFemale(double percentFemale) 
     
   {
-    if (percentFemale > 100 || percentFemale < 0)
+    if (percentFemale != -1 && percentFemale > 100 || percentFemale < 0)
     {
       throw new IllegalArgumentException("Invalid female percentage.");
     }
@@ -708,7 +708,7 @@ public class University
   public void setSatVerbal(double satVerbal) 
     
   {
-	  if (satVerbal > 800 || satVerbal < 0)
+	  if (satVerbal != -1 && satVerbal > 800 || satVerbal < 0)
 	    {
 	      throw new IllegalArgumentException("Invalid sat verbal");
 	    }
@@ -727,7 +727,7 @@ public class University
    */
   public void setSatMath(double satMath)   
   {
-   if (satMath>800 || satMath<0)
+   if (satMath != -1 && satMath>800 || satMath<0)
    {
 	   throw new IllegalArgumentException("Invalid sat math score");
    }
@@ -746,7 +746,7 @@ public class University
    */
   public void setTuition(double tuition)  
   {
-	  if (tuition < 0)
+	  if (tuition != -1 && tuition < 0)
 	    {
 	      throw new IllegalArgumentException("Invalid tuition");
 	    }
@@ -764,7 +764,7 @@ public class University
    */
   public void setPercentRecFinAid(double percentRecFinAid)     
   {  
-    if (percentRecFinAid > 100 || percentRecFinAid < 0)
+    if (percentRecFinAid != -1 && percentRecFinAid > 100 || percentRecFinAid < 0)
     {
       throw new IllegalArgumentException("Illegal financial aid percentage");
     }
@@ -783,7 +783,7 @@ public class University
   public void setPercentAccepted(double percentAccepted) 
     
   {
-    if (percentAccepted > 100 || percentAccepted < 0)
+    if (percentAccepted != -1 && percentAccepted > 100 || percentAccepted < 0)
     {
       throw new IllegalArgumentException("Invalid acceptance percentage.");
     }
@@ -800,7 +800,7 @@ public class University
    */
   public void setPercentEnroll(double percentEnroll)    
   {
-	  if (percentEnroll > 100 || percentEnroll < 0)
+	  if (percentEnroll != -1 && percentEnroll > 100 || percentEnroll < 0)
 	    {
 	      throw new IllegalArgumentException("Invalid enroll percentage");
 	    }
