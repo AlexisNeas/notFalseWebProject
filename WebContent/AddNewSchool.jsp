@@ -1,3 +1,5 @@
+<%@include file="VerifyLogin_Action.jsp" %>
+<%@include file="VerifyAdmin.jsp" %>
 <%@ page language="java" import = "DatabaseController.*" 
 import = "User.*" import = "University.*" import = "java.util.*"%>
 <html>
@@ -17,6 +19,7 @@ String error =request.getParameter("add");
 if(error != null)
 { 
 	if(Integer.parseInt(error) == -1) out.println("Failed to add new school. Try Again.");
+	if(Integer.parseInt(error) == 1) out.println("Added Your School!");
 }
 %>
 </h2>

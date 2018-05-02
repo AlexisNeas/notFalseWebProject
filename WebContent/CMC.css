@@ -86,6 +86,7 @@ table{
 td,tr{
 	background-color: White;
 	height: auto;
+	
 }
 
 .login td,tr{
@@ -346,4 +347,22 @@ input[name="lowQualityOfLifeScale"],input[name="upQualityOfLifeScale"]{
 }
 th{
 	height: 20px;
+}
+
+.UpperInput input{
+	 text-transform: uppercase;
+}
+
+.searchResult input[name="save"]{
+	width: 80px;
+	
+}
+.searchResult input[name="viewSchool"]{
+	
+	width: 120px;
+}
+.searchResult input[name="newSearch"]
+{
+	float: center;
+	
 }

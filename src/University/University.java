@@ -184,7 +184,7 @@ public class University
    */
   public String getSchoolName()
   {
-    return schoolName; 
+    return this.schoolName; 
   }
   
   
@@ -195,7 +195,7 @@ public class University
    */
   public String getState()    
   {  
-    return state;  
+    return this.state;  
   }
   
   
@@ -207,7 +207,7 @@ public class University
    */
   public String getLocation()    
   {
-       return location;    
+       return this.location;    
   }
   
   
@@ -219,7 +219,7 @@ public class University
    */
   public String getControl()   
   {   
-    return control;   
+    return this.control;   
   }
   
   
@@ -231,7 +231,7 @@ public class University
    */
   public String getStudyArea1()     
   {   
-    return studyArea1;   
+    return this.studyArea1;   
   }
   
   
@@ -243,7 +243,7 @@ public class University
    */
   public String getStudyArea2()   
   {   
-    return studyArea2;   
+    return this.studyArea2;   
   }
   
   
@@ -255,7 +255,7 @@ public class University
    */
   public String getStudyArea3()   
   {   
-    return studyArea3;   
+    return this.studyArea3;   
   }
   
   
@@ -267,7 +267,7 @@ public class University
    */
   public String getStudyArea4()
   {   
-    return studyArea4;   
+    return this.studyArea4;   
   }
   
   
@@ -279,7 +279,7 @@ public class University
    */
   public String getStudyArea5()     
   {    
-    return studyArea5;    
+    return this.studyArea5;    
   }
   
   
@@ -291,7 +291,7 @@ public class University
    */
   public int getNumApplicants()    
   {   
-    return numApplicants;    
+    return this.numApplicants;    
   }
   
   
@@ -303,7 +303,7 @@ public class University
    */
   public int getNumStudents()     
   {   
-    return numStudents;   
+    return this.numStudents;   
   }
   
   
@@ -315,7 +315,7 @@ public class University
    */
   public int getAcademicScale()     
   {    
-    return academicScale;    
+    return this.academicScale;    
   }
   
   
@@ -327,7 +327,7 @@ public class University
    */
   public int getQualOfLife()    
   {   
-    return qualOfLife;   
+    return this.qualOfLife;   
   }
   
   
@@ -351,7 +351,7 @@ public class University
    */
   public double getSatVerbal()     
   {    
-    return satVerbal;    
+    return this.satVerbal;    
   }
   
   
@@ -363,7 +363,7 @@ public class University
    */
   public double getSatMath()   
   {    
-    return satMath;    
+    return this.satMath;    
   }
   
   
@@ -375,7 +375,7 @@ public class University
    */
   public double getTuition()
   {  
-    return tuition;   
+    return this.tuition;   
   }
   
   
@@ -400,7 +400,7 @@ public class University
   public double getPercentAccepted() 
     
   {    
-    return percentAccepted;    
+    return this.percentAccepted;    
   }
   
   
@@ -413,7 +413,7 @@ public class University
   public double getPercentEnroll() 
     
   {   
-    return percentEnroll;   
+    return this.percentEnroll;   
   }
   
   /**
@@ -424,7 +424,7 @@ public class University
   
   public int getSocial()
   {
-    return social;
+    return this.social;
   }
   
   
@@ -690,7 +690,7 @@ public class University
   public void setPercentFemale(double percentFemale) 
     
   {
-    if (percentFemale != -1 && percentFemale > 100 || percentFemale < 0)
+    if (percentFemale != -1.0 && (percentFemale > 100.0 || percentFemale < 0.0))
     {
       throw new IllegalArgumentException("Invalid female percentage.");
     }
@@ -708,7 +708,7 @@ public class University
   public void setSatVerbal(double satVerbal) 
     
   {
-	  if (satVerbal != -1 && satVerbal > 800 || satVerbal < 0)
+	  if (satVerbal != -1.0 && (satVerbal > 800.0 || satVerbal < 0.0))
 	    {
 	      throw new IllegalArgumentException("Invalid sat verbal");
 	    }
@@ -727,7 +727,7 @@ public class University
    */
   public void setSatMath(double satMath)   
   {
-   if (satMath != -1 && satMath>800 || satMath<0)
+   if (satMath != -1.0 && (satMath>800.0 || satMath<0.0))
    {
 	   throw new IllegalArgumentException("Invalid sat math score");
    }
@@ -746,7 +746,7 @@ public class University
    */
   public void setTuition(double tuition)  
   {
-	  if (tuition != -1 && tuition < 0)
+	  if (tuition != -1.0 && tuition < 0.0)
 	    {
 	      throw new IllegalArgumentException("Invalid tuition");
 	    }
@@ -764,7 +764,7 @@ public class University
    */
   public void setPercentRecFinAid(double percentRecFinAid)     
   {  
-    if (percentRecFinAid != -1 && percentRecFinAid > 100 || percentRecFinAid < 0)
+    if (percentRecFinAid != -1.0 && (percentRecFinAid > 100.0 || percentRecFinAid < 0.0))
     {
       throw new IllegalArgumentException("Illegal financial aid percentage");
     }
@@ -783,7 +783,7 @@ public class University
   public void setPercentAccepted(double percentAccepted) 
     
   {
-    if (percentAccepted != -1 && percentAccepted > 100 || percentAccepted < 0)
+    if (percentAccepted != -1.0 && (percentAccepted > 100.0 || percentAccepted < 0.0))
     {
       throw new IllegalArgumentException("Invalid acceptance percentage.");
     }
@@ -800,7 +800,7 @@ public class University
    */
   public void setPercentEnroll(double percentEnroll)    
   {
-	  if (percentEnroll != -1 && percentEnroll > 100 || percentEnroll < 0)
+	  if (percentEnroll != -1.0 && (percentEnroll > 100.0 || percentEnroll < 0.0))
 	    {
 	      throw new IllegalArgumentException("Invalid enroll percentage");
 	    }

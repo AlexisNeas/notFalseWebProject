@@ -1,5 +1,4 @@
 <%@include file="VerifyLogin_Action.jsp" %>
-<%@include file="VerifyAdmin.jsp" %>
 
 <html>
 <head>
@@ -23,8 +22,16 @@
 <body>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import ="User.*" %>
+<<<<<<< HEAD
 <p class="Error">
 <% 
+=======
+<br>
+ 
+
+<br>
+<%
+>>>>>>> 77b7bfab32cea0fb90b39e776ecd84695542c194
 String error = request.getParameter("Edit");
 if(error !=null && error.equals("-1"))
 {
