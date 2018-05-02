@@ -15,10 +15,12 @@ String percentFemale = request.getParameter("perFemale");
 String SATVerbal = request.getParameter("satVerbal");
 String SATMath = request.getParameter("satMath");
 String tuition = request.getParameter("expenses");
-String percentRecFinAid = request.getParameter("percentRecFinAid");
-String numApplicants = request.getParameter("getNumApplicants");
-String percentAccepted = request.getParameter("percentAccepted");
-String percentEnrolled = request.getParameter("percentEnrolled");
+
+String percentRecFinAid = request.getParameter("perFinancialAid");
+String numApplicants = request.getParameter("numOfApplicants");
+String percentAccepted = request.getParameter("perAdmitted");
+String percentEnrolled = request.getParameter("perEnrolled");
+
 String academicScale = request.getParameter("academicScale");
 String socialScale = request.getParameter("socialScale");
 String qualOfLife = request.getParameter("qualityOfLifeScale");
@@ -75,8 +77,6 @@ if(socialScale == null || socialScale.equals(""))
 	socialScale = "-1";
 if(qualOfLife == null || qualOfLife.equals(""))
 	qualOfLife = "-1";
-if(schoolName == null || schoolName.equals(""))
-	schoolName = "-1";
 if(state == null || state.equals(""))
 	state = "-1";
 if(location == null || location.equals(""))
