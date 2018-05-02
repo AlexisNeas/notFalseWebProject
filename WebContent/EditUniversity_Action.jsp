@@ -84,13 +84,14 @@ if(location == null || location.equals(""))
 if(control == null || control.equals(""))
 	control = "-1";
 
-University school = ai.getSchoolInfo(schoolName.toUpperCase());
+University school = new University();
 		//,state,location,control,Integer.parseInt(numStudents),Double.parseDouble(percentFemale),Double.parseDouble(SATVerbal),Double.parseDouble(SATMath),
 		//Double.parseDouble(tuition),Double.parseDouble(percentRecFinAid),Integer.parseInt(numApplicants),Double.parseDouble(percentAccepted),Double.parseDouble(percentEnrolled),Integer.parseInt(academicScale),Integer.parseInt(socialScale),Integer.parseInt(qualOfLife),study1,study2,study3,study4,study5);
 
-System.out.println("In Action ---- Editted University:   "   + study1 +"\n"+study2+"\n"+study3+"\n"+study4+"\n"+study5);
-System.out.println("In Action ---- Current Emphases 1    " + school.getStudyArea1());
+//System.out.println(schoolName+"   "+state+"   "+ location+"   "+control+"  " + numStudents+"  "+"  "+Double.parseDouble(percentFemale)+"  "+SATVerbal+"  "+SATMath+ "   "+ "  "+tuition+"  "
+//		+percentRecFinAid+"  "+ numApplicants+"  "+percentAccepted+"  "+percentEnrolled+"  "+academicScale+"  "+socialScale+"  "+qualOfLife );
 try{
+	school.setSchoolName(schoolName);
 school.setState(state);
 school.setLocation(location);
 school.setControl(control);
@@ -124,11 +125,12 @@ int edit = ai.editSchool(school);
 
 
 response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
- 
+
 }
 
-catch(Exception e){
-	int edit = -1;
+catch(NumberFormatException e){
+	
+	int edit= -1;
 	response.sendRedirect("EditUniversity.jsp?edit="+edit+"&School="+schoolName);
 }
 

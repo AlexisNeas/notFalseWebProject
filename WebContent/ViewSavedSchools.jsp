@@ -24,7 +24,7 @@ http-equiv="content-type">
 <br>
 
 
-<table style="text-align: left; width: 536px; height: 40px;" border="1">
+<table style="width: 536px; height: 40px;" border="1">
 <tbody>
 <tr align="center">
 <td colspan="3" style="vertical-align: top;">School<br>
